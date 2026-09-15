@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cq1vxidiehq7o"]
+
+[ext_resource type="Script" uid="uid://bmqyrwypcgnfi" path="res://Scripts/proyectile.gd" id="1_3dr3y"]
+[ext_resource type="Texture2D" uid="uid://u6o3awal8m68" path="res://Assets/Sin título.png" id="2_3dr3y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f5jn5"]
+radius = 9.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_82v0y"]
+
+[node name="Proyectile" type="CharacterBody2D" unique_id=928016521]
+scale = Vector2(1.5, 1.5)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_3dr3y")
+Velocidad = 500
+DistanciaMaxima = 65
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=944853505]
+scale = Vector2(0.057128906, 0.049560573)
+texture = ExtResource("2_3dr3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=186546663]
+scale = Vector2(1.35, 1.35)
+shape = SubResource("CircleShape2D_f5jn5")
+
+[node name="AreadeImpacto" type="Area2D" parent="." unique_id=1739339313]
+scale = Vector2(1.35, 1.35)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreadeImpacto" unique_id=542873050]
+scale = Vector2(1.35, 1.35)
+shape = SubResource("CircleShape2D_82v0y")

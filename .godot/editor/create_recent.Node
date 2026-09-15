@@ -1,0 +1,15 @@
+RayCast2D
+PhantomCameraHost
+Camera2D
+Node2D
+PhantomCamera2D
+Timer
+CollisionShape2D
+Area2D
+AnimationPlayer
+TextureProgressBar
+StaticBody2D
+TileMap
+HitboxAbajo
+Hurtbox
+CollisionPolygon2D

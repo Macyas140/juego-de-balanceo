@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://bgkq8mpqv0w6m"]
+
+[ext_resource type="Script" uid="uid://cypjamsgoytqq" path="res://Scripts/personaje.gd" id="1_h6c8c"]
+[ext_resource type="Texture2D" uid="uid://ys0e6fydu6hd" path="res://Assets/doge_meme_PNG9.png" id="1_t6wr4"]
+[ext_resource type="Shader" uid="uid://ci755jxtmie51" path="res://Shaders/Personaje.gdshader" id="2_sin02"]
+[ext_resource type="Script" uid="uid://choucwrou1xh" path="res://Scripts/salto.gd" id="3_ith2g"]
+[ext_resource type="Script" uid="uid://bvtsvxgmsqxvm" path="res://Scripts/lanzar_bufanda.gd" id="4_5ss6n"]
+[ext_resource type="Script" uid="uid://cpep4srdgje4" path="res://Scripts/Ataque.gd" id="5_7vwnh"]
+[ext_resource type="Script" uid="uid://b1bd0tmi2gf3w" path="res://Scripts/AtaqueAbajo.gd" id="7_sin02"]
+[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="8_38khm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_15yhy"]
+shader = ExtResource("2_sin02")
+shader_parameter/flash_color = Color(2.6522467, 2.6522467, 2.6522467, 1)
+shader_parameter/flash_value = 0.0
+
+[sub_resource type="Animation" id="Animation_38khm"]
+resource_name = "Flash"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/flash_value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_5vmsb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/flash_value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lhmt1"]
+_data = {
+&"Flash": SubResource("Animation_38khm"),
+&"RESET": SubResource("Animation_5vmsb")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_82v0y"]
+size = Vector2(75.05762, 149.55328)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_am3o3"]
+size = Vector2(175, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_125jq"]
+size = Vector2(64, 58)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=477400654]
+script = ExtResource("1_h6c8c")
+friccion = 1400
+fuerzaRebote = -300.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2120447331]
+material = SubResource("ShaderMaterial_15yhy")
+position = Vector2(1, -26.999998)
+scale = Vector2(0.116455086, 0.114746094)
+texture = ExtResource("1_t6wr4")
+
+[node name="FlashAnimation" type="AnimationPlayer" parent="Sprite2D" unique_id=977003677]
+libraries/ = SubResource("AnimationLibrary_lhmt1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=51471503]
+position = Vector2(0.49999905, -21.75)
+scale = Vector2(0.27978507, 0.28417963)
+shape = SubResource("RectangleShape2D_82v0y")
+
+[node name="Salto" type="Node2D" parent="." unique_id=468091311]
+script = ExtResource("3_ith2g")
+gravity = 980
+
+[node name="TemporizadorCoyoteTime" type="Timer" parent="Salto" unique_id=1486377635]
+
+[node name="TemporizadorBuffer" type="Timer" parent="Salto" unique_id=2041849967]
+
+[node name="LanzarBufanda" type="Node2D" parent="." unique_id=189203918]
+script = ExtResource("4_5ss6n")
+fuerzaDelImpulso = 450.0
+
+[node name="Ataque" type="Node2D" parent="." unique_id=2078326027]
+
+[node name="Hitbox" type="Area2D" parent="Ataque" unique_id=394215482]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("5_7vwnh")
+metadata/_custom_type_script = "uid://cpep4srdgje4"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ataque/Hitbox" unique_id=1285372919]
+position = Vector2(92.5, -22.5)
+shape = SubResource("RectangleShape2D_am3o3")
+disabled = true
+
+[node name="HitboxAbajo" type="Area2D" parent="Ataque" unique_id=1043482050]
+script = ExtResource("7_sin02")
+metadata/_custom_type_script = "uid://b1bd0tmi2gf3w"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ataque/HitboxAbajo" unique_id=57249802]
+position = Vector2(-1, 19)
+shape = SubResource("RectangleShape2D_125jq")
+disabled = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1071802769]
+top_level = true
+zoom = Vector2(3, 3)
+limit_left = -280
+limit_top = -1000
+limit_right = 100000
+limit_bottom = 512
+editor_draw_limits = true
+
+[node name="PhantomCameraHost" type="Node" parent="Camera2D" unique_id=1340835451]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("8_38khm")
+metadata/_custom_type_script = "uid://bd046eokvcnu2"

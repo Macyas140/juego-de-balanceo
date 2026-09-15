@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://bj6t5bg1pufry"]
+
+[ext_resource type="Script" uid="uid://dywgbuiavfrwm" path="res://Scripts/enemigo.gd" id="1_okatw"]
+[ext_resource type="Texture2D" uid="uid://bu0h0iwadfoqb" path="res://Assets/Doge-Head-Face-PNG-HD-Quality.png" id="1_tusv5"]
+[ext_resource type="Shader" uid="uid://ci755jxtmie51" path="res://Shaders/Personaje.gdshader" id="2_2mqn1"]
+[ext_resource type="Script" uid="uid://qdycqexdwm2s" path="res://Scripts/HurtBox.gd" id="3_he5sb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_38khm"]
+resource_local_to_scene = true
+shader = ExtResource("2_2mqn1")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_value = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_125jq"]
+size = Vector2(950.0001, 670.0001)
+
+[sub_resource type="Animation" id="Animation_hxdoq"]
+resource_name = "HitFlash"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/flash_value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_c2twk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/flash_value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pqadn"]
+_data = {
+&"HitFlash": SubResource("Animation_hxdoq"),
+&"RESET": SubResource("Animation_c2twk")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_am3o3"]
+size = Vector2(20.75, 15.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_82v0y"]
+size = Vector2(100, 72)
+
+[node name="Enemigos" type="CharacterBody2D" unique_id=131267338]
+script = ExtResource("1_okatw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1011553583]
+material = SubResource("ShaderMaterial_38khm")
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_tusv5")
+
+[node name="Hurtbox" type="Area2D" parent="Sprite2D" unique_id=85523914]
+script = ExtResource("3_he5sb")
+metadata/_custom_type_script = "uid://qdycqexdwm2s"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Hurtbox" unique_id=707071688]
+position = Vector2(-14.999969, 35.000004)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_125jq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D" unique_id=1594601133]
+libraries/ = SubResource("AnimationLibrary_pqadn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1596499315]
+position = Vector2(1.5, 1)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_am3o3")
+
+[node name="DirectionTimer" type="Timer" parent="." unique_id=1689828213]
+autostart = true
+
+[node name="AreaDaño" type="Area2D" parent="." unique_id=1905198806]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDaño" unique_id=1452307778]
+position = Vector2(-2, 4)
+shape = SubResource("RectangleShape2D_82v0y")
+
+[node name="RaycastBorde" type="RayCast2D" parent="." unique_id=664212712]
+target_position = Vector2(0, 40)
+
+[connection signal="timeout" from="DirectionTimer" to="." method="_on_direction_timer_timeout"]

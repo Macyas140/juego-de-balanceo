@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://b7xdcaqavguw7"]
+
+[ext_resource type="Texture2D" uid="uid://bcye0qm0utryc" path="res://Assets/BaseNegra.png" id="1_cgmvo"]
+[ext_resource type="Script" uid="uid://cxusqyqxh80et" path="res://Scripts/Temporizador.gd" id="1_vh8u0"]
+[ext_resource type="Texture2D" uid="uid://dg5mqmd5wj6o6" path="res://Assets/BaseLlena.png" id="2_vh8u0"]
+
+[node name="Control" type="Control" unique_id=34598685]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 42.0
+offset_right = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vh8u0")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=1326666556]
+layout_mode = 1
+offset_left = -34.0
+offset_top = 16.0
+offset_right = 1118.0
+offset_bottom = 664.0
+scale = Vector2(0.02, 0.02)
+offset_transform_scale = Vector2(0.5, 0.5)
+max_value = 200.0
+value = 25.0
+fill_mode = 8
+radial_initial_angle = 180.0
+radial_center_offset = Vector2(-20, 0)
+texture_under = ExtResource("1_cgmvo")
+texture_progress = ExtResource("2_vh8u0")
+
+[node name="TemporizadorBloqueo" type="Timer" parent="." unique_id=1296601135]
+
+[node name="PantallaMuerte" type="Timer" parent="." unique_id=1274868077]
+wait_time = 10.0
+one_shot = true

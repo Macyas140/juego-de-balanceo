@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://0wyuxkgnl0lf"]
+
+[ext_resource type="Texture2D" uid="uid://bu0h0iwadfoqb" path="res://Assets/Doge-Head-Face-PNG-HD-Quality.png" id="1_wht6p"]
+[ext_resource type="Script" uid="uid://bnmutabohk847" path="res://Scripts/mouse.gd" id="2_6wno3"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=229503590]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_wht6p")
+script = ExtResource("2_6wno3")
