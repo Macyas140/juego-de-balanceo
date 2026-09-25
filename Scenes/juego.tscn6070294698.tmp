@@ -53,16 +53,10 @@ point_count = 2
 [sub_resource type="CurveTexture" id="CurveTexture_o2khi"]
 curve = SubResource("Curve_ua078")
 
-[sub_resource type="Curve" id="Curve_gwg3i"]
-_limits = [-360.0, 360.0, 0.0, 1.0]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
-point_count = 2
-
 [sub_resource type="CurveTexture" id="CurveTexture_iypdf"]
-curve = SubResource("Curve_gwg3i")
 
 [sub_resource type="Curve" id="Curve_237a5"]
-_data = [Vector2(0.006410256, 0.2678572), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0.29464293), 0.0, -1.1839287, 0, 0, Vector2(0.9807693, 0.7678572), -0.54008764, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="CurveTexture" id="CurveTexture_gwg3i"]
@@ -74,15 +68,16 @@ angle_min = 15.0000105
 angle_max = 25.000011
 angle_curve = SubResource("CurveTexture_iypdf")
 direction = Vector3(0, -1, 0)
-initial_velocity_min = 20.0
-initial_velocity_max = 40.0
-gravity = Vector3(0, 60, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 70.0
+gravity = Vector3(0, -30, 0)
 damping_min = 20.0
 damping_max = 25.000002
 scale_min = 0.75
 scale_max = 1.5
 scale_curve = SubResource("CurveTexture_gwg3i")
 alpha_curve = SubResource("CurveTexture_o2khi")
+turbulence_enabled = true
 turbulence_noise_strength = 3.53
 turbulence_noise_scale = 10.0
 turbulence_influence_max = 0.5
@@ -2108,16 +2103,27 @@ shader_parameter/softness = 0.490000023275
 [node name="Juego" type="Node2D" unique_id=934025006]
 
 [node name="CharacterBody2D" parent="." unique_id=477400654 instance=ExtResource("1_kbscr")]
-position = Vector2(-248, 415)
+position = Vector2(-248, 408.00003)
 scale = Vector2(0.35, 0.35)
 SPEED = 125.0
 friccion = 450
 friccion_aire = 100
 friccionMuerte = 140
+friccionAireMuerte = null
+velocidadGiro = null
+velocidadAcomodo = null
+duracionKnockback = null
+friccionKnockback = null
+Invulnerabilidad = null
+duracion_Hitbox_Ataque = null
+Cooldown_Ataque = null
+Offset_HitboxAtaque = null
+duracion_HitboxAbajo_ataque = null
+cooldown_AtaqueAbajo = null
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="CharacterBody2D" unique_id=2016460736]
 emitting = false
-amount = 22
+amount = 16
 amount_ratio = 0.8
 texture = ExtResource("2_237a5")
 lifetime = 0.5
@@ -2125,11 +2131,10 @@ fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_am3o3")
 
 [node name="SaltoCaida" type="GPUParticles2D" parent="CharacterBody2D" unique_id=231501342]
-emitting = false
-amount = 16
+amount = 25
+amount_ratio = 0.88
 texture = ExtResource("2_237a5")
-lifetime = 0.2
-one_shot = true
+lifetime = 0.3
 process_material = SubResource("ParticleProcessMaterial_125jq")
 
 [node name="Objetos Balanceo" type="Node2D" parent="." unique_id=233119566]
@@ -2308,7 +2313,7 @@ rangoPatrulla = 80
 
 [node name="PhantomCamera2D" type="Node2D" parent="CamaraSystem" unique_id=520547218 node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(-148, 375)
+position = Vector2(-148, 368.00003)
 script = ExtResource("2_l8qcm")
 priority = 2
 follow_mode = 2
@@ -2364,7 +2369,7 @@ RuidoAterrizaje = ExtResource("7_jhb2u")
 
 [node name="PhantomCamera2D" type="Node2D" parent="CamaraManager" unique_id=989805825 node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(-248, 415)
+position = Vector2(-248, 408.00003)
 script = ExtResource("2_l8qcm")
 priority = 1
 follow_mode = 2

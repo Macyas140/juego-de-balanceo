@@ -62,7 +62,7 @@ size = Vector2(64, 58)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=477400654]
 script = ExtResource("1_h6c8c")
-friccion = 1400
+friccion = 2200
 fuerzaRebote = -300.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2120447331]
@@ -115,11 +115,8 @@ disabled = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1071802769]
 top_level = true
+ignore_rotation = false
 zoom = Vector2(3, 3)
-limit_left = -280
-limit_top = -1000
-limit_right = 100000
-limit_bottom = 512
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D" unique_id=1340835451]

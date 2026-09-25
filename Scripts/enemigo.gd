@@ -21,7 +21,7 @@ var Origen:float = 0.0
 @onready var area_daño: Area2D = $AreaDaño
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
-@export var KnockbackRecibido:float = 250
+@export var KnockbackRecibido:float = 120
 @export var duracionKnockback:float = 0.2
 @export var friccionKnockback:float = 600
 var KnockbackRestante:float = 0.0
@@ -32,6 +32,16 @@ var tiempoInvulnerabilidadRestante:float = 0.0
 
 @onready var raycast_borde: RayCast2D = $RaycastBorde
 @export var offset_Borde: float = 16.0
+
+@export var TiempoIdleMin: float = 0.2
+@export var TiempoIdleMax: float = 0.6
+@export var IdleAleatoreo: float = 0.15
+var enIdle:bool = false
+var idle_restante:float = 0.0
+var forzarGiro:bool = false
+
+@export var proteccionPostIdle:float = 0.3
+var proteccionRestante: float = 0.0
 
 
 func _ready() -> void:
@@ -46,12 +56,21 @@ func _physics_process(delta: float) -> void:
 	if KnockbackRestante > 0:
 		KnockbackRestante -= delta
 	
+	if proteccionRestante > 0:
+		proteccionRestante -= delta
+	
 	if not is_on_floor():
 		velocity.y += gravity * delta
 		if KnockbackRestante <= 0:
 			velocity.x = 0
 	move(delta)
 	move_and_slide()
+	if not muerto and not enIdle and proteccionRestante <= 0:
+		for i in get_slide_collision_count():
+			var colision = get_slide_collision(i)
+			if colision.get_collider() is EnemigoTierra:
+				entrar_idle(true)
+				break
 	
 func move(delta):
 	if muerto:
@@ -59,6 +78,12 @@ func move(delta):
 		return
 	if KnockbackRestante > 0:
 		velocity.x = move_toward(velocity.x, 0, friccionKnockback * delta)
+		return
+	if enIdle:
+		idle_restante -= delta
+		velocity.x = 0
+		if idle_restante <= 0:
+			salir_idle()
 		return
 		
 	if global_position.x <= Origen - rangoPatrulla:
@@ -74,17 +99,33 @@ func move(delta):
 	
 	if hay_pared or hay_precipicio:
 		dir = Vector2.RIGHT if dir.x < 0 else Vector2.LEFT
+		
 	
 	velocity.x = dir.x * speed
 	if sprite_2d:
 		sprite_2d.flip_h = dir.x < 0
 	sePasea = true
 	
+func entrar_idle(forzar_giro:bool) -> void:
+	if enIdle or muerto:
+		return
+	enIdle = true
+	forzarGiro = forzar_giro
+	idle_restante = randf_range(TiempoIdleMin, TiempoIdleMax)
+	velocity.x = 0
+	sePasea = false
+
+func salir_idle() -> void:
+	enIdle = false
+	proteccionRestante = proteccionPostIdle
+	if forzarGiro or randf() < 0.5:
+		dir = Vector2.RIGHT if dir.x < 0 else Vector2.LEFT
 
 func _on_direction_timer_timeout():
 	$DirectionTimer.wait_time = choose([1.5,2.0,2.5])
 	dir = choose([Vector2.RIGHT, Vector2.LEFT])
-	velocity.x = 0
+	if not enIdle and not muerto and randf() < IdleAleatoreo:
+		entrar_idle(false)
 	
 func choose(array):
 	array.shuffle()
@@ -103,6 +144,7 @@ func RecibirDaño(cantidad: float, direccion_knockback: Vector2 = Vector2.ZERO) 
 		return
 	vida = max(vida - cantidad, vidaMinima)
 	animation_player.play("HitFlash")
+	HitStopManager.hit_stop_short()
 	if direccion_knockback != Vector2.ZERO:
 		velocity.x = direccion_knockback.x * KnockbackRecibido
 		KnockbackRestante = duracionKnockback

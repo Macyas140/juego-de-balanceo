@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Estamina="*uid://b7xdcaqavguw7"
 PhantomCameraManager="*uid://duq6jhf6unyis"
+HitStopManager="*uid://m6181nrqdxwi"
 
 [display]
 

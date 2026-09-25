@@ -34,5 +34,9 @@ texture_progress = ExtResource("2_vh8u0")
 [node name="TemporizadorBloqueo" type="Timer" parent="." unique_id=1296601135]
 
 [node name="PantallaMuerte" type="Timer" parent="." unique_id=1274868077]
+wait_time = 3.0
+one_shot = true
+
+[node name="PantallaMuerteColgado" type="Timer" parent="." unique_id=1438864759]
 wait_time = 10.0
 one_shot = true

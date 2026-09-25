@@ -9,12 +9,14 @@ var ultima_direccion: int = 1
 @export var friccion = 2000
 @export var friccion_aire = 75
 @export var friccionMuerte = 135
+@export var friccionAireMuerte = 100
 
 #Esto es para que despues de soltarte, puedas saltar
 var saltoGancho:bool = false
 @onready var sprite = $Sprite2D
 @onready var gancho: Node2D = $LanzarBufanda
 var muriendo:bool = false
+var muriendoColgado:bool = false
 
 #Esto es para que, cuando el personaje se muera, se desplome sobre el suelo
 @export var velocidadGiro:float = 0.02
@@ -48,6 +50,15 @@ var gastoAtaque
 var enPicada:bool = false
 var cooldownPicada_restante:float = 0.0
 
+#Esto es para las particulas de polvo al caminar y saltar
+@onready var dustParticles: GPUParticles2D = $GPUParticles2D
+@onready var salto_caida: GPUParticles2D = $SaltoCaida
+
+
+#Esto es para el temblor por saltos
+
+
+var estabaAire: bool = false
 
 func _ready() -> void:
 	Estamina.reiniciar()
@@ -55,9 +66,15 @@ func _ready() -> void:
 	Estamina.muerto.connect(_on_estamina_muerto)
 	Estamina.listoReinicio.connect(listoReinicio)
 	hitboxAbajo.golpeo.connect(_on_picada_golpeo)
+	var gestor = get_tree().get_first_node_in_group("gestor_camara")
 
-
+signal aterrizo(velocidad_caida:float)
 func _physics_process(delta: float) -> void:
+	var is_moving = abs(velocity.x) > 10
+	var on_ground = is_on_floor()
+	dustParticles.emitting = is_moving and on_ground
+	
+	
 	if tiempoInvulnerabilidadRestante > 0:
 		tiempoInvulnerabilidadRestante -= delta
 		invulnerable = tiempoInvulnerabilidadRestante > 0
@@ -71,7 +88,7 @@ func _physics_process(delta: float) -> void:
 	if cooldownPicada_restante > 0:
 		cooldownPicada_restante -= delta
 	
-	if not muriendo:
+	if not muriendo and not muriendoColgado:
 		if Input.is_action_just_pressed("Ataque") and not atacando and not enPicada:
 			if Input.is_action_pressed("AtaqueAbajo") and not is_on_floor() and cooldownPicada_restante <= 0:
 				ataqueAbajo()
@@ -86,7 +103,7 @@ func _physics_process(delta: float) -> void:
 			
 		var colgado = gancho.proyectil_actual != null and gancho.proyectil_actual.agarrado
 		var colgando_en_aire = colgado and not is_on_floor()
-		Estamina.actualizar_Estado(colgando_en_aire, is_on_floor(), delta)
+		Estamina.actualizar_Estado(colgando_en_aire, is_on_floor(), delta, colgado)
 		
 		if knockbackRestante > 0:
 			velocity.x = move_toward(velocity.x, 0, friccionKnockback * delta)
@@ -105,6 +122,8 @@ func _physics_process(delta: float) -> void:
 				velocity.x = move_toward(velocity.x, 0, friccion_aire * delta)
 			if Input.is_action_pressed("Impulso"):
 				velocity.x = move_toward(velocity.x, 0, friccion_aire * delta)
+	elif muriendoColgado:
+		velocity.x = move_toward(velocity.x, 0, friccionAireMuerte * delta)
 	else:
 		var colgado = gancho.proyectil_actual != null and gancho.proyectil_actual.agarrado
 		if colgado:
@@ -114,8 +133,18 @@ func _physics_process(delta: float) -> void:
 				velocity.x = move_toward(velocity.x, 0, friccion * delta)
 			acomodar_caidaMuerte(delta)
 			
+	var velocidadEnYAntes = velocity.y
 	
 	move_and_slide()
+	var enElAireAhora = not is_on_floor()
+	
+	if not estabaAire and enElAireAhora and not muriendo and not muriendoColgado:
+		_emitir_polvo_mundo(salto_caida)
+	
+	if estabaAire and not enElAireAhora and not muriendo and not muriendoColgado:
+		aterrizo.emit(velocidadEnYAntes)
+		_emitir_polvo_mundo(salto_caida)
+	estabaAire = enElAireAhora
 	
 func ataque() -> void:
 	print("ataque")
@@ -152,13 +181,23 @@ func _on_picada_golpeo(_hurtbox: Hurtbox) -> void:
 func recibir_daño(cantidad:float) -> void:
 	Estamina.recibir_daño(cantidad)
 	flash_animation.play("Flash")
+	HitStopManager.hit_stop_short()
 	
+
+signal murioColgado(colgado: bool)
 func _on_estamina_muerto() -> void:
-	muriendo = true
+	var colgado_Muerto = gancho.proyectil_actual != null and gancho.proyectil_actual.agarrado
+	if colgado_Muerto:
+		muriendoColgado = true
+		
+	else:
+		muriendo = true
+		
 	gancho.muriendo = true
 	salto.muriendo = true
 	if knockbackRestante <= 0:
 		golpeado_de_espalda = sign(velocity.x) != 0 and sign(velocity.x) == ultima_direccion
+	murioColgado.emit(colgado_Muerto)
 
 func listoReinicio() -> void:
 	get_tree().call_deferred("reload_current_scene")
@@ -172,7 +211,7 @@ func acomodar_caidaMuerte(delta:float) -> void:
 		sprite.flip_h = golpeado_de_espalda
 
 func recibir_ataque(cantidad:float, direccion_knockback:Vector2, fuerza:float) -> void:
-	if muriendo or invulnerable:
+	if muriendo or invulnerable or muriendoColgado:
 		invulnerable = false
 		return
 	recibir_daño(cantidad)
@@ -182,3 +221,12 @@ func recibir_ataque(cantidad:float, direccion_knockback:Vector2, fuerza:float) -
 	knockbackRestante = duracionKnockback
 	invulnerable = true
 	tiempoInvulnerabilidadRestante = Invulnerabilidad
+
+func _emitir_polvo_mundo(plantilla: GPUParticles2D) -> void:
+	var copia = plantilla.duplicate()
+	get_tree().current_scene.add_child(copia)
+	copia.global_position = plantilla.global_position
+	copia.emitting = true
+	
+	await get_tree().create_timer(copia.lifetime + 0.2).timeout
+	copia.queue_free()

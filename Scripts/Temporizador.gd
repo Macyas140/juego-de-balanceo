@@ -2,6 +2,8 @@ extends Control
 @onready var tempo: TextureProgressBar = $TextureProgressBar
 @onready var temporizador_bloqueo: Timer = $TemporizadorBloqueo
 @onready var pantalla_muerte: Timer = $PantallaMuerte
+@onready var pantalla_muerte_colgado: Timer = $PantallaMuerteColgado
+
 
 @export var estamina_max = 200
 @export var cansancio:float = 20
@@ -19,6 +21,8 @@ var estamina:float
 var bloqueada:bool = false                                                                                                                                         
 var ya_murio:bool = false
 var jugador_objetivo:Node2D = null
+var estaColgado:bool = false
+
 
 func _ready():
 	top_level = true
@@ -26,6 +30,8 @@ func _ready():
 	temporizador_bloqueo.timeout.connect(_on_temporizador_bloqueo_timeout)
 	pantalla_muerte.one_shot = true
 	pantalla_muerte.timeout.connect(onPantallaMuerte_timeout)
+	pantalla_muerte_colgado.one_shot = true
+	pantalla_muerte_colgado.timeout.connect(onPantallaMuerteColgado_timeout)
 	reiniciar()
 	
 func reiniciar() -> void:
@@ -36,6 +42,7 @@ func reiniciar() -> void:
 	ya_murio = false
 	temporizador_bloqueo.stop()
 	pantalla_muerte.stop()
+	pantalla_muerte_colgado.stop()
 	_actualizar_visibilidad()
 
 func seguir_a(jugador:Node2D) -> void:
@@ -46,7 +53,8 @@ func _process(delta: float) -> void:
 		global_position = jugador_objetivo.global_position + offset_sobre_personaje
 
 #Aqui llamo a todo lo que el jugador tendra acceso del temporizador
-func actualizar_Estado(colgando_en_aire:bool, en_suelo:bool, delta:float) -> void:
+func actualizar_Estado(colgando_en_aire:bool, en_suelo:bool, delta:float, colgado:bool) -> void:
+	estaColgado = colgado
 	if ya_murio:
 		return
 	if colgando_en_aire:
@@ -73,7 +81,11 @@ func gastar(cantidad:float) -> void:
 	if estamina <= 0.0:
 		ya_murio = true
 		muerto.emit()
-		pantalla_muerte.start(pantalla_muerte.wait_time)
+		if estaColgado:
+			pantalla_muerte_colgado.start(pantalla_muerte_colgado.wait_time)
+		else:
+			pantalla_muerte.start(pantalla_muerte.wait_time)
+	
 
 func gasto_impulso() -> void:
 	gastar(costoImpulso)
@@ -85,6 +97,9 @@ func _on_temporizador_bloqueo_timeout() -> void:
 	bloqueada = false
 
 func onPantallaMuerte_timeout() -> void:
+	listoReinicio.emit()
+
+func onPantallaMuerteColgado_timeout() -> void:
 	listoReinicio.emit()
 
 func gasto_Ataque() -> void:
