@@ -1,3 +1,4 @@
+res://Scripts/area_2d.gd
 res://Scenes/juego.tscn
 res://addons/phantom_camera/themes/theme.tres
 res://Shaders/Personaje.gdshader

@@ -117,6 +117,10 @@ disabled = true
 top_level = true
 ignore_rotation = false
 zoom = Vector2(3, 3)
+limit_left = -280
+limit_top = -408
+limit_right = 100000
+limit_bottom = 512
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D" unique_id=1340835451]

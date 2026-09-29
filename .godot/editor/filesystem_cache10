@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1790380029
+::res://::1790697386
 export_presets.cfg::TextFile::-1::1789479483::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::7091499362181717379::1789479483::1789479483::1::::<><><>0<>0<>0f0ca1833ea52b98adb9d8c3d479bb40<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://addons/::1789479488
@@ -144,11 +144,11 @@ phantom_camera_noise_2d.gd::GDScript::7746826514819894941::1789479489::0::1::::P
 phantom_camera_noise_3d.gd::GDScript::6187281538235516492::1789479489::0::1::::PhantomCameraNoise3D<>Resource<>res://addons/phantom_camera/icons/phantom_camera_noise_resource.svg<>0<>1<><>::
 tween_director_resource.gd::GDScript::1896363988711138719::1789479489::0::1::::TweenDirectorResource<>Resource<>res://addons/phantom_camera/icons/phantom_camera_tween_director_resource.svg<>0<>1<><>::
 tween_resource.gd::GDScript::2358266811638875852::1789479489::0::1::::PhantomCameraTween<>Resource<>res://addons/phantom_camera/icons/phantom_camera_tween.svg<>0<>0<><>::
-::res://addons/phantom_camera/themes/::1790273366
+::res://addons/phantom_camera/themes/::1790694602
 button_focus.tres::StyleBoxFlat::1106322926052085743::1789479489::0::1::::<><><>0<>0<><>::
 button_hover.tres::StyleBoxFlat::2151354179275418664::1789479489::0::1::::<><><>0<>0<><>::
 button_normal.tres::StyleBoxFlat::2549607310371774247::1789479489::0::1::::<><><>0<>0<><>::
-theme.tres::Theme::2909626652912860453::1790273366::0::1::::<><><>0<>0<><>::uid://dve7mgsjik4dg::::res://addons/phantom_camera/fonts/Nunito-Regular.ttf<>uid://5weqvkjsfso3::::res://addons/phantom_camera/themes/button_hover.tres<>uid://bclbwo3xrdat0::::res://addons/phantom_camera/themes/button_normal.tres
+theme.tres::Theme::2909626652912860453::1790694602::0::1::::<><><>0<>0<><>::uid://dve7mgsjik4dg::::res://addons/phantom_camera/fonts/Nunito-Regular.ttf<>uid://5weqvkjsfso3::::res://addons/phantom_camera/themes/button_hover.tres<>uid://bclbwo3xrdat0::::res://addons/phantom_camera/themes/button_normal.tres
 ::res://Assets/::1790268773
 BaseImpulso.png::CompressedTexture2D::5178502256475442501::1789479489::1789479489::1::::<><><>0<>0<>4dd46e093a844eaef2bc7521864fb7a5<>res://.godot/imported/BaseImpulso.png-8d9293f5ba3654bc5531db5b83c5016c.ctex::
 BaseLlena.png::CompressedTexture2D::7643084258452433823::1789479489::1789479489::1::::<><><>0<>0<>80caaced31f92ede56a1ad325d027062<>res://.godot/imported/BaseLlena.png-c31e8cf72ca0802f2b01df365402bc30.ctex::
@@ -165,30 +165,31 @@ xd.png::CompressedTexture2D::764575602870623606::1789479489::1789479489::1::::<>
 deathCamTween.tres::Resource/PhantomCameraTween::5276292107805960361::1790093451::0::1::::<><>res://addons/phantom_camera/icons/phantom_camera_tween.svg<>0<>0<><>::uid://8umksf8e80fw::::res://addons/phantom_camera/scripts/resources/tween_resource.gd
 RuidoMuerteColgado.tres::Resource/PhantomCameraNoise2D::990111241839461277::1790258477::0::1::::<><>res://addons/phantom_camera/icons/phantom_camera_noise_resource.svg<>0<>0<><>::uid://dimvdouy8g0sv::::res://addons/phantom_camera/scripts/resources/phantom_camera_noise_2d.gd
 Salto.tres::Resource/PhantomCameraNoise2D::7156535891009954220::1790265870::0::1::::<><><>0<>0<><>::uid://dimvdouy8g0sv::::res://addons/phantom_camera/scripts/resources/phantom_camera_noise_2d.gd
-::res://Scenes/::1790273721
+::res://Scenes/::1790697251
 calibration_gym.tscn::PackedScene::2492441465893608457::1789479489::0::1::::<><><>0<>0<><>::uid://bgkq8mpqv0w6m::::res://Scenes/Personaje.tscn<>uid://dlu3805qxvt28::::res://Scenes/ObjetoBlanceo.tscn<>uid://bj6t5bg1pufry::::res://Scenes/Enemigo.tscn
 control.tscn::PackedScene::4680130115764814812::1790084313::0::1::::<><><>0<>0<><>::uid://bcye0qm0utryc::::res://Assets/BaseNegra.png<>uid://cxusqyqxh80et::::res://Scripts/Temporizador.gd<>uid://dg5mqmd5wj6o6::::res://Assets/BaseLlena.png
 Enemigo.tscn::PackedScene::3083323246485290430::1789505370::0::1::::<><><>0<>0<><>::uid://dywgbuiavfrwm::::res://Scripts/enemigo.gd<>uid://bu0h0iwadfoqb::::res://Assets/Doge-Head-Face-PNG-HD-Quality.png<>uid://ci755jxtmie51::::res://Shaders/Personaje.gdshader<>uid://qdycqexdwm2s::::res://Scripts/HurtBox.gd
-juego.tscn::PackedScene::7374599562185545108::1790273721::0::1::::<><><>0<>0<><>::uid://bgkq8mpqv0w6m::::res://Scenes/Personaje.tscn<>uid://u43toxoa4xmq::::res://Assets/Sin títu5lo.png<>uid://dlu3805qxvt28::::res://Scenes/ObjetoBlanceo.tscn<>uid://bhexx6mj1xv3q::::res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd<>uid://bj6t5bg1pufry::::res://Scenes/Enemigo.tscn<>uid://8umksf8e80fw::::res://addons/phantom_camera/scripts/resources/tween_resource.gd<>uid://bxclb6drd4so1::::res://Assets/Contítulo.png<>uid://c87xdohx3l013::::res://Resources/Salto.tres<>uid://cevp6wlqhgk6a::::res://Scripts/camara_manager.gd<>uid://8nrip3ja276p::::res://Scripts/area_2d.gd<>uid://dimvdouy8g0sv::::res://addons/phantom_camera/scripts/resources/phantom_camera_noise_2d.gd<>uid://chf403yr73gl2::::res://Resources/deathCamTween.tres<>uid://bxyc8rmv0hsas::::res://Shaders/vignette.gdshader<>uid://bhd4nuiu23e7l::::res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_noise_emitter_2d.gd<>uid://odu8tssq7y5b::::res://Resources/RuidoMuerteColgado.tres
+juego.tscn::PackedScene::7374599562185545108::1790697251::0::1::::<><><>0<>0<><>::uid://bgkq8mpqv0w6m::::res://Scenes/Personaje.tscn<>uid://u43toxoa4xmq::::res://Assets/Sin títu5lo.png<>uid://dlu3805qxvt28::::res://Scenes/ObjetoBlanceo.tscn<>uid://bhexx6mj1xv3q::::res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd<>uid://bj6t5bg1pufry::::res://Scenes/Enemigo.tscn<>uid://8umksf8e80fw::::res://addons/phantom_camera/scripts/resources/tween_resource.gd<>uid://bxclb6drd4so1::::res://Assets/Contítulo.png<>uid://c87xdohx3l013::::res://Resources/Salto.tres<>uid://cevp6wlqhgk6a::::res://Scripts/camara_manager.gd<>uid://8nrip3ja276p::::res://Scripts/area_2d.gd<>uid://dimvdouy8g0sv::::res://addons/phantom_camera/scripts/resources/phantom_camera_noise_2d.gd<>uid://chf403yr73gl2::::res://Resources/deathCamTween.tres<>uid://bxyc8rmv0hsas::::res://Shaders/vignette.gdshader<>uid://bhd4nuiu23e7l::::res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_noise_emitter_2d.gd<>uid://odu8tssq7y5b::::res://Resources/RuidoMuerteColgado.tres
 Mouse.tscn::PackedScene::1801631549020161735::1789479490::0::1::::<><><>0<>0<><>::uid://bu0h0iwadfoqb::::res://Assets/Doge-Head-Face-PNG-HD-Quality.png<>uid://bnmutabohk847::::res://Scripts/mouse.gd
 ObjetoBlanceo.tscn::PackedScene::7974387253361614363::1789479490::0::1::::<><><>0<>0<><>::uid://q8e2b668j0qo::::res://Assets/Sin títuloq1.png
-Personaje.tscn::PackedScene::2829228580353325018::1790094246::0::1::::<><><>0<>0<><>::uid://cypjamsgoytqq::::res://Scripts/personaje.gd<>uid://ys0e6fydu6hd::::res://Assets/doge_meme_PNG9.png<>uid://ci755jxtmie51::::res://Shaders/Personaje.gdshader<>uid://choucwrou1xh::::res://Scripts/salto.gd<>uid://bvtsvxgmsqxvm::::res://Scripts/lanzar_bufanda.gd<>uid://cpep4srdgje4::::res://Scripts/Ataque.gd<>uid://b1bd0tmi2gf3w::::res://Scripts/AtaqueAbajo.gd<>uid://bd046eokvcnu2::::res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd
+Personaje.tscn::PackedScene::2829228580353325018::1790697166::0::1::::<><><>0<>0<><>::uid://cypjamsgoytqq::::res://Scripts/personaje.gd<>uid://ys0e6fydu6hd::::res://Assets/doge_meme_PNG9.png<>uid://ci755jxtmie51::::res://Shaders/Personaje.gdshader<>uid://choucwrou1xh::::res://Scripts/salto.gd<>uid://bvtsvxgmsqxvm::::res://Scripts/lanzar_bufanda.gd<>uid://cpep4srdgje4::::res://Scripts/Ataque.gd<>uid://b1bd0tmi2gf3w::::res://Scripts/AtaqueAbajo.gd<>uid://bd046eokvcnu2::::res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd
 proyectile.tscn::PackedScene::5950853242498520646::1789479490::0::1::::<><><>0<>0<><>::uid://bmqyrwypcgnfi::::res://Scripts/proyectile.gd<>uid://u6o3awal8m68::::res://Assets/Sin título.png
-::res://Scripts/::1790273517
-area_2d.gd::GDScript::2344116057600908709::1789479632::0::1::::<>Area2D<><>0<>0<><>::
+::res://Scripts/::1790697225
+area_2d.gd::GDScript::2344116057600908709::1790697225::0::1::::<>Area2D<><>0<>0<><>::
 Ataque.gd::GDScript::171614560226891977::1789505370::0::1::::Hitbox<>Area2D<><>0<>0<><>::
 AtaqueAbajo.gd::GDScript::4213622808743037378::1789479490::0::1::::HitboxAbajo<>Hitbox<><>0<>0<><>::
 camara_manager.gd::GDScript::5097915962519256998::1790265549::0::1::::<>Node<><>0<>0<><>::
+death_zone.gd::GDScript::8510152185201466767::1790695974::0::1::::<>Area2D<><>0<>0<><>::
 enemigo.gd::GDScript::8889577759585617332::1790265074::0::1::::EnemigoTierra<>CharacterBody2D<><>0<>0<><>::
 HitStopManager.gd::GDScript::907900793526521288::1790265622::0::1::::<>Node<><>0<>0<><>::
 HurtBox.gd::GDScript::1130676258487625624::1789504440::0::1::::Hurtbox<>Area2D<><>0<>0<><>::
 lanzar_bufanda.gd::GDScript::3900741202836531154::1789654800::0::1::::<>Node2D<><>0<>0<><>::
 mouse.gd::GDScript::3324896456166448574::1789479490::0::1::::<>Sprite2D<><>0<>0<><>::
-personaje.gd::GDScript::6488886392323742428::1790273517::0::1::::<>CharacterBody2D<><>0<>0<><>::
+personaje.gd::GDScript::6488886392323742428::1790696787::0::1::::<>CharacterBody2D<><>0<>0<><>::
 proyectile.gd::GDScript::3263205611010688662::1789479490::0::1::::<>CharacterBody2D<><>0<>0<><>::
 salto.gd::GDScript::155714225155636893::1789479490::0::1::::<>Node2D<><>0<>0<><>::
 Temporizador.gd::GDScript::6429595091047386455::1790055091::0::1::::<>Control<><>0<>0<><>::
-::res://Shaders/::1790273366
-HitFlah.tres::VisualShader::3489337997560296041::1790273366::0::1::::<><><>0<>0<><>::
-Personaje.gdshader::Shader::5402287797340796870::1790273366::0::1::::<><><>0<>0<><>::
-vignette.gdshader::Shader::4050490431072128706::1790273366::0::1::::<><><>0<>0<><>::
+::res://Shaders/::1790694602
+HitFlah.tres::VisualShader::3489337997560296041::1790694602::0::1::::<><><>0<>0<><>::
+Personaje.gdshader::Shader::5402287797340796870::1790694602::0::1::::<><><>0<>0<><>::
+vignette.gdshader::Shader::4050490431072128706::1790694602::0::1::::<><><>0<>0<><>::
