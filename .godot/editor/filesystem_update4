@@ -1,6 +1,11 @@
-res://Scripts/area_2d.gd
 res://Scenes/juego.tscn
 res://addons/phantom_camera/themes/theme.tres
 res://Shaders/Personaje.gdshader
 res://Shaders/vignette.gdshader
 res://Shaders/HitFlah.tres
+res://Scripts/salto.gd
+res://Scenes/proyectile.tscn
+res://Scenes/Personaje.tscn
+res://Scenes/control.tscn
+res://Scripts/proyectile.gd
+res://Scripts/personaje.gd

@@ -7,7 +7,7 @@ extends CharacterBody2D
 var walk = 100
 var ultima_direccion: int = 1
 @export var friccion = 2000
-@export var friccion_aire = 75
+@export var friccion_aire = 55
 @export var friccionMuerte = 135
 @export var friccionAireMuerte = 100
 

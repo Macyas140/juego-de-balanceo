@@ -9,15 +9,15 @@ var enElSuelo: bool = false
 @export var coyoteTimer:float = 0.3
 
 #Diferentes velocidades del salto
-@export var salto_min:float = -100.0
-@export var salto_max:float = -300.0
+@export var salto_min:float = -200.0
+@export var salto_max:float = -600.0
 
 #Esto es para que cuando saltas en el aire y tocas el suelo saltes
 var salto_al_tocar_El_Suelo:bool = false
 @export var duracionBuffering:float = 0.15
 
 #Esto es la gravedadaaa
-@export var gravity = 2000
+@export var gravity = 16000
 var current_gravity = gravity
 var saltando:bool = false
 var muriendo:bool = false

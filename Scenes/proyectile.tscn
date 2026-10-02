@@ -13,8 +13,8 @@ scale = Vector2(1.5, 1.5)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_3dr3y")
-Velocidad = 500
-DistanciaMaxima = 65
+DistanciaMaxima = 150
+distanciaMinima = 30.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=944853505]
 scale = Vector2(0.057128906, 0.049560573)

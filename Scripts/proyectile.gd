@@ -1,8 +1,8 @@
 extends CharacterBody2D
 var jugador: Node2D
 
-@export var Velocidad = 10000
-@export var DistanciaMaxima = 100
+@export var Velocidad = 2000
+@export var DistanciaMaxima = 1000
 var dir:Vector2 = Vector2.RIGHT
 var spawnPos:Vector2
 var spawnRot:float
