@@ -12,7 +12,7 @@ var agarrado:bool = false
 var distanciaEnganche:float = 0.0
 @onready var hit_area: Area2D = $AreadeImpacto
 var enganche: Vector2
-@export var distanciaMinima:float = 10
+@export var distanciaMinima:float = 200
 
 
 func _ready():

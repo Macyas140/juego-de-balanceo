@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name EnemigoTierra
-@onready var animation_player: AnimationPlayer = $Sprite2D/AnimationPlayer
+#@onready var animation_player: AnimationPlayer = $Sprite2D/AnimationPlayer
+@onready var animation_player: AnimationPlayer = $AnimatedSprite2D/AnimationPlayer
 
 
 const  speed = 40
@@ -12,14 +13,15 @@ var tomandoDaño:bool = false
 var daño = 35
 var dir:Vector2 = Vector2.RIGHT
 const gravity = 2000
-var Knockback = 200
+var Knockback = 400
 var sePasea:bool = true
 
-@export var rangoPatrulla = 100
+@export var rangoPatrulla = 80
 var Origen:float = 0.0
 
 @onready var area_daño: Area2D = $AreaDaño
-@onready var sprite_2d: Sprite2D = $Sprite2D
+#@onready var sprite_2d: Sprite2D = $Sprite2D
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 @export var KnockbackRecibido:float = 120
 @export var duracionKnockback:float = 0.2
@@ -102,8 +104,8 @@ func move(delta):
 		
 	
 	velocity.x = dir.x * speed
-	if sprite_2d:
-		sprite_2d.flip_h = dir.x < 0
+	if animated_sprite_2d:
+		animated_sprite_2d.flip_h = dir.x < 0
 	sePasea = true
 	
 func entrar_idle(forzar_giro:bool) -> void:
@@ -143,7 +145,7 @@ func RecibirDaño(cantidad: float, direccion_knockback: Vector2 = Vector2.ZERO) 
 		invulnerable = false
 		return
 	vida = max(vida - cantidad, vidaMinima)
-	animation_player.play("HitFlash")
+	animation_player.play("Hitflash")
 	HitStopManager.hit_stop_short()
 	if direccion_knockback != Vector2.ZERO:
 		velocity.x = direccion_knockback.x * KnockbackRecibido
@@ -156,6 +158,10 @@ func RecibirDaño(cantidad: float, direccion_knockback: Vector2 = Vector2.ZERO) 
 func morir() -> void:
 	muerto = true
 	velocity = Vector2.ZERO
-	area_daño.set_deferred("monitoring", false)
+	animation_player.play("muerto")
+	$DirectionTimer.stop()
+	for area in find_children("*", "Area2D", true, false):
+		area.set_deferred("monitoring", false)
+		area.set_deferred("monitorable", false)
 	collision_layer = 0
 	set_physics_process(false)

@@ -8,11 +8,11 @@ extends Control
 @export var estamina_max = 200
 @export var cansancio:float = 20
 @export var costo_disparo:float = 15
-@export var cargaRapida:float = 150
+@export var cargaRapida:float = 350
 @export var espera_tras_daño:float = 2.5
 @export var offset_sobre_personaje:Vector2 = Vector2(5,-40)
 @export var costoImpulso = 30
-var gastoAtaque:float = 15.0
+var gastoAtaque:float = 5.0
 
 signal muerto
 signal listoReinicio
@@ -22,6 +22,8 @@ var bloqueada:bool = false
 var ya_murio:bool = false
 var jugador_objetivo:Node2D = null
 var estaColgado:bool = false
+
+var direccionActual:int = 1
 
 
 func _ready():
@@ -50,11 +52,15 @@ func seguir_a(jugador:Node2D) -> void:
 
 func _process(delta: float) -> void:
 	if jugador_objetivo and is_instance_valid(jugador_objetivo):
+		var offset = offset_sobre_personaje
+		offset.x *= -direccionActual
 		global_position = jugador_objetivo.global_position + offset_sobre_personaje
+		
 
 #Aqui llamo a todo lo que el jugador tendra acceso del temporizador
-func actualizar_Estado(colgando_en_aire:bool, en_suelo:bool, delta:float, colgado:bool) -> void:
+func actualizar_Estado(colgando_en_aire:bool, en_suelo:bool, delta:float, colgado:bool, direccion:int) -> void:
 	estaColgado = colgado
+	direccionActual = direccion
 	if ya_murio:
 		return
 	if colgando_en_aire:

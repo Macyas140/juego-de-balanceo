@@ -7,6 +7,8 @@ var proyectil_actual: Node2D = null
 var muriendo:bool = false
 @export var fuerzaDelImpulso:float = 500.0
 
+signal bufanda_lanzada
+
 func _ready() -> void:
 	jugador.get_parent()
 	
@@ -49,6 +51,7 @@ func Lanzar_Bufanda():
 		instancia.tree_exiting.connect(ProyectilDestruido)
 		
 		Estamina.gastar_por_disparo()
+		bufanda_lanzada.emit()
 		
 func ProyectilDestruido() -> void:
 	seDisparo = false

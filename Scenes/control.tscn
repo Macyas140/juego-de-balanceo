@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://b7xdcaqavguw7"]
 
-[ext_resource type="Texture2D" uid="uid://bcye0qm0utryc" path="res://Assets/BaseNegra.png" id="1_cgmvo"]
 [ext_resource type="Script" uid="uid://cxusqyqxh80et" path="res://Scripts/Temporizador.gd" id="1_vh8u0"]
-[ext_resource type="Texture2D" uid="uid://dg5mqmd5wj6o6" path="res://Assets/BaseLlena.png" id="2_vh8u0"]
+[ext_resource type="Texture2D" uid="uid://bpmfg3wxqsr8n" path="res://Assets/negro.PNG" id="2_wpaqk"]
+[ext_resource type="Texture2D" uid="uid://yvcly27mgd2i" path="res://Assets/marco.PNG" id="3_btyrf"]
+[ext_resource type="Texture2D" uid="uid://cdly06xhhxcdx" path="res://Assets/verde.PNG" id="4_dqysy"]
 
 [node name="Control" type="Control" unique_id=34598685]
 layout_mode = 3
@@ -16,20 +17,21 @@ grow_vertical = 2
 script = ExtResource("1_vh8u0")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=1326666556]
+z_index = 4
 layout_mode = 1
-offset_left = -116.0
-offset_top = -24.0
-offset_right = 1036.0
-offset_bottom = 624.0
-scale = Vector2(0.1, 0.1)
+offset_left = -66.0
+offset_top = -13.0
+offset_right = -33.500004
+offset_bottom = 19.499996
+scale = Vector2(0.8, 0.8)
 offset_transform_scale = Vector2(0.5, 0.5)
 max_value = 200.0
 value = 25.0
 fill_mode = 8
 radial_initial_angle = 180.0
-radial_center_offset = Vector2(-20, 0)
-texture_under = ExtResource("1_cgmvo")
-texture_progress = ExtResource("2_vh8u0")
+texture_under = ExtResource("2_wpaqk")
+texture_over = ExtResource("3_btyrf")
+texture_progress = ExtResource("4_dqysy")
 
 [node name="TemporizadorBloqueo" type="Timer" parent="." unique_id=1296601135]
 

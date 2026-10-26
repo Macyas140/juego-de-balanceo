@@ -4,6 +4,31 @@
 [ext_resource type="Texture2D" uid="uid://bu0h0iwadfoqb" path="res://Assets/Doge-Head-Face-PNG-HD-Quality.png" id="1_tusv5"]
 [ext_resource type="Shader" uid="uid://ci755jxtmie51" path="res://Shaders/Personaje.gdshader" id="2_2mqn1"]
 [ext_resource type="Script" uid="uid://qdycqexdwm2s" path="res://Scripts/HurtBox.gd" id="3_he5sb"]
+[ext_resource type="Shader" uid="uid://3g4wiaetjv41" path="res://Shaders/Enemigo.gdshader" id="4_hn7lj"]
+[ext_resource type="Texture2D" uid="uid://c3i1aad7nut4a" path="res://Assets/Animaciones/AnimacionesEnemigos/Muerte/morido_0000.png" id="4_j1d4f"]
+[ext_resource type="Texture2D" uid="uid://by031lpb52scl" path="res://Assets/Animaciones/AnimacionesEnemigos/Muerte/morido_0001.png" id="5_36s0t"]
+[ext_resource type="Texture2D" uid="uid://d2jn5cqn8d3j8" path="res://Assets/Animaciones/AnimacionesEnemigos/Muerte/morido_0002.png" id="6_hn7lj"]
+[ext_resource type="Texture2D" uid="uid://bwa5df4qe8jf2" path="res://Assets/Animaciones/AnimacionesEnemigos/Muerte/morido_0003.png" id="7_cs6ib"]
+[ext_resource type="Texture2D" uid="uid://7udle6ildl47" path="res://Assets/Animaciones/AnimacionesEnemigos/Muerte/morido_0004.png" id="8_q7ny7"]
+[ext_resource type="Texture2D" uid="uid://tqq5yiiajy4t" path="res://Assets/Animaciones/AnimacionesEnemigos/Muerte/morido_0005.png" id="9_evv08"]
+[ext_resource type="Texture2D" uid="uid://dsqrhq3w2i2l2" path="res://Assets/Animaciones/AnimacionesEnemigos/Muerte/morido_0006.png" id="10_w70as"]
+[ext_resource type="Texture2D" uid="uid://cfasdgyeknv3l" path="res://Assets/Animaciones/AnimacionesEnemigos/Muerte/morido_0007.png" id="11_cv2xl"]
+[ext_resource type="Texture2D" uid="uid://b0hvg6mwv83fj" path="res://Assets/Animaciones/AnimacionesEnemigos/Muerte/morido_0008.png" id="12_gh8xj"]
+[ext_resource type="Texture2D" uid="uid://c7qllhab7n8oi" path="res://Assets/Animaciones/AnimacionesEnemigos/Muerte/morido_0009.png" id="13_ojm8q"]
+[ext_resource type="Texture2D" uid="uid://c7qpulu5afe34" path="res://Assets/Animaciones/AnimacionesEnemigos/Muerte/morido_0010.png" id="14_sbd22"]
+[ext_resource type="Texture2D" uid="uid://s6icy2g72dyi" path="res://Assets/Animaciones/AnimacionesEnemigos/Muerte/morido_0011.png" id="15_pwdcr"]
+[ext_resource type="Texture2D" uid="uid://c0y4gqbpxkbmm" path="res://Assets/Animaciones/AnimacionesEnemigos/Muerte/morido_0012.png" id="16_a33fi"]
+[ext_resource type="Texture2D" uid="uid://hqfcvjud75x4" path="res://Assets/Animaciones/AnimacionesEnemigos/Muerte/morido_0013.png" id="17_000sb"]
+[ext_resource type="Texture2D" uid="uid://6kx3h6m8n2px" path="res://Assets/Animaciones/AnimacionesEnemigos/Muerte/morido_0014.png" id="18_rnfko"]
+[ext_resource type="Texture2D" uid="uid://dahdoqsues1pf" path="res://Assets/Animaciones/AnimacionesEnemigos/Caminata/caminata_0000.png" id="19_pnulp"]
+[ext_resource type="Texture2D" uid="uid://bq1tq5wwx8xr1" path="res://Assets/Animaciones/AnimacionesEnemigos/Caminata/caminata_0001.png" id="20_c0npn"]
+[ext_resource type="Texture2D" uid="uid://bv0fojoacw732" path="res://Assets/Animaciones/AnimacionesEnemigos/Caminata/caminata_0002.png" id="21_t3wo4"]
+[ext_resource type="Texture2D" uid="uid://dnf6i2658yvvo" path="res://Assets/Animaciones/AnimacionesEnemigos/Caminata/caminata_0003.png" id="22_cmeow"]
+[ext_resource type="Texture2D" uid="uid://dm8xc6a8hxsua" path="res://Assets/Animaciones/AnimacionesEnemigos/Caminata/caminata_0004.png" id="23_p5sag"]
+[ext_resource type="Texture2D" uid="uid://dw6wey7dvwafx" path="res://Assets/Animaciones/AnimacionesEnemigos/Caminata/caminata_0005.png" id="24_7js2f"]
+[ext_resource type="Texture2D" uid="uid://ct3vkcm5qpp82" path="res://Assets/Animaciones/AnimacionesEnemigos/Caminata/caminata_0006.png" id="25_5kbmm"]
+[ext_resource type="Texture2D" uid="uid://dscj8ke3k5i5r" path="res://Assets/Animaciones/AnimacionesEnemigos/Caminata/caminata_0007.png" id="26_xddhy"]
+[ext_resource type="Script" uid="uid://csag1pl7pf0rw" path="res://Scripts/animation_manager.gd" id="28_36s0t"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_38khm"]
 resource_local_to_scene = true
@@ -11,8 +36,98 @@ shader = ExtResource("2_2mqn1")
 shader_parameter/flash_color = Color(1, 1, 1, 1)
 shader_parameter/flash_value = 0.0
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_am3o3"]
+resource_local_to_scene = true
+shader = ExtResource("4_hn7lj")
+shader_parameter/flash_amount = 0.0
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/gray_amount = 0.0
+shader_parameter/gray_color = Color(0.3172787, 0.31727865, 0.31727865, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_82v0y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_j1d4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_36s0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hn7lj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cs6ib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_q7ny7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_evv08")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_w70as")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cv2xl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_gh8xj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ojm8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_sbd22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_pwdcr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_a33fi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_000sb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_rnfko")
+}],
+"loop": 0,
+"name": &"Muerte",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_pnulp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_c0npn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_t3wo4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_cmeow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_p5sag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_7js2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_5kbmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_xddhy")
+}],
+"loop": 1,
+"name": &"caminata",
+"speed": 24.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_125jq"]
-size = Vector2(950.0001, 670.0001)
+size = Vector2(1160.0004, 650.00024)
 
 [sub_resource type="Animation" id="Animation_hxdoq"]
 resource_name = "HitFlash"
@@ -25,6 +140,22 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_5on1y"]
+resource_name = "Hitflash"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D:material:shader_parameter/flash_amount")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.12, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [0.0, 1.0, 0.0]
@@ -44,41 +175,92 @@ tracks/0/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AnimatedSprite2D:material:shader_parameter/flash_amount")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../AnimatedSprite2D:material:shader_parameter/gray_amount")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_j1d4f"]
+resource_name = "muerto"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D:material:shader_parameter/gray_amount")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.70000003325]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pqadn"]
 _data = {
 &"HitFlash": SubResource("Animation_hxdoq"),
-&"RESET": SubResource("Animation_c2twk")
+&"Hitflash": SubResource("Animation_5on1y"),
+&"RESET": SubResource("Animation_c2twk"),
+&"muerto": SubResource("Animation_j1d4f")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_am3o3"]
-size = Vector2(20.75, 15.5)
+size = Vector2(28.25, 15.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_82v0y"]
-size = Vector2(100, 72)
+size = Vector2(118, 66)
 
 [node name="Enemigos" type="CharacterBody2D" unique_id=131267338]
 script = ExtResource("1_okatw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1011553583]
+visible = false
 material = SubResource("ShaderMaterial_38khm")
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_tusv5")
 
-[node name="Hurtbox" type="Area2D" parent="Sprite2D" unique_id=85523914]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=295136063]
+material = SubResource("ShaderMaterial_am3o3")
+position = Vector2(6, 0)
+scale = Vector2(-1, 1)
+sprite_frames = SubResource("SpriteFrames_82v0y")
+animation = &"caminata"
+
+[node name="Hurtbox" type="Area2D" parent="AnimatedSprite2D" unique_id=85523914]
+scale = Vector2(0.1, 0.1)
 script = ExtResource("3_he5sb")
 metadata/_custom_type_script = "uid://qdycqexdwm2s"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Hurtbox" unique_id=707071688]
-position = Vector2(-14.999969, 35.000004)
-scale = Vector2(0.99999976, 0.99999976)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Hurtbox" unique_id=707071688]
+position = Vector2(10.000036, 44.999924)
+scale = Vector2(0.9999994, 0.9999994)
 shape = SubResource("RectangleShape2D_125jq")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D" unique_id=1594601133]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D" unique_id=1594601133]
+root_node = NodePath("../../Sprite2D")
 libraries/ = SubResource("AnimationLibrary_pqadn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1596499315]
-position = Vector2(1.5, 1)
+position = Vector2(0.5, 1)
 scale = Vector2(4, 4)
 shape = SubResource("RectangleShape2D_am3o3")
 
@@ -88,10 +270,15 @@ autostart = true
 [node name="AreaDaño" type="Area2D" parent="." unique_id=1905198806]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDaño" unique_id=1452307778]
-position = Vector2(-2, 4)
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_82v0y")
 
 [node name="RaycastBorde" type="RayCast2D" parent="." unique_id=664212712]
 target_position = Vector2(0, 40)
+
+[node name="AnimationManager" type="Node" parent="." unique_id=816281835]
+script = ExtResource("28_36s0t")
+anim_caminando = &"caminata"
+anim_muriendo = &"Muerte"
 
 [connection signal="timeout" from="DirectionTimer" to="." method="_on_direction_timer_timeout"]

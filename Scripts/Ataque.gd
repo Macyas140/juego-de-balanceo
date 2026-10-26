@@ -29,20 +29,20 @@ func hay_linea_de_vision(objetivo:Area2D) -> bool:
 		consulta.collision_mask = mascara_obstaculos
 		consulta.exclude = excluidos
 		var resultado = espacio.intersect_ray(consulta)
-		print("Intento ", intentos, " -> resultado: ", resultado)
+		#print("Intento ", intentos, " -> resultado: ", resultado)
 
 		if resultado.is_empty():
-			print("Sin obstáculos, línea de visión libre")
+			#print("Sin obstáculos, línea de visión libre")
 			return true
 
 		var collider = resultado["collider"]
 		if collider is CharacterBody2D:
-			print("Ignorando personaje: ", collider.name)
+			#print("Ignorando personaje: ", collider.name)
 			excluidos.append(resultado["rid"])
 			intentos += 1
 			continue
 		else:
-			print("Bloqueado por: ", collider.name)
+			#print("Bloqueado por: ", collider.name)
 			return false
 
 	return false

@@ -1,6 +1,6 @@
 extends CharacterBody2D
 @onready var salto: Node2D = $Salto
-@onready var flash_animation: AnimationPlayer = $Sprite2D/FlashAnimation
+@onready var flash_animation: AnimationPlayer = $AnimatedSprite2D/FlashAnimation
 
 #Esto es el movimiento basico del personaje
 @export var SPEED = 350.0 #300 es el original
@@ -13,7 +13,9 @@ var ultima_direccion: int = 1
 
 #Esto es para que despues de soltarte, puedas saltar
 var saltoGancho:bool = false
-@onready var sprite = $Sprite2D
+#@onready var sprite = $Sprite2D
+@onready var animatedSprite = $AnimatedSprite2D
+@onready var animador:Node = $AnimatorManager
 @onready var gancho: Node2D = $LanzarBufanda
 var muriendo:bool = false
 var muriendoColgado:bool = false
@@ -36,7 +38,6 @@ var tiempoInvulnerabilidadRestante:float = 0.0
 @onready var hitbox_ataque_forma:CollisionShape2D = $Ataque/Hitbox/CollisionShape2D
 @export var duracion_Hitbox_Ataque:float = 0.15
 @export var Cooldown_Ataque:float = 0.4
-@export var Offset_HitboxAtaque:float = 30
 var atacando:bool = false
 var cooldownAtaque_restante:float = 0.0
 var gastoAtaque
@@ -61,6 +62,8 @@ var cooldownPicada_restante:float = 0.0
 var estabaAire: bool = false
 
 func _ready() -> void:
+	if Checkpoint.tiene_checkpoint:
+		global_position = Checkpoint.posicion_respawn
 	Estamina.reiniciar()
 	Estamina.seguir_a(self)
 	Estamina.muerto.connect(_on_estamina_muerto)
@@ -99,11 +102,11 @@ func _physics_process(delta: float) -> void:
 		var direction := Input.get_axis("Izquierda", "Derecha")
 		if direction != 0:
 			ultima_direccion = direction
-			sprite.flip_h = direction < 0
+			animatedSprite.flip_h = direction < 0
 			
 		var colgado = gancho.proyectil_actual != null and gancho.proyectil_actual.agarrado
 		var colgando_en_aire = colgado and not is_on_floor()
-		Estamina.actualizar_Estado(colgando_en_aire, is_on_floor(), delta, colgado)
+		Estamina.actualizar_Estado(colgando_en_aire, is_on_floor(), delta, colgado, ultima_direccion)
 		
 		if knockbackRestante > 0:
 			velocity.x = move_toward(velocity.x, 0, friccionKnockback * delta)
@@ -131,7 +134,7 @@ func _physics_process(delta: float) -> void:
 		else:
 			if is_on_floor():
 				velocity.x = move_toward(velocity.x, 0, friccion * delta)
-			acomodar_caidaMuerte(delta)
+			#acomodar_caidaMuerte(delta)
 			
 	var velocidadEnYAntes = velocity.y
 	
@@ -150,9 +153,9 @@ func ataque() -> void:
 	print("ataque")
 	atacando = true
 	cooldownAtaque_restante = Cooldown_Ataque
-	hitbox_ataque.position.x = Offset_HitboxAtaque * ultima_direccion
 	hitbox_ataque.scale.x = ultima_direccion
 	hitbox_ataque_forma.disabled = false
+	animador.reproducir_ataque()
 	Estamina.gasto_Ataque()
 	
 	await  get_tree().create_timer(duracion_Hitbox_Ataque).timeout
@@ -165,7 +168,9 @@ func ataqueAbajo() -> void:
 	Estamina.gasto_Ataque()
 	enPicada = true
 	cooldownPicada_restante = cooldown_AtaqueAbajo
+	hitboxAbajo.scale.x = ultima_direccion
 	hitboxAbajo_forma.disabled = false
+	animador.reproducir_ataque_abajo()
 	
 	
 	await get_tree().create_timer(duracion_HitboxAbajo_ataque).timeout
@@ -176,11 +181,12 @@ func ataqueAbajo() -> void:
 func _on_picada_golpeo(_hurtbox: Hurtbox) -> void:
 	print("aplicando Salto")
 	velocity.y = fuerzaRebote
-	saltoGancho = true
+	#saltoGancho = true
 
 func recibir_daño(cantidad:float) -> void:
 	Estamina.recibir_daño(cantidad)
-	flash_animation.play("Flash")
+	flash_animation.play("Flash2")
+	animador.reproducir_dano()
 	HitStopManager.hit_stop_short()
 	
 
@@ -204,11 +210,11 @@ func listoReinicio() -> void:
 
 func acomodar_caidaMuerte(delta:float) -> void:
 	if not is_on_floor():
-		sprite.rotation += velocity.x * velocidadGiro * delta
+		animatedSprite.rotation += velocity.x * velocidadGiro * delta
 	else:
 		var angulo_objetivo = PI/2 if velocity.x > 0 else -PI/2
-		sprite.rotation = lerp_angle(sprite.rotation, angulo_objetivo, delta * velocidadAcomodo)
-		sprite.flip_h = golpeado_de_espalda
+		animatedSprite.rotation = lerp_angle(animatedSprite.rotation, angulo_objetivo, delta * velocidadAcomodo)
+		animatedSprite.flip_h = golpeado_de_espalda
 
 func recibir_ataque(cantidad:float, direccion_knockback:Vector2, fuerza:float) -> void:
 	if muriendo or invulnerable or muriendoColgado:

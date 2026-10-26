@@ -6,7 +6,7 @@ extends Node2D
 #esto es el coyote time
 var coyoteTime:bool = false
 var enElSuelo: bool = false
-@export var coyoteTimer:float = 0.3
+@export var coyoteTimer:float = 0.15
 
 #Diferentes velocidades del salto
 @export var salto_min:float = -200.0
