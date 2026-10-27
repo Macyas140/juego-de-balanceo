@@ -7073,7 +7073,6 @@ jugador = NodePath("../CharacterBody2D")
 CamaraMuerte = NodePath("PhantomCamera2D")
 CamaraJugador = NodePath("../CamaraSystem/PhantomCamera2D")
 TemblorMuerte = SubResource("Resource_6y2rp")
-RuidoAterrizaje = ExtResource("7_jhb2u")
 
 [node name="PhantomCamera2D" type="Node2D" parent="CamaraManager" unique_id=989805825 node_paths=PackedStringArray("follow_target")]
 top_level = true

@@ -7,11 +7,13 @@ var proyectil_actual: Node2D = null
 var muriendo:bool = false
 @export var fuerzaDelImpulso:float = 500.0
 
+@export var offset_mano:Vector2 = Vector2(0, -40)
+
 signal bufanda_lanzada
 
-func _ready() -> void:
-	jugador.get_parent()
-	
+func posicion_mano() -> Vector2:
+	return jugador.global_position + offset_mano
+
 func _physics_process(delta: float) -> void:
 	if not muriendo and Input.is_action_just_pressed("LanzarBufanda"):
 		if proyectil_actual == null:
@@ -32,19 +34,25 @@ func _physics_process(delta: float) -> void:
 	if proyectil_actual and proyectil_actual.agarrado:
 		balanceo_Gancho()
 
+
+#func _draw() -> void:
+#	draw_circle(to_local(posicion_mano()), 3.0, Color.YELLOW)
+
 func Lanzar_Bufanda():
 	if proyectile and not seDisparo:
 		var instancia = proyectile.instantiate()
+		var origen_disparo = posicion_mano()
 		var canvas_transform = get_viewport().get_canvas_transform()
-		var jugadorEnPantalla = canvas_transform * jugador.global_position
+		var manoEnPantalla = canvas_transform * origen_disparo
 		var mouse_pantalla = get_viewport().get_mouse_position()
-		var direccion = (mouse_pantalla - jugadorEnPantalla).normalized()
+		var direccion = (mouse_pantalla - manoEnPantalla).normalized()
 		
-		instancia.spawnPos = global_position
+		instancia.spawnPos = origen_disparo
 		instancia.dir = direccion
 		instancia.spawnRot = direccion.angle() + PI/2
 		instancia.jugador = jugador
-		get_parent().add_child(instancia)
+		instancia.origen = self # NUEVO: el proyectil le pregunta a este nodo dónde está la mano
+		jugador.get_parent().add_child(instancia) # CAMBIO: va al nivel, no dentro del Personaje
 		instancia.add_collision_exception_with(jugador)
 		seDisparo = true
 		proyectil_actual = instancia
@@ -59,16 +67,17 @@ func ProyectilDestruido() -> void:
 
 func balanceo_Gancho():
 	var ancla = proyectil_actual.global_position
-	var distanciaAlejamiento = proyectil_actual.distanciaEnganche
-	var offset = jugador.global_position - ancla
+	var largo = proyectil_actual.distanciaEnganche
+	var offset = posicion_mano() - ancla   # CAMBIO: se mide desde la mano
 	var distanciaActual = offset.length()
 	
-	if distanciaActual > distanciaAlejamiento:
-		var direccionRadial = offset.normalized()
+	if distanciaActual > largo:
+		var direccionRadial = offset / distanciaActual
 		var componenteRadial = jugador.velocity.dot(direccionRadial)
 		if componenteRadial > 0:
 			jugador.velocity -= direccionRadial * componenteRadial
-		jugador.global_position = ancla + (direccionRadial * distanciaAlejamiento)
+		# CAMBIO: se mueve a la jugadora solo lo que se pasó de la cuerda
+		jugador.global_position -= direccionRadial * (distanciaActual - largo)
 
 func Impulso_gacho():
 	var direccion_impulso = proyectil_actual.dir

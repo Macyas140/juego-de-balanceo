@@ -841,6 +841,7 @@ gravity = 1150
 [node name="LanzarBufanda" type="Node2D" parent="." unique_id=189203918]
 script = ExtResource("4_5ss6n")
 fuerzaDelImpulso = 450.0
+offset_mano = Vector2(3, -35)
 
 [node name="Ataque" type="Node2D" parent="." unique_id=2078326027]
 

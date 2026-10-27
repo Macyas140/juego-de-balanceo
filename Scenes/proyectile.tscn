@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bmqyrwypcgnfi" path="res://Scripts/proyectile.gd" id="1_3dr3y"]
 [ext_resource type="Texture2D" uid="uid://u6o3awal8m68" path="res://Assets/Sin título.png" id="2_3dr3y"]
+[ext_resource type="Script" uid="uid://cbd7vve206iue" path="res://Scripts/line_2d.gd" id="2_rak2d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f5jn5"]
 radius = 11.862135
@@ -13,10 +14,18 @@ scale = Vector2(1.5, 1.5)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_3dr3y")
-DistanciaMaxima = 150
-distanciaMinima = 30.0
+DistanciaMaxima = 140
+distanciaMinima = 40.0
+
+[node name="Cuerda" type="Line2D" parent="." unique_id=2048143069]
+width = 20.0
+default_color = Color(0.50712967, 0, 0.16125461, 1)
+begin_cap_mode = 1
+end_cap_mode = 1
+script = ExtResource("2_rak2d")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=944853505]
+z_index = 1
 scale = Vector2(0.057128906, 0.049560573)
 texture = ExtResource("2_3dr3y")
 

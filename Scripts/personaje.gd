@@ -32,6 +32,7 @@ var knockbackRestante:float = 0.0
 @export var Invulnerabilidad:float = 0.1
 var invulnerable:bool = false
 var tiempoInvulnerabilidadRestante:float = 0.0
+@export var Knockback_Aerero:float = 400
 
 #Esto es para el ataque del personaje
 @onready var hitbox_ataque:Area2D = $Ataque/Hitbox
