@@ -8,6 +8,7 @@
 radius = 11.862135
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_82v0y"]
+radius = 13.539463
 
 [node name="Proyectile" type="CharacterBody2D" unique_id=928016521]
 scale = Vector2(1.5, 1.5)

@@ -127,7 +127,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_125jq"]
-size = Vector2(1160.0004, 650.00024)
+size = Vector2(1200.001, 600.00037)
 
 [sub_resource type="Animation" id="Animation_hxdoq"]
 resource_name = "HitFlash"
@@ -224,10 +224,10 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_am3o3"]
-size = Vector2(28.25, 15.5)
+size = Vector2(30, 15.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_82v0y"]
-size = Vector2(118, 66)
+size = Vector2(136, 64)
 
 [node name="Enemigos" type="CharacterBody2D" unique_id=131267338]
 script = ExtResource("1_okatw")
@@ -251,8 +251,8 @@ script = ExtResource("3_he5sb")
 metadata/_custom_type_script = "uid://qdycqexdwm2s"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Hurtbox" unique_id=707071688]
-position = Vector2(10.000036, 44.999924)
-scale = Vector2(0.9999994, 0.9999994)
+position = Vector2(19.999973, 20.000006)
+scale = Vector2(0.9999991, 0.9999991)
 shape = SubResource("RectangleShape2D_125jq")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D" unique_id=1594601133]
@@ -260,7 +260,7 @@ root_node = NodePath("../../Sprite2D")
 libraries/ = SubResource("AnimationLibrary_pqadn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1596499315]
-position = Vector2(0.5, 1)
+position = Vector2(4, 1)
 scale = Vector2(4, 4)
 shape = SubResource("RectangleShape2D_am3o3")
 
@@ -270,7 +270,7 @@ autostart = true
 [node name="AreaDaño" type="Area2D" parent="." unique_id=1905198806]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDaño" unique_id=1452307778]
-position = Vector2(0, 1)
+position = Vector2(4, 0)
 shape = SubResource("RectangleShape2D_82v0y")
 
 [node name="RaycastBorde" type="RayCast2D" parent="." unique_id=664212712]

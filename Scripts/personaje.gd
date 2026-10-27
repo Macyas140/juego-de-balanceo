@@ -7,6 +7,7 @@ extends CharacterBody2D
 var walk = 100
 var ultima_direccion: int = 1
 @export var friccion = 2000
+@export var friccionCaminata:int = 20
 @export var friccion_aire = 55
 @export var friccionMuerte = 135
 @export var friccionAireMuerte = 100
@@ -118,7 +119,7 @@ func _physics_process(delta: float) -> void:
 				else:
 					velocity.x = direction * SPEED
 			else:
-				velocity.x = move_toward(velocity.x, 0, friccion * delta)
+				velocity.x = move_toward(velocity.x / friccionCaminata, 0, friccion * delta)
 		else:
 			if direction:
 				velocity.x += direction * SPEED * delta

@@ -45,9 +45,11 @@ var forzarGiro:bool = false
 @export var proteccionPostIdle:float = 0.3
 var proteccionRestante: float = 0.0
 
+var _ultima_pos_valida:Vector2
 
 func _ready() -> void:
 	Origen = global_position.x
+	_ultima_pos_valida = global_position 
 	area_daño.body_entered.connect(area_daño_body_entered)
 
 func _physics_process(delta: float) -> void:

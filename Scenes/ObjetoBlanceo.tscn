@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bxw1xy82eogiu" path="res://Scripts/Rotacion.gd" id="2_hc4np"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_enrft"]
-radius = 24.342463
+radius = 42.02116
 
 [sub_resource type="Animation" id="Animation_gkdit"]
 length = 0.001

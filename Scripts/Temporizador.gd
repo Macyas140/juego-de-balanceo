@@ -8,8 +8,8 @@ extends Control
 @export var estamina_max = 200
 @export var cansancio:float = 20
 @export var costo_disparo:float = 15
-@export var cargaRapida:float = 350
-@export var espera_tras_daño:float = 2.5
+@export var cargaRapida:float = 700
+@export var espera_tras_daño:float = 1.5
 @export var offset_sobre_personaje:Vector2 = Vector2(5,-40)
 @export var costoImpulso = 30
 var gastoAtaque:float = 5.0

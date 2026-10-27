@@ -4,6 +4,13 @@ res://Shaders/Personaje.gdshader
 res://Shaders/Enemigo.gdshader
 res://Shaders/vignette.gdshader
 res://Shaders/HitFlah.tres
-res://Scripts/enemigo.gd
 res://Scenes/Personaje.tscn
 res://Scripts/personaje.gd
+res://Scripts/enemigo.gd
+res://Scenes/Enemigo.tscn
+res://Scenes/control.tscn
+res://Scripts/Temporizador.gd
+res://Scripts/Ataque.gd
+res://Scenes/ObjetoBlanceo.tscn
+res://Scenes/proyectile.tscn
+res://Scripts/HurtBox.gd
