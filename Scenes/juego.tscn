@@ -116,6 +116,7 @@ turbulence_influence_max = 0.5
 
 [sub_resource type="Resource" id="Resource_wpuia"]
 script = ExtResource("3_pehpj")
+duration = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_237a5"]
 texture = ExtResource("7_3g55f")
@@ -729,6 +730,9 @@ sources/2 = SubResource("TileSetAtlasSource_6ypmb")
 script = ExtResource("9_r5jw4")
 metadata/_custom_type_script = "uid://dimvdouy8g0sv"
 
+[sub_resource type="Resource" id="Resource_ey75x"]
+script = ExtResource("3_pehpj")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_82v0y"]
 size = Vector2(17, 289)
 
@@ -751,7 +755,7 @@ polygon = PackedVector2Array(0, 0, 95, 0, 95, 18, 0, 18)
 polygon = PackedVector2Array(0, 0, 130, 0, 130, 18, 0, 18)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ua078"]
-polygon = PackedVector2Array(0, 0, 25, 0, 25, 18, 0, 18)
+polygon = PackedVector2Array(3, -1, 30, -1, 28, 18, 1, 18)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_jd4v6"]
 polygon = PackedVector2Array(0, 0, 100, 0, 100, 18, 0, 18)
@@ -6815,6 +6819,9 @@ animations = [{
 "speed": 24.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_am3o3"]
+size = Vector2(129, 456)
+
 [node name="Juego" type="Node2D" unique_id=934025006]
 
 [node name="CharacterBody2D" parent="." unique_id=477400654 groups=["Jugador"] instance=ExtResource("1_kbscr")]
@@ -7074,15 +7081,23 @@ CamaraMuerte = NodePath("PhantomCamera2D")
 CamaraJugador = NodePath("../CamaraSystem/PhantomCamera2D")
 TemblorMuerte = SubResource("Resource_6y2rp")
 
+[node name="CamaraDelFinal" type="Node2D" parent="CamaraManager" unique_id=1898849762]
+position = Vector2(9581, -946)
+script = ExtResource("2_l8qcm")
+zoom = Vector2(2.7, 2.7)
+tween_resource = SubResource("Resource_ey75x")
+draw_limits = true
+metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+
 [node name="PhantomCamera2D" type="Node2D" parent="CamaraManager" unique_id=989805825 node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(-224, 406)
+position = Vector2(-224, 396)
 script = ExtResource("2_l8qcm")
 follow_mode = 2
 follow_target = NodePath("../../CharacterBody2D")
 zoom = Vector2(3, 3)
 tween_resource = ExtResource("10_c5cua")
-follow_offset = Vector2(0, -10)
+follow_offset = Vector2(0, -20)
 draw_limits = true
 noise_emitter_layer = 1
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
@@ -7138,6 +7153,7 @@ position = Vector2(2848, -176)
 occluder = SubResource("OccluderPolygon2D_o2khi")
 
 [node name="LightOccluder2D5" type="LightOccluder2D" parent="LightOcluders" unique_id=1078628795]
+z_index = -1
 position = Vector2(4719, -255)
 occluder = SubResource("OccluderPolygon2D_ua078")
 
@@ -7334,6 +7350,12 @@ position = Vector2(4452, -188)
 
 [node name="Area2D3" parent="Monedas" unique_id=1418317438 instance=ExtResource("30_lq22b")]
 position = Vector2(2133, -286)
+
+[node name="ZonaFinal" type="Area2D" parent="." unique_id=489648293]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaFinal" unique_id=1283927298]
+position = Vector2(9500.5, -1054)
+shape = SubResource("RectangleShape2D_am3o3")
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
 [connection signal="timeout" from="DeathZone/Timer" to="DeathZone" method="_on_timer_timeout"]

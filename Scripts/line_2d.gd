@@ -1,5 +1,4 @@
 extends Line2D
-# Cuerda.gd: va en el nodo Line2D "Cuerda", hijo del nodo raíz de proyectil.tscn
 
 @export var segmentos: int = 14
 @export var gravedad: Vector2 = Vector2(0, 700)
@@ -7,13 +6,12 @@ extends Line2D
 @export_range(0.8, 1.0) var amortiguacion: float = 0.98
 @export var ajustar_a_pixel: bool = true
 
-var proyectil = null   # sin tipo a propósito: leemos origen, agarrado y distanciaEnganche
+var proyectil = null 
 var _p := PackedVector2Array()
 var _prev := PackedVector2Array()
 var _iniciada := false
 
 func _ready() -> void:
-	# La cuerda se dibuja en coordenadas del mundo, ignorando la rotación del proyectil
 	top_level = true
 	global_transform = Transform2D.IDENTITY
 	segmentos = maxi(segmentos, 3)

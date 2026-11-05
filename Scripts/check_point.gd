@@ -17,7 +17,7 @@ func _on_body_entered(body: Node2D) -> void:
 		return
 	if body.muriendo or body.muriendoColgado:
 		return
-	Checkpoint.guardar(spawn.global_position)   # <-- posición de spawn, no la del Area2D
+	Checkpoint.guardar(spawn.global_position)
 	_marcar_activo()
 
 func _marcar_activo() -> void:

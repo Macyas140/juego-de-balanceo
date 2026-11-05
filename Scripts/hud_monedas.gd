@@ -23,7 +23,7 @@ func _ready() -> void:
 		spr.sprite_frames = frames_moneda
 		spr.animation = anim_moneda
 		spr.frame = 0
-		spr.modulate = color_vacio   # vacia: oscura y quieta en el cuadro 0
+		spr.modulate = color_vacio
 		spr.play(anim_moneda)
 		slot.add_child(spr)
 		slot.resized.connect(_ajustar_sprite.bind(slot, spr))
@@ -68,7 +68,7 @@ func recibir_moneda(pos_pantalla: Vector2, frames: SpriteFrames, animacion: Stri
 	tween.tween_property(volador, "scale", escala_final, duracion_vuelo)\
 		.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
 	tween.chain().tween_callback(func():
-		spr_slot.frame = volador.frame   # el espacio retoma exactamente el cuadro de la voladora
+		spr_slot.frame = volador.frame
 		spr_slot.modulate = color_lleno
 		spr_slot.play(animacion)
 		volador.queue_free()

@@ -47,10 +47,19 @@ var proteccionRestante: float = 0.0
 
 var _ultima_pos_valida:Vector2
 
+var _pos_inicial: Vector2
+var _capa_original: int
+var _estado_areas: Dictionary = {}
+
 func _ready() -> void:
+	add_to_group("enemigos")
 	Origen = global_position.x
-	_ultima_pos_valida = global_position 
+	_pos_inicial = global_position
+	_capa_original = collision_layer   # se lee aquí, ya con el valor del Inspector
+	for area in find_children("*", "Area2D", true, false):
+		_estado_areas[area] = [area.monitoring, area.monitorable]
 	area_daño.body_entered.connect(area_daño_body_entered)
+
 
 func _physics_process(delta: float) -> void:
 	if tiempoInvulnerabilidadRestante > 0:
@@ -167,3 +176,38 @@ func morir() -> void:
 		area.set_deferred("monitorable", false)
 	collision_layer = 0
 	set_physics_process(false)
+
+func reiniciar() -> void:
+	muerto = false
+	vida = vidaMaxima
+	velocity = Vector2.ZERO
+	global_position = _pos_inicial
+	reset_physics_interpolation()
+	dir = Vector2.RIGHT
+	invulnerable = false
+	tiempoInvulnerabilidadRestante = 0.0
+	KnockbackRestante = 0.0
+	proteccionRestante = 0.0
+	enIdle = false
+	idle_restante = 0.0
+	collision_layer = _capa_original
+	for area in _estado_areas:
+		if is_instance_valid(area):
+			area.set_deferred("monitoring", _estado_areas[area][0])
+			area.set_deferred("monitorable", _estado_areas[area][1])
+	_restaurar_visual()
+	$DirectionTimer.start()
+	set_physics_process(true)
+	var manager := get_node_or_null("AnimationManager")
+	if manager and manager.has_method("reiniciar"):
+		manager.reiniciar()
+
+func _restaurar_visual() -> void:
+	animation_player.stop()
+	if animation_player.has_animation("RESET"):
+		animation_player.play("RESET")
+		animation_player.advance(0)
+	var mat := animated_sprite_2d.material as ShaderMaterial
+	if mat:
+		mat.set_shader_parameter("flash_amount", 0.0)
+		mat.set_shader_parameter("gray_amount", 0.0)

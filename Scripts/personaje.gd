@@ -30,7 +30,7 @@ var golpeado_de_espalda:bool = true
 @export var duracionKnockback:float = 0.25
 @export var friccionKnockback:float = 300.0
 var knockbackRestante:float = 0.0
-@export var Invulnerabilidad:float = 0.1
+@export var Invulnerabilidad:float = 1.0
 var invulnerable:bool = false
 var tiempoInvulnerabilidadRestante:float = 0.0
 @export var Knockback_Aerero:float = 400
@@ -58,12 +58,15 @@ var cooldownPicada_restante:float = 0.0
 @onready var salto_caida: GPUParticles2D = $SaltoCaida
 
 
-#Esto es para el temblor por saltos
-
+#Esto es para el respawn
+signal reaparecio
+var posicion_inicial: Vector2
 
 var estabaAire: bool = false
+@export var knockback_vertical:float = -450.0
 
 func _ready() -> void:
+	posicion_inicial = global_position   # NUEVO: se guarda ANTES de aplicar el checkpoint
 	if Checkpoint.tiene_checkpoint:
 		global_position = Checkpoint.posicion_respawn
 	Estamina.reiniciar()
@@ -71,7 +74,6 @@ func _ready() -> void:
 	Estamina.muerto.connect(_on_estamina_muerto)
 	Estamina.listoReinicio.connect(listoReinicio)
 	hitboxAbajo.golpeo.connect(_on_picada_golpeo)
-	var gestor = get_tree().get_first_node_in_group("gestor_camara")
 
 signal aterrizo(velocidad_caida:float)
 func _physics_process(delta: float) -> void:
@@ -208,7 +210,8 @@ func _on_estamina_muerto() -> void:
 	murioColgado.emit(colgado_Muerto)
 
 func listoReinicio() -> void:
-	get_tree().call_deferred("reload_current_scene")
+	reaparecer()
+	#get_tree().call_deferred("reload_current_scene")
 
 func acomodar_caidaMuerte(delta:float) -> void:
 	if not is_on_floor():
@@ -219,13 +222,13 @@ func acomodar_caidaMuerte(delta:float) -> void:
 		animatedSprite.flip_h = golpeado_de_espalda
 
 func recibir_ataque(cantidad:float, direccion_knockback:Vector2, fuerza:float) -> void:
-	if muriendo or invulnerable or muriendoColgado:
-		invulnerable = false
+	if muriendo or muriendoColgado:
 		return
 	recibir_daño(cantidad)
 	golpeado_de_espalda = sign(direccion_knockback.x) == ultima_direccion
+	salto.saltando = false
 	velocity.x = direccion_knockback.x * fuerza
-	velocity.y = -fuerza * 0.5
+	velocity.y = knockback_vertical
 	knockbackRestante = duracionKnockback
 	invulnerable = true
 	tiempoInvulnerabilidadRestante = Invulnerabilidad
@@ -238,3 +241,31 @@ func _emitir_polvo_mundo(plantilla: GPUParticles2D) -> void:
 	
 	await get_tree().create_timer(copia.lifetime + 0.2).timeout
 	copia.queue_free()
+
+func reaparecer() -> void:
+	muriendo = false
+	muriendoColgado = false
+	golpeado_de_espalda = true
+	velocity = Vector2.ZERO
+	knockbackRestante = 0.0
+	invulnerable = false
+	tiempoInvulnerabilidadRestante = 0.0
+	atacando = false
+	enPicada = false
+	cooldownAtaque_restante = 0.0
+	cooldownPicada_restante = 0.0
+	hitbox_ataque_forma.set_deferred("disabled", true)
+	hitboxAbajo_forma.set_deferred("disabled", true)
+	gancho.reiniciar()
+	salto.muriendo = false
+	saltoGancho = false
+	animatedSprite.rotation = 0.0
+	if Checkpoint.tiene_checkpoint:
+		global_position = Checkpoint.posicion_respawn
+	else:
+		global_position = posicion_inicial
+	reset_physics_interpolation()
+	Estamina.reiniciar()
+	get_tree().call_group("enemigos", "reiniciar")
+	reaparecio.emit()
+	

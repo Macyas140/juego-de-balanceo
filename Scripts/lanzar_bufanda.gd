@@ -51,8 +51,8 @@ func Lanzar_Bufanda():
 		instancia.dir = direccion
 		instancia.spawnRot = direccion.angle() + PI/2
 		instancia.jugador = jugador
-		instancia.origen = self # NUEVO: el proyectil le pregunta a este nodo dónde está la mano
-		jugador.get_parent().add_child(instancia) # CAMBIO: va al nivel, no dentro del Personaje
+		instancia.origen = self
+		jugador.get_parent().add_child(instancia) 
 		instancia.add_collision_exception_with(jugador)
 		seDisparo = true
 		proyectil_actual = instancia
@@ -68,7 +68,7 @@ func ProyectilDestruido() -> void:
 func balanceo_Gancho():
 	var ancla = proyectil_actual.global_position
 	var largo = proyectil_actual.distanciaEnganche
-	var offset = posicion_mano() - ancla   # CAMBIO: se mide desde la mano
+	var offset = posicion_mano() - ancla
 	var distanciaActual = offset.length()
 	
 	if distanciaActual > largo:
@@ -76,7 +76,6 @@ func balanceo_Gancho():
 		var componenteRadial = jugador.velocity.dot(direccionRadial)
 		if componenteRadial > 0:
 			jugador.velocity -= direccionRadial * componenteRadial
-		# CAMBIO: se mueve a la jugadora solo lo que se pasó de la cuerda
 		jugador.global_position -= direccionRadial * (distanciaActual - largo)
 
 func Impulso_gacho():
@@ -85,3 +84,10 @@ func Impulso_gacho():
 	jugador.saltoGancho = true
 	jugador.velocity = direccion_impulso * fuerzaDelImpulso * 1.2
 	Estamina.gasto_impulso()
+
+func reiniciar() -> void:
+	if is_instance_valid(proyectil_actual):
+		proyectil_actual.queue_free()
+	proyectil_actual = null
+	seDisparo = false
+	muriendo = false

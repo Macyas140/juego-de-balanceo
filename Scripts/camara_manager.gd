@@ -25,19 +25,22 @@ var currentScene:int = 0
 var jugadorMuerto:bool = false
 var jugadorMurioColgado: bool = false
 var tween_muerte: Tween
+var zoom_inicial_muerte: Vector2   # NUEVO
 
 @onready var noiseMuerte: PhantomCameraNoiseEmitter2D = $PhantomCamera2D/PhantomCameraNoiseEmitter2D
 @onready var noiseAterrizaje: PhantomCameraNoiseEmitter2D = $"../CamaraSystem/PhantomCamera2D/PhantomCameraNoiseEmitter2D"
 
 func _ready() -> void:
 	print("Prioridades al cargar -> Jugador: ", CamaraJugador.priority, " | Muerte: ", CamaraMuerte.priority)
+	zoom_inicial_muerte = CamaraMuerte.zoom   # NUEVO: se guarda ANTES de la primera muerte
 	jugador.murioColgado.connect(_on_jugador_murio)
 	jugador.aterrizo.connect(_on_jugador_aterrizo)
 	jugadorMuerto = false
 	jugadorMurioColgado = false
 	_restaurar_camaras.call_deferred()
 	
-	Estamina.listoReinicio.connect(reiniciar_efectos_muerte)
+	# CAMBIO: antes era Estamina.listoReinicio. Con 'reaparecio' la jugadora ya está en su nueva posición
+	jugador.reaparecio.connect(reiniciar_efectos_muerte)
 	
 	if Checkpoint.tiene_checkpoint:
 		CamaraJugador.global_position = Checkpoint.posicion_respawn
@@ -76,9 +79,17 @@ func reiniciar_efectos_muerte() -> void:
 	
 	jugadorMuerto = false
 	jugadorMurioColgado = false
-	_restaurar_camaras()
 	if vignetteMaterial:
 		vignetteMaterial.set_shader_parameter("strength", 0.0)
+	
+	# NUEVO: la cámara de muerte vuelve a su zoom inicial para la siguiente muerte
+	CamaraMuerte.zoom = zoom_inicial_muerte
+	
+	# NUEVO: las dos cámaras saltan de golpe hacia la jugadora, sin deslizarse por el damping
+	CamaraJugador.teleport_position()
+	CamaraMuerte.teleport_position()
+	
+	_restaurar_camaras()
 
 func _on_jugador_aterrizo(velocidad_caida: float) -> void:
 	if jugadorMuerto or not RuidoAterrizaje or not noiseAterrizaje:
@@ -93,4 +104,3 @@ func _on_jugador_aterrizo(velocidad_caida: float) -> void:
 	
 func snap_camara_al_jugador() -> void:
 	CamaraJugador.global_position = Checkpoint.posicion_respawn
-	

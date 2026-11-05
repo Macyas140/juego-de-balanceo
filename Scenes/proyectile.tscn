@@ -19,13 +19,14 @@ DistanciaMaxima = 140
 distanciaMinima = 40.0
 
 [node name="Cuerda" type="Line2D" parent="." unique_id=2048143069]
-width = 20.0
+width = 18.0
 default_color = Color(0.50712967, 0, 0.16125461, 1)
 begin_cap_mode = 1
 end_cap_mode = 1
 script = ExtResource("2_rak2d")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=944853505]
+visible = false
 z_index = 1
 scale = Vector2(0.057128906, 0.049560573)
 texture = ExtResource("2_3dr3y")

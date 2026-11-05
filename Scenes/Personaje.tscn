@@ -805,6 +805,7 @@ animations = [{
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=477400654]
 script = ExtResource("1_h6c8c")
 friccion = 2200
+Invulnerabilidad = 3.0
 fuerzaRebote = -300.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2076041388]

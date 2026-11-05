@@ -20,9 +20,8 @@ func _physics_process(_delta: float) -> void:
 	if enemigo.muerto:
 		sprite.speed_scale = 1.0
 		_reproducir(anim_muriendo)
-		set_physics_process(false)  # ya no hay nada más que decidir
+		set_physics_process(false)
 		return
-	# En idle el enemigo está quieto: congela la animación de caminar en su frame actual
 	sprite.speed_scale = 0.0 if enemigo.enIdle else 1.0
 	_reproducir(anim_caminando)
 
@@ -46,3 +45,9 @@ func _existe(nombre: StringName) -> bool:
 func _forzar_sin_loop(nombre: StringName) -> void:
 	if sprite.sprite_frames and sprite.sprite_frames.has_animation(nombre):
 		sprite.sprite_frames.set_animation_loop(nombre, false)
+
+func reiniciar() -> void:
+	animacion_actual = &""     
+	sprite.speed_scale = 1.0
+	_reproducir(anim_caminando)
+	set_physics_process(true)
