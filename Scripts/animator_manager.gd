@@ -6,6 +6,7 @@ extends Node
 @onready var efecto_abajo: AnimatedSprite2D = $"../Ataque/HitboxAbajo/AnimatedSprite2D"
 @onready var efecto_ataque: AnimatedSprite2D = $"../Ataque/Hitbox/AnimatedSprite2D"
 
+var victoria_activa: bool = false
 
 @export_group("Nombres de animacion")
 @export var anim_idle: StringName = &"Idle"
@@ -21,6 +22,11 @@ extends Node
 @export var anim_colgado_desesperada: StringName = &"balanceo_desesperada"
 @export var anim_muerte_colgado: StringName = &"muerte_colgado"
 @export var anim_muerte: StringName = &"muerte"
+@export var anim_victoria_1: StringName = &"Victoria1"
+@export var anim_victoria_2: StringName = &"Victoria2"
+@export var anim_colgada_ataque_tranquila: StringName = &"ColgAtq1"
+@export var anim_colgada_ataque_asustada: StringName = &"ColgAtq2"
+@export var anim_colgada_ataque_desesperada: StringName = &"ColgAtq3"
 
 @export_group("efectos")
 @export var anim_efecto_ataque: StringName = &"efecto_ataque"
@@ -42,6 +48,11 @@ extends Node
 	"correr": Vector2(-15,0),
 	"lanzar": Vector2(1,-20),
 	"muerte_colgado": Vector2(1,-28),
+	"ColgAtq1": Vector2(1,-28),
+	"ColgAtq2": Vector2(1,-28),
+	"ColgAtq3": Vector2(1,-28),
+	"Victoria1": Vector2(1,-8),
+	"Victoria2": Vector2(1,-8)
 }
 
 var offset_base: Vector2
@@ -66,6 +77,11 @@ func _ready() -> void:
 	_forzar_sin_loop(anim_ataque_abajo)
 	_preparar_efecto(efecto_ataque, anim_efecto_ataque)
 	_preparar_efecto(efecto_abajo, anim_efecto_abajo)
+	_forzar_sin_loop(anim_colgada_ataque_tranquila)
+	_forzar_sin_loop(anim_colgada_ataque_asustada)
+	_forzar_sin_loop(anim_colgada_ataque_desesperada)
+	_forzar_sin_loop(anim_victoria_1)
+	_forzar_sin_loop(anim_victoria_2)
 
 func _physics_process(_delta: float) -> void:
 	_aplicar_ajuste()
@@ -79,12 +95,17 @@ func _physics_process(_delta: float) -> void:
 		prioridad_bloqueo = 0
 		_reproducir(anim_muerte_colgado)
 		return
+	if victoria_activa:
+		return
+	if bloqueado and _es_ataque_colgada(animacion_actual) and (not _esta_colgado() or jugador.is_on_floor()):
+		bloqueado = false
+		prioridad_bloqueo = 0
 	if bloqueado:
 		return
 	_reproducir(_determinar_animacion())
 
 func _determinar_animacion() -> StringName:
-	if _esta_colgado():
+	if _esta_colgado() and not jugador.is_on_floor():
 		return _animacion_colgado()
 	if not jugador.is_on_floor():
 		return anim_salto if jugador.velocity.y < 0.0 else anim_caida
@@ -118,7 +139,11 @@ func reproducir_lanzar() -> void:
 func reproducir_ataque() -> void:
 	if jugador.muriendo or jugador.muriendoColgado:
 		return
-	reproducir_una_vez(anim_ataque, 5)
+	var anim := anim_ataque
+	if _esta_colgado() and not jugador.is_on_floor():
+		anim = _animacion_colgado_ataque()
+	print("animación de ataque: ", anim)
+	reproducir_una_vez(anim, 5)
 	_mostrar_efecto(efecto_ataque, anim_efecto_ataque)
 
 
@@ -197,3 +222,40 @@ func _aplicar_ajuste() -> void:
 	var extra: Vector2 = ajustes.get(String(sprite.animation), Vector2.ZERO)
 	var lado := -1.0 if sprite.flip_h else 1.0
 	sprite.offset = Vector2((offset_base.x + extra.x) * lado, offset_base.y + extra.y)
+
+func _animacion_colgado_ataque() -> StringName:
+	var porcentaje = Estamina.estamina / float(Estamina.estamina_max)
+	if porcentaje <= umbral_desesperada:
+		return anim_colgada_ataque_desesperada
+	if porcentaje <= umbral_asustada:
+		return anim_colgada_ataque_asustada
+	return anim_colgada_ataque_tranquila
+
+func _es_ataque_colgada(nombre: StringName) -> bool:
+	return nombre == anim_colgada_ataque_tranquila \
+		or nombre == anim_colgada_ataque_asustada \
+		or nombre == anim_colgada_ataque_desesperada
+
+#Aqui hare la parte de la victoria
+
+func reproducir_victoria_1(veces: int = 0) -> void:
+	if not _existe(anim_victoria_1):
+		return
+	victoria_activa = true
+	animacion_actual = anim_victoria_1
+	sprite.stop()
+	sprite.play(anim_victoria_1)
+	await sprite.animation_finished
+
+func reproducir_victoria_2() -> void:
+	if not _existe(anim_victoria_2):
+		return
+	victoria_activa = true
+	animacion_actual = anim_victoria_2
+	sprite.stop()
+	sprite.play(anim_victoria_2)
+
+func terminar_victoria() -> void:
+	victoria_activa = false
+	bloqueado = false
+	prioridad_bloqueo = 0

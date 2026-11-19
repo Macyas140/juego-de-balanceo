@@ -45,103 +45,193 @@
 [ext_resource type="Texture2D" uid="uid://b0fqq3hofl6bs" path="res://Assets/Animaciones/AtaqueLado/AtaqueLado_0007.png" id="20_1aryf"]
 [ext_resource type="Texture2D" uid="uid://dcvrgwsvkcl1j" path="res://Assets/Animaciones/parada/Parada_0018.png" id="20_yd2b3"]
 [ext_resource type="Texture2D" uid="uid://cc2trlcq7fd7b" path="res://Assets/Animaciones/parada/Parada_0019.png" id="21_50rho"]
+[ext_resource type="Texture2D" uid="uid://dxtkthn07qxd7" path="res://Assets/Animaciones/Fase1Ataque/AF01Ataque_0000.png" id="21_fidbh"]
+[ext_resource type="Texture2D" uid="uid://cjl04fd6cd15g" path="res://Assets/Animaciones/Fase1Ataque/AF01Ataque_0001.png" id="22_5fjj4"]
 [ext_resource type="Texture2D" uid="uid://bupcnwdob3dul" path="res://Assets/Animaciones/parada/Parada_0020.png" id="22_wu75b"]
 [ext_resource type="Texture2D" uid="uid://bobxgi4cmeb6g" path="res://Assets/Animaciones/parada/Parada_0021.png" id="23_g8w24"]
+[ext_resource type="Texture2D" uid="uid://bd8qi8lk0k2dr" path="res://Assets/Animaciones/Fase1Ataque/AF01Ataque_0002.png" id="23_tdsm4"]
 [ext_resource type="Texture2D" uid="uid://bbl7xj5nudso3" path="res://Assets/Animaciones/parada/Parada_0022.png" id="24_ivvyb"]
+[ext_resource type="Texture2D" uid="uid://cqi2btunx2m3c" path="res://Assets/Animaciones/Fase1Ataque/AF01Ataque_0003.png" id="24_om6ca"]
+[ext_resource type="Texture2D" uid="uid://cb2hl8b6gh7mv" path="res://Assets/Animaciones/Fase1Ataque/AF01Ataque_0004.png" id="25_x2p0u"]
+[ext_resource type="Texture2D" uid="uid://bu0yj6ycbpb3w" path="res://Assets/Animaciones/Fase1Ataque/AF01Ataque_0005.png" id="26_677b6"]
 [ext_resource type="Texture2D" uid="uid://c67ny0fbwvie1" path="res://Assets/Animaciones/SaltandoAbajo/saltandoAbajo_0000.png" id="26_g2b3q"]
 [ext_resource type="Texture2D" uid="uid://c4ksdrjvo3b07" path="res://Assets/Animaciones/SaltandoAbajo/saltandoAbajo_0001.png" id="27_djqwr"]
+[ext_resource type="Texture2D" uid="uid://0hfca5vrox7i" path="res://Assets/Animaciones/Fase1Ataque/AF01Ataque_0006.png" id="27_xhstd"]
+[ext_resource type="Texture2D" uid="uid://b6qwq1soj4hl2" path="res://Assets/Animaciones/Fase1Ataque/AF01Ataque_0007.png" id="28_5c7ym"]
 [ext_resource type="Texture2D" uid="uid://dwt5mnpnn12wg" path="res://Assets/Animaciones/SaltandoAbajo/saltandoAbajo_0002.png" id="28_xnhhs"]
 [ext_resource type="Texture2D" uid="uid://dofy3i0sh0eqw" path="res://Assets/Animaciones/SaltandoAbajo/saltandoAbajo_0003.png" id="29_6q0mc"]
+[ext_resource type="Texture2D" uid="uid://s08fl0lhuit1" path="res://Assets/Animaciones/Fase2Ataque/AF02Ataque_0000.png" id="29_cim5i"]
+[ext_resource type="Texture2D" uid="uid://cupfte7mdfh6g" path="res://Assets/Animaciones/Fase2Ataque/AF02Ataque_0001.png" id="30_u2wby"]
 [ext_resource type="Texture2D" uid="uid://bvqr4w0cs4i7y" path="res://Assets/Animaciones/SatandoArriba/SaltandoArriba_0000.png" id="30_yd2b3"]
 [ext_resource type="Texture2D" uid="uid://cdp3vp3m02gxe" path="res://Assets/Animaciones/SatandoArriba/SaltandoArriba_0001.png" id="31_50rho"]
 [ext_resource type="Script" uid="uid://emrf5y1vu6rc" path="res://Scripts/animator_manager.gd" id="31_d3tc7"]
+[ext_resource type="Texture2D" uid="uid://bjm4p7lpxwc4q" path="res://Assets/Animaciones/Fase2Ataque/AF02Ataque_0002.png" id="31_gq6yd"]
 [ext_resource type="Texture2D" uid="uid://dq7mcr265eetl" path="res://Assets/Animaciones/SatandoArriba/SaltandoArriba_0002.png" id="32_wu75b"]
+[ext_resource type="Texture2D" uid="uid://bnma3lekjql7g" path="res://Assets/Animaciones/Fase2Ataque/AF02Ataque_0003.png" id="32_xxned"]
 [ext_resource type="Texture2D" uid="uid://t362waouy1t3" path="res://Assets/Animaciones/SatandoArriba/SaltandoArriba_0003.png" id="33_g8w24"]
+[ext_resource type="Texture2D" uid="uid://83fhg78jreot" path="res://Assets/Animaciones/Fase2Ataque/AF02Ataque_0004.png" id="33_x67p4"]
+[ext_resource type="Texture2D" uid="uid://bhxyk835sb7ru" path="res://Assets/Animaciones/Fase2Ataque/AF02Ataque_0005.png" id="34_hk35q"]
 [ext_resource type="Texture2D" uid="uid://bnci3e21oqbk2" path="res://Assets/Animaciones/correr/corriendo_0000.png" id="34_ivvyb"]
 [ext_resource type="Texture2D" uid="uid://cnshq4lta6va8" path="res://Assets/Animaciones/AhorcamientoFase2/AhorcamientoFase2_0000.png" id="34_ybesl"]
 [ext_resource type="Texture2D" uid="uid://dntfcmjifjaxg" path="res://Assets/Animaciones/correr/corriendo_0001.png" id="35_2o86i"]
+[ext_resource type="Texture2D" uid="uid://dkl2ri5iycxho" path="res://Assets/Animaciones/Fase2Ataque/AF02Ataque_0006.png" id="35_jt4t4"]
 [ext_resource type="Texture2D" uid="uid://dkg5bi1gy4d2v" path="res://Assets/Animaciones/AhorcamientoFase2/AhorcamientoFase2_0001.png" id="35_r3lu3"]
 [ext_resource type="Texture2D" uid="uid://d31wv4q5b4pu3" path="res://Assets/Animaciones/correr/corriendo_0002.png" id="36_4dfem"]
+[ext_resource type="Texture2D" uid="uid://b03xwa5ifpe0h" path="res://Assets/Animaciones/Fase2Ataque/AF02Ataque_0007.png" id="36_5q4jg"]
 [ext_resource type="Texture2D" uid="uid://v0s5rtk03w5y" path="res://Assets/Animaciones/AhorcamientoFase2/AhorcamientoFase2_0002.png" id="36_fxc6n"]
 [ext_resource type="Texture2D" uid="uid://cx4ga8mqtorct" path="res://Assets/Animaciones/correr/corriendo_0003.png" id="37_3vbd8"]
 [ext_resource type="Texture2D" uid="uid://co4i6maifk35a" path="res://Assets/Animaciones/AhorcamientoFase2/AhorcamientoFase2_0003.png" id="37_u5qgx"]
+[ext_resource type="Texture2D" uid="uid://dt7baxtgi6x72" path="res://Assets/Animaciones/Fase3Ataque/AF03Ataque_0000.png" id="37_v7kjh"]
+[ext_resource type="Texture2D" uid="uid://dxlxypqnvfmjv" path="res://Assets/Animaciones/Fase3Ataque/AF03Ataque_0001.png" id="38_8n4pj"]
 [ext_resource type="Texture2D" uid="uid://c041w7gpq734h" path="res://Assets/Animaciones/correr/corriendo_0004.png" id="38_a20eo"]
 [ext_resource type="Texture2D" uid="uid://bq1pygalniq3a" path="res://Assets/Animaciones/AhorcamientoFase3/AhorcamientoFase3_0000.png" id="38_f8w1w"]
 [ext_resource type="Texture2D" uid="uid://dhwfokvqupjs0" path="res://Assets/Animaciones/AhorcamientoFase3/AhorcamientoFase3_0001.png" id="39_bh8go"]
 [ext_resource type="Texture2D" uid="uid://dq2huel3pea5c" path="res://Assets/Animaciones/correr/corriendo_0005.png" id="39_jvkad"]
+[ext_resource type="Texture2D" uid="uid://bmdcv7xeitx15" path="res://Assets/Animaciones/Fase3Ataque/AF03Ataque_0002.png" id="39_qggg6"]
 [ext_resource type="Texture2D" uid="uid://cv6ndf8o5rqwq" path="res://Assets/Animaciones/AhorcamientoFase1/AhorcamientoFase1_0000.png" id="40_j4uv8"]
+[ext_resource type="Texture2D" uid="uid://c60cdu1o0dcjt" path="res://Assets/Animaciones/Fase3Ataque/AF03Ataque_0003.png" id="40_l48lg"]
+[ext_resource type="Texture2D" uid="uid://og8b1x6xkvtd" path="res://Assets/Animaciones/Fase3Ataque/AF03Ataque_0004.png" id="41_kelxm"]
 [ext_resource type="Texture2D" uid="uid://drgha5ox27pss" path="res://Assets/Animaciones/AhorcamientoFase1/AhorcamientoFase1_0001.png" id="41_sqgas"]
 [ext_resource type="Texture2D" uid="uid://bw71c8e3tqy4k" path="res://Assets/Animaciones/AhorcamientoFase1/AhorcamientoFase1_0002.png" id="42_1f4yc"]
+[ext_resource type="Texture2D" uid="uid://cnqmp3v1u44ti" path="res://Assets/Animaciones/Fase3Ataque/AF03Ataque_0005.png" id="42_u8qum"]
+[ext_resource type="Texture2D" uid="uid://ugvc13curyuq" path="res://Assets/Animaciones/Fase3Ataque/AF03Ataque_0006.png" id="43_7lque"]
 [ext_resource type="Texture2D" uid="uid://by44hufgo70wd" path="res://Assets/Animaciones/AhorcamientoFase1/AhorcamientoFase1_0003.png" id="43_tk387"]
+[ext_resource type="Texture2D" uid="uid://c7tnklp44yg1l" path="res://Assets/Animaciones/Fase3Ataque/AF03Ataque_0007.png" id="44_06aw2"]
 [ext_resource type="Texture2D" uid="uid://b7pxiaioapuiq" path="res://Assets/Animaciones/AhorcamientoFase1/AhorcamientoFase1_0004.png" id="44_tlgra"]
 [ext_resource type="Texture2D" uid="uid://b6la7xpfdbqgy" path="res://Assets/Animaciones/AhorcamientoFase1/AhorcamientoFase1_0005.png" id="45_4o7m8"]
+[ext_resource type="Texture2D" uid="uid://c4ey2vl2uvgoj" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0000.png" id="52_sk3ol"]
 [ext_resource type="Texture2D" uid="uid://d12auijyis6cy" path="res://Assets/Animaciones/Lanzado/Lanzado_0000.png" id="52_tyvko"]
+[ext_resource type="Texture2D" uid="uid://b6nmtj114m5lt" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0001.png" id="53_ic0q6"]
 [ext_resource type="Texture2D" uid="uid://dwchpe45dbh2e" path="res://Assets/Animaciones/Lanzado/Lanzado_0001.png" id="53_vo2ws"]
 [ext_resource type="Texture2D" uid="uid://bjv3eu3pbytiy" path="res://Assets/Animaciones/Lanzado/Lanzado_0002.png" id="54_eye74"]
+[ext_resource type="Texture2D" uid="uid://b6kpfd3lgcon5" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0002.png" id="54_ygq1f"]
+[ext_resource type="Texture2D" uid="uid://wd4l0fx4xbxc" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0003.png" id="55_skn3u"]
 [ext_resource type="Texture2D" uid="uid://ck2ppshgwus3s" path="res://Assets/Animaciones/Lanzado/Lanzado_0003.png" id="55_ywcas"]
 [ext_resource type="Texture2D" uid="uid://dsu8bre8itn6u" path="res://Assets/Animaciones/Lanzado/Lanzado_0004.png" id="56_gamix"]
+[ext_resource type="Texture2D" uid="uid://dvrntuxqsfm5l" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0004.png" id="56_iai7w"]
+[ext_resource type="Texture2D" uid="uid://c3v1ou268s5xq" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0005.png" id="57_fnet1"]
 [ext_resource type="Texture2D" uid="uid://cgb57403iwap5" path="res://Assets/Animaciones/Lanzado/Lanzado_0005.png" id="57_hd84t"]
 [ext_resource type="Texture2D" uid="uid://dkbvk087c4bba" path="res://Assets/Animaciones/Lanzado/Lanzado_0006.png" id="58_4fw1a"]
+[ext_resource type="Texture2D" uid="uid://bba3s86nis35x" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0006.png" id="58_ttksr"]
+[ext_resource type="Texture2D" uid="uid://ca0ts0mc5hhwr" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0007.png" id="59_1b6ie"]
 [ext_resource type="Texture2D" uid="uid://dfhm44aoj3h8s" path="res://Assets/Animaciones/Lanzado/Lanzado_0007.png" id="59_45gby"]
 [ext_resource type="Texture2D" uid="uid://cl505jq1a5vus" path="res://Assets/Animaciones/Lanzado/Lanzado_0008.png" id="60_e6rm7"]
+[ext_resource type="Texture2D" uid="uid://cuasyi1o3twbj" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0008.png" id="60_ryo5g"]
 [ext_resource type="Texture2D" uid="uid://ow5oehaaxiw2" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0000.png" id="61_gis37"]
+[ext_resource type="Texture2D" uid="uid://dsdgo1rd0juyt" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0009.png" id="61_sojwi"]
+[ext_resource type="Texture2D" uid="uid://dol8pphjibuh5" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0010.png" id="62_3ro41"]
 [ext_resource type="Texture2D" uid="uid://cf0ublsebvott" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0001.png" id="62_yba5q"]
 [ext_resource type="Texture2D" uid="uid://che8mehgd33n2" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0002.png" id="63_peq7o"]
+[ext_resource type="Texture2D" uid="uid://c8n6ix2jgj0kh" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0011.png" id="63_whlpi"]
 [ext_resource type="Texture2D" uid="uid://bgpr5egjljjb1" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0003.png" id="64_03gwv"]
+[ext_resource type="Texture2D" uid="uid://8dhytkxexygs" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0012.png" id="64_3mf5h"]
+[ext_resource type="Texture2D" uid="uid://dk7tf471en0kd" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0013.png" id="65_6v7a8"]
 [ext_resource type="Texture2D" uid="uid://b0n8jlf4nh43w" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0004.png" id="65_kavl4"]
+[ext_resource type="Texture2D" uid="uid://bx1a1dagcen43" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0014.png" id="66_5hy5f"]
 [ext_resource type="Texture2D" uid="uid://cbwf3wm5dftex" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0005.png" id="66_oocbc"]
+[ext_resource type="Texture2D" uid="uid://ib5c7nubs12x" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0015.png" id="67_4m3ig"]
 [ext_resource type="Texture2D" uid="uid://cdvk031s28f2f" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0006.png" id="67_7pygh"]
+[ext_resource type="Texture2D" uid="uid://bjutq0y2u4wol" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0016.png" id="68_e56l7"]
 [ext_resource type="Texture2D" uid="uid://denhan1l5doyg" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0007.png" id="68_o48fy"]
 [ext_resource type="Texture2D" uid="uid://hh6weokbj4ul" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0008.png" id="69_8c74m"]
+[ext_resource type="Texture2D" uid="uid://bf3cehe1xbxs7" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0017.png" id="69_l36t4"]
+[ext_resource type="Texture2D" uid="uid://duy6v6i60auyy" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0018.png" id="70_4iflq"]
 [ext_resource type="Texture2D" uid="uid://0sxghj86yf2u" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0009.png" id="70_no8jw"]
 [ext_resource type="Texture2D" uid="uid://10j0og3a266q" path="res://Assets/Animaciones/Atacada/Atacada_0000.png" id="70_vrq3t"]
 [ext_resource type="Texture2D" uid="uid://c4ochj4kek1ik" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0010.png" id="71_5k2v4"]
+[ext_resource type="Texture2D" uid="uid://c1efsw1yt2jas" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0019.png" id="71_hpvm2"]
 [ext_resource type="Texture2D" uid="uid://d2m8taotfr280" path="res://Assets/Animaciones/Atacada/Atacada_0001.png" id="71_oo3yl"]
 [ext_resource type="Texture2D" uid="uid://bs7sv7gxdl1ex" path="res://Assets/Animaciones/Atacada/Atacada_0002.png" id="72_ivurd"]
 [ext_resource type="Texture2D" uid="uid://cd41ts4ri218j" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0011.png" id="72_u1h3o"]
+[ext_resource type="Texture2D" uid="uid://bymngfuxob1i2" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0020.png" id="72_ukeg6"]
 [ext_resource type="Texture2D" uid="uid://6vdu6sx3dplh" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0012.png" id="73_cu07v"]
+[ext_resource type="Texture2D" uid="uid://rg1dct0ydndp" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0021.png" id="73_tslnu"]
 [ext_resource type="Texture2D" uid="uid://dhetq3yotfx82" path="res://Assets/Animaciones/Atacada/Atacada_0003.png" id="73_u55he"]
+[ext_resource type="Texture2D" uid="uid://bwekevbh3qgs0" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0022.png" id="74_ieqpp"]
 [ext_resource type="Texture2D" uid="uid://pxuh4en2wqou" path="res://Assets/Animaciones/Atacada/Atacada_0004.png" id="74_orcio"]
 [ext_resource type="Texture2D" uid="uid://die6v3f8akr14" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0013.png" id="74_sk0bc"]
+[ext_resource type="Texture2D" uid="uid://cgf6y4stm502o" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0023.png" id="75_lbitv"]
 [ext_resource type="Texture2D" uid="uid://brv3jme3g02q" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0014.png" id="75_p6028"]
 [ext_resource type="Texture2D" uid="uid://cbyyk0xkmrpum" path="res://Assets/Animaciones/Atacada/Atacada_0005.png" id="75_rptql"]
+[ext_resource type="Texture2D" uid="uid://7um0twqmun1c" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0024.png" id="76_fidbh"]
 [ext_resource type="Texture2D" uid="uid://ca5koex1dadfd" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0015.png" id="76_vbl1k"]
 [ext_resource type="Texture2D" uid="uid://dccemjoevhtc2" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0016.png" id="77_1kfbb"]
+[ext_resource type="Texture2D" uid="uid://cmdopekl33kvj" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0025.png" id="77_5fjj4"]
 [ext_resource type="Texture2D" uid="uid://dmjgl4arjced5" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0017.png" id="78_bqnpk"]
+[ext_resource type="Texture2D" uid="uid://dxy6rm38hll4e" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0026.png" id="78_tdsm4"]
+[ext_resource type="Texture2D" uid="uid://daxl3ges8mm32" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0027.png" id="79_om6ca"]
 [ext_resource type="Texture2D" uid="uid://cy8hsc3hrrocr" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0018.png" id="79_yr2yo"]
 [ext_resource type="Texture2D" uid="uid://cgncyo0vtug26" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0019.png" id="80_vrq3t"]
+[ext_resource type="Texture2D" uid="uid://bdpm0teyeiuu5" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0028.png" id="80_x2p0u"]
+[ext_resource type="Texture2D" uid="uid://8qm1f0x1v870" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0029.png" id="81_677b6"]
 [ext_resource type="Texture2D" uid="uid://dnajm5bmbg4yv" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0020.png" id="81_oo3yl"]
 [ext_resource type="Texture2D" uid="uid://cuv1cc0kyqtm0" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0021.png" id="82_ivurd"]
+[ext_resource type="Texture2D" uid="uid://b5duo1w1ies8m" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0030.png" id="82_xhstd"]
+[ext_resource type="Texture2D" uid="uid://bt60p7kjl05je" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0031.png" id="83_5c7ym"]
 [ext_resource type="Texture2D" uid="uid://8b5qa82kt3r2" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0022.png" id="83_u55he"]
+[ext_resource type="Texture2D" uid="uid://d3pcl30mlpav7" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0032.png" id="84_cim5i"]
 [ext_resource type="Texture2D" uid="uid://c1wqwvdsfsgy8" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0023.png" id="84_orcio"]
 [ext_resource type="Texture2D" uid="uid://ckhmcd35hi2ni" path="res://Assets/Animaciones/Muerte/muerte_0000.png" id="85_5urfe"]
 [ext_resource type="Texture2D" uid="uid://8yu6wwqnxh61" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0024.png" id="85_rptql"]
+[ext_resource type="Texture2D" uid="uid://kbv14ms8edm6" path="res://Assets/Animaciones/Victoria/fase1/VictoriaFase01_0033.png" id="85_u2wby"]
 [ext_resource type="Texture2D" uid="uid://cyf8qx3x1rmwb" path="res://Assets/Animaciones/Muerte/muerte_0001.png" id="86_fkhmy"]
+[ext_resource type="Texture2D" uid="uid://dab1ibh0agle7" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0000.png" id="86_gq6yd"]
 [ext_resource type="Texture2D" uid="uid://c7r16j3hucu0b" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0025.png" id="86_q7x7m"]
 [ext_resource type="Texture2D" uid="uid://xk2jqhoxayy1" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0026.png" id="87_6goua"]
 [ext_resource type="Texture2D" uid="uid://db3xdyud5gqge" path="res://Assets/Animaciones/Muerte/muerte_0002.png" id="87_iu6g6"]
+[ext_resource type="Texture2D" uid="uid://bby5wcjp1n80k" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0001.png" id="87_xxned"]
 [ext_resource type="Texture2D" uid="uid://cujfao68ger35" path="res://Assets/Animaciones/Muerte/muerte_0003.png" id="88_2jhqi"]
 [ext_resource type="Texture2D" uid="uid://b3b8pyvaoe3mm" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0027.png" id="88_owhob"]
+[ext_resource type="Texture2D" uid="uid://b5lb8dbom8ph" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0002.png" id="88_x67p4"]
 [ext_resource type="Texture2D" uid="uid://dl5e1aajrmmfo" path="res://Assets/Animaciones/Muerte/muerte_0004.png" id="89_583it"]
 [ext_resource type="Texture2D" uid="uid://cnwsgn8j8smh0" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0028.png" id="89_fpadw"]
+[ext_resource type="Texture2D" uid="uid://3dh0q1sai8k6" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0003.png" id="89_hk35q"]
 [ext_resource type="Texture2D" uid="uid://bk728oglrvx0p" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0029.png" id="90_6qpxm"]
 [ext_resource type="Texture2D" uid="uid://dvspf24sqpffj" path="res://Assets/Animaciones/Muerte/muerte_0005.png" id="90_a4cu4"]
+[ext_resource type="Texture2D" uid="uid://dx5hojxhr6f81" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0004.png" id="90_jt4t4"]
 [ext_resource type="Texture2D" uid="uid://75o0c51ws2oa" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0030.png" id="91_1aryf"]
 [ext_resource type="Texture2D" uid="uid://b1i3b4g6mcgn6" path="res://Assets/Animaciones/Muerte/muerte_0006.png" id="91_3wtfm"]
+[ext_resource type="Texture2D" uid="uid://bsgmnostcndn5" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0005.png" id="91_5q4jg"]
 [ext_resource type="Texture2D" uid="uid://bpbisvm68utv6" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0031.png" id="92_nfa51"]
 [ext_resource type="Texture2D" uid="uid://calkpbig51u2a" path="res://Assets/Animaciones/Muerte/muerte_0007.png" id="92_sycmc"]
+[ext_resource type="Texture2D" uid="uid://qeso3s6yrboi" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0006.png" id="92_v7kjh"]
+[ext_resource type="Texture2D" uid="uid://bkuwsbc046tld" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0007.png" id="93_8n4pj"]
 [ext_resource type="Texture2D" uid="uid://bbkq4a87vupvh" path="res://Assets/Animaciones/Muerte/muerte_0008.png" id="93_52w3q"]
 [ext_resource type="Texture2D" uid="uid://cby3xw1or324y" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0032.png" id="93_wgctx"]
 [ext_resource type="Texture2D" uid="uid://0g34ca86f4mp" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0033.png" id="94_5urfe"]
 [ext_resource type="Texture2D" uid="uid://b30intf5mat8n" path="res://Assets/Animaciones/Muerte/muerte_0009.png" id="94_8ni3r"]
+[ext_resource type="Texture2D" uid="uid://bicbu30jb6dd" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0008.png" id="94_qggg6"]
 [ext_resource type="Texture2D" uid="uid://dxi8sf46ea1xd" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0034.png" id="95_fkhmy"]
+[ext_resource type="Texture2D" uid="uid://ckuh2baluww0x" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0009.png" id="95_l48lg"]
 [ext_resource type="Texture2D" uid="uid://bxw84570rrgdh" path="res://Assets/Animaciones/Muerte/muerte_0010.png" id="95_y7pg7"]
 [ext_resource type="Texture2D" uid="uid://bvggnwvjrhlqu" path="res://Assets/Animaciones/Muerte/muerte_0011.png" id="96_aa26r"]
 [ext_resource type="Texture2D" uid="uid://cwje7pxp3da6e" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0035.png" id="96_iu6g6"]
+[ext_resource type="Texture2D" uid="uid://c4d21ipl7ntol" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0010.png" id="96_kelxm"]
 [ext_resource type="Texture2D" uid="uid://c5j2m1tfl3kae" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0036.png" id="97_2jhqi"]
 [ext_resource type="Texture2D" uid="uid://fnhtwc6yy6tw" path="res://Assets/Animaciones/Muerte/muerte_0012.png" id="97_767nx"]
+[ext_resource type="Texture2D" uid="uid://cluhma2be6748" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0011.png" id="97_u8qum"]
+[ext_resource type="Texture2D" uid="uid://bwrrxuahvocys" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0012.png" id="98_7lque"]
 [ext_resource type="Texture2D" uid="uid://ddm7roxovagsg" path="res://Assets/Animaciones/MuerteAhorcamiento/MuerteAhorcamiento_0037.png" id="98_583it"]
 [ext_resource type="Texture2D" uid="uid://4oyx3uisx08m" path="res://Assets/Animaciones/Muerte/muerte_0013.png" id="98_hkwaa"]
+[ext_resource type="Texture2D" uid="uid://b1kkpi56lb0ik" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0013.png" id="99_06aw2"]
+[ext_resource type="Texture2D" uid="uid://cwq8ts0qwujjk" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0014.png" id="100_h2vq2"]
+[ext_resource type="Texture2D" uid="uid://jfin30g18oot" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0015.png" id="101_g2qmn"]
+[ext_resource type="Texture2D" uid="uid://wq4vqv24ehv3" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0016.png" id="102_4ykis"]
+[ext_resource type="Texture2D" uid="uid://cua5uqvfcaak5" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0017.png" id="103_frsjx"]
+[ext_resource type="Texture2D" uid="uid://de7qv2epb4jpu" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0018.png" id="104_iuwry"]
+[ext_resource type="Texture2D" uid="uid://bqsh4nx75sy1b" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0019.png" id="105_hrj30"]
+[ext_resource type="Texture2D" uid="uid://ve18c6cy4bw7" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0020.png" id="106_giywq"]
+[ext_resource type="Texture2D" uid="uid://cl3ps3uvpxc6m" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0021.png" id="107_vhqnv"]
+[ext_resource type="Texture2D" uid="uid://2400a4ws2xh0" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0022.png" id="108_6ya32"]
+[ext_resource type="Texture2D" uid="uid://bu2tloglb1r2r" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0023.png" id="109_jgn4u"]
+[ext_resource type="Texture2D" uid="uid://cpy6lxqn38qpk" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0024.png" id="110_sxynh"]
+[ext_resource type="Texture2D" uid="uid://diwyr3k387fji" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0025.png" id="111_a5wsh"]
+[ext_resource type="Texture2D" uid="uid://b46hmoc1c221h" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0026.png" id="112_xkf5w"]
+[ext_resource type="Texture2D" uid="uid://ha7bi0vh8b6" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0027.png" id="113_7d017"]
+[ext_resource type="Texture2D" uid="uid://dfduhch5dhrmv" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0028.png" id="114_xadeu"]
+[ext_resource type="Texture2D" uid="uid://crn63hwsa4hes" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0029.png" id="115_53ou2"]
+[ext_resource type="Texture2D" uid="uid://c5tn2tsqxka1j" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0030.png" id="116_tywel"]
+[ext_resource type="Texture2D" uid="uid://8c5fe72voe4r" path="res://Assets/Animaciones/Victoria/fase2/victoriaFase02_0031.png" id="117_sqll5"]
 [ext_resource type="Texture2D" uid="uid://cw2aauxren6c6" path="res://Assets/Animaciones/BufandaLado/BufandaLado_0000.png" id="120_nfa51"]
 [ext_resource type="Texture2D" uid="uid://bmbrxbp4hcmun" path="res://Assets/Animaciones/BufandaLado/BufandaLado_0001.png" id="121_wgctx"]
 [ext_resource type="Texture2D" uid="uid://b26dfigh6mp6c" path="res://Assets/Animaciones/BufandaLado/BufandaLado_0002.png" id="122_5urfe"]
@@ -229,6 +319,93 @@ animations = [{
 "loop": 1,
 "name": &"AtaqueLado",
 "speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_fidbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_5fjj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_tdsm4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_om6ca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_x2p0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_677b6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_xhstd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_5c7ym")
+}],
+"loop": 1,
+"name": &"ColgAtq1",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_cim5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_u2wby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_gq6yd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_xxned")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_x67p4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_hk35q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_jt4t4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_5q4jg")
+}],
+"loop": 1,
+"name": &"ColgAtq2",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_v7kjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_8n4pj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_qggg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_l48lg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_kelxm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_u8qum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_7lque")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_06aw2")
+}],
+"loop": 1,
+"name": &"ColgAtq3",
+"speed": 24.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -337,6 +514,214 @@ animations = [{
 "loop": 1,
 "name": &"SaltandoArriba",
 "speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("52_sk3ol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_ic0q6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_ygq1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_skn3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_iai7w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_fnet1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_ttksr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_1b6ie")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_ryo5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_sojwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_3ro41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_whlpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_3mf5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_6v7a8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_5hy5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_4m3ig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_e56l7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_l36t4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_4iflq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_hpvm2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_ukeg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_tslnu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_ieqpp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_lbitv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_fidbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_5fjj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_tdsm4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_om6ca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_x2p0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_677b6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_xhstd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_5c7ym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_cim5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_u2wby")
+}],
+"loop": 0,
+"name": &"Victoria1",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("86_gq6yd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_xxned")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_x67p4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_hk35q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_jt4t4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_5q4jg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_v7kjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_8n4pj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_qggg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_l48lg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_kelxm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_u8qum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_7lque")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_06aw2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_h2vq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_g2qmn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_4ykis")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_frsjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_iuwry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_hrj30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_giywq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_vhqnv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_6ya32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_jgn4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_sxynh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_a5wsh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_xkf5w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_7d017")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_xadeu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_53ou2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_tywel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_sqll5")
+}],
+"loop": 0,
+"name": &"Victoria2",
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -881,9 +1266,9 @@ sprite_frames = SubResource("SpriteFrames_125jq")
 animation = &"BufandaAbajo"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1071802769]
+physics_interpolation_mode = 1
 top_level = true
 ignore_rotation = false
-zoom = Vector2(1.3, 1.3)
 limit_left = -280
 limit_top = -10000
 limit_right = 100000

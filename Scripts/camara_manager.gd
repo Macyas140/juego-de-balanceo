@@ -25,21 +25,20 @@ var currentScene:int = 0
 var jugadorMuerto:bool = false
 var jugadorMurioColgado: bool = false
 var tween_muerte: Tween
-var zoom_inicial_muerte: Vector2   # NUEVO
+var zoom_inicial_muerte: Vector2 
 
 @onready var noiseMuerte: PhantomCameraNoiseEmitter2D = $PhantomCamera2D/PhantomCameraNoiseEmitter2D
 @onready var noiseAterrizaje: PhantomCameraNoiseEmitter2D = $"../CamaraSystem/PhantomCamera2D/PhantomCameraNoiseEmitter2D"
 
 func _ready() -> void:
 	print("Prioridades al cargar -> Jugador: ", CamaraJugador.priority, " | Muerte: ", CamaraMuerte.priority)
-	zoom_inicial_muerte = CamaraMuerte.zoom   # NUEVO: se guarda ANTES de la primera muerte
+	zoom_inicial_muerte = CamaraMuerte.zoom 
 	jugador.murioColgado.connect(_on_jugador_murio)
 	jugador.aterrizo.connect(_on_jugador_aterrizo)
 	jugadorMuerto = false
 	jugadorMurioColgado = false
 	_restaurar_camaras.call_deferred()
 	
-	# CAMBIO: antes era Estamina.listoReinicio. Con 'reaparecio' la jugadora ya está en su nueva posición
 	jugador.reaparecio.connect(reiniciar_efectos_muerte)
 	
 	if Checkpoint.tiene_checkpoint:

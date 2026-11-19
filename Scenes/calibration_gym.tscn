@@ -2,7 +2,79 @@
 
 [ext_resource type="PackedScene" uid="uid://bgkq8mpqv0w6m" path="res://Scenes/Personaje.tscn" id="1_be6m5"]
 [ext_resource type="PackedScene" uid="uid://dlu3805qxvt28" path="res://Scenes/ObjetoBlanceo.tscn" id="2_6dpfs"]
+[ext_resource type="Texture2D" uid="uid://u43toxoa4xmq" path="res://Assets/Sin títu5lo.png" id="2_djt8y"]
 [ext_resource type="PackedScene" uid="uid://bj6t5bg1pufry" path="res://Scenes/Enemigo.tscn" id="3_djt8y"]
+
+[sub_resource type="Curve" id="Curve_8noji"]
+_data = [Vector2(0, 0.47321433), 0.0, -0.4893821, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_img0v"]
+curve = SubResource("Curve_8noji")
+
+[sub_resource type="Curve" id="Curve_xk417"]
+_data = [Vector2(0, 0.7410715), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_125jq"]
+curve = SubResource("Curve_xk417")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_oa167"]
+particle_flag_disable_z = true
+angle_min = 5.000011
+angle_max = 15.0000105
+direction = Vector3(0, -1, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 40.0
+gravity = Vector3(0, -50, 0)
+damping_min = 10.0
+damping_max = 15.000001
+scale_min = 1.1999999
+scale_max = 3.0
+scale_curve = SubResource("CurveTexture_125jq")
+alpha_curve = SubResource("CurveTexture_img0v")
+turbulence_enabled = true
+
+[sub_resource type="Curve" id="Curve_y2l05"]
+_data = [Vector2(0, 0.34821433), 0.0, 0.0, 0, 0, Vector2(1, 0.017857194), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_o2khi"]
+curve = SubResource("Curve_y2l05")
+
+[sub_resource type="Curve" id="Curve_e4tve"]
+_limits = [-360.0, 360.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_iypdf"]
+curve = SubResource("Curve_e4tve")
+
+[sub_resource type="Curve" id="Curve_m11om"]
+_data = [Vector2(0, 0.57142866), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_gwg3i"]
+curve = SubResource("Curve_m11om")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_be6t8"]
+particle_flag_disable_z = true
+angle_min = 15.0000105
+angle_max = 25.000011
+angle_curve = SubResource("CurveTexture_iypdf")
+direction = Vector3(0, -1, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 40.0
+gravity = Vector3(0, 60, 0)
+damping_min = 20.0
+damping_max = 25.000002
+scale_min = 1.1999999
+scale_max = 3.0
+scale_curve = SubResource("CurveTexture_gwg3i")
+alpha_curve = SubResource("CurveTexture_o2khi")
+turbulence_noise_strength = 3.53
+turbulence_noise_scale = 10.0
+turbulence_influence_max = 0.5
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_82v0y"]
 
@@ -12,9 +84,27 @@
 position = Vector2(316, 377)
 scale = Vector2(0.35, 0.35)
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1942763833]
+[node name="Camera2D2" type="Camera2D" parent="CharacterBody2D" unique_id=1942763833]
 scale = Vector2(2.8571427, 2.8571427)
 zoom = Vector2(3, 3)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="CharacterBody2D" unique_id=1808876490]
+emitting = false
+amount = 22
+amount_ratio = 0.8
+texture = ExtResource("2_djt8y")
+lifetime = 0.5
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_oa167")
+
+[node name="SaltoCaida" type="GPUParticles2D" parent="CharacterBody2D" unique_id=1113992266]
+scale = Vector2(0.99999994, 0.99999994)
+emitting = false
+amount = 16
+texture = ExtResource("2_djt8y")
+lifetime = 0.2
+one_shot = true
+process_material = SubResource("ParticleProcessMaterial_be6t8")
 
 [node name="ObjetoBalanceo" parent="." unique_id=1901786606 groups=["Agarrable"] instance=ExtResource("2_6dpfs")]
 position = Vector2(239.00003, 352)

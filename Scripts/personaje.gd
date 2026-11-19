@@ -2,6 +2,7 @@ extends CharacterBody2D
 @onready var salto: Node2D = $Salto
 @onready var flash_animation: AnimationPlayer = $AnimatedSprite2D/FlashAnimation
 
+
 #Esto es el movimiento basico del personaje
 @export var SPEED = 350.0 #300 es el original
 var walk = 100
@@ -61,12 +62,20 @@ var cooldownPicada_restante:float = 0.0
 #Esto es para el respawn
 signal reaparecio
 var posicion_inicial: Vector2
+var _reapareciendo:bool = false
 
 var estabaAire: bool = false
 @export var knockback_vertical:float = -450.0
 
+#Esto es para la cinematica final
+var cinematica: bool = false
+var cine_direccion: float = 0.0
+var cine_velocidad: float = 100.0
+var cine_levitando: bool = false
+var cine_vy: float = 0.0
+
 func _ready() -> void:
-	posicion_inicial = global_position   # NUEVO: se guarda ANTES de aplicar el checkpoint
+	posicion_inicial = global_position
 	if Checkpoint.tiene_checkpoint:
 		global_position = Checkpoint.posicion_respawn
 	Estamina.reiniciar()
@@ -74,13 +83,14 @@ func _ready() -> void:
 	Estamina.muerto.connect(_on_estamina_muerto)
 	Estamina.listoReinicio.connect(listoReinicio)
 	hitboxAbajo.golpeo.connect(_on_picada_golpeo)
+	TransitionScreen.revelar()
+	
 
 signal aterrizo(velocidad_caida:float)
 func _physics_process(delta: float) -> void:
 	var is_moving = abs(velocity.x) > 10
 	var on_ground = is_on_floor()
 	dustParticles.emitting = is_moving and on_ground
-	
 	
 	if tiempoInvulnerabilidadRestante > 0:
 		tiempoInvulnerabilidadRestante -= delta
@@ -96,14 +106,15 @@ func _physics_process(delta: float) -> void:
 		cooldownPicada_restante -= delta
 	
 	if not muriendo and not muriendoColgado:
-		if Input.is_action_just_pressed("Ataque") and not atacando and not enPicada:
+		if not cinematica and Input.is_action_just_pressed("Ataque") and not atacando and not enPicada:
 			if Input.is_action_pressed("AtaqueAbajo") and not is_on_floor() and cooldownPicada_restante <= 0:
 				ataqueAbajo()
 			elif cooldownAtaque_restante <= 0:
 				ataque()
 		
 #Aqui voy a hacer que el personaje mire para otros lados dependiendo del input del jugador
-		var direction := Input.get_axis("Izquierda", "Derecha")
+		var direction: float = cine_direccion if cinematica else Input.get_axis("Izquierda", "Derecha")
+		#var direction := Input.get_axis("Izquierda", "Derecha")
 		if direction != 0:
 			ultima_direccion = direction
 			animatedSprite.flip_h = direction < 0
@@ -116,7 +127,9 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0, friccionKnockback * delta)
 		elif not colgado:
 			if direction:
-				if Input.is_action_pressed("Caminar"):
+				if cinematica:
+					velocity.x = direction * cine_velocidad
+				elif Input.is_action_pressed("Caminar"):
 					velocity.x = direction * walk
 				else:
 					velocity.x = direction * SPEED
@@ -140,6 +153,9 @@ func _physics_process(delta: float) -> void:
 				velocity.x = move_toward(velocity.x, 0, friccion * delta)
 			#acomodar_caidaMuerte(delta)
 			
+	if cinematica and cine_levitando:
+		velocity.y = cine_vy
+	
 	var velocidadEnYAntes = velocity.y
 	
 	move_and_slide()
@@ -210,7 +226,13 @@ func _on_estamina_muerto() -> void:
 	murioColgado.emit(colgado_Muerto)
 
 func listoReinicio() -> void:
-	reaparecer()
+	if _reapareciendo:
+		return
+	_reapareciendo = true
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
+	reaparecer()                                    
+	_reapareciendo = false
 	#get_tree().call_deferred("reload_current_scene")
 
 func acomodar_caidaMuerte(delta:float) -> void:
@@ -222,7 +244,7 @@ func acomodar_caidaMuerte(delta:float) -> void:
 		animatedSprite.flip_h = golpeado_de_espalda
 
 func recibir_ataque(cantidad:float, direccion_knockback:Vector2, fuerza:float) -> void:
-	if muriendo or muriendoColgado:
+	if muriendo or muriendoColgado or cinematica:
 		return
 	recibir_daño(cantidad)
 	golpeado_de_espalda = sign(direccion_knockback.x) == ultima_direccion
@@ -268,4 +290,34 @@ func reaparecer() -> void:
 	Estamina.reiniciar()
 	get_tree().call_group("enemigos", "reiniciar")
 	reaparecio.emit()
-	
+
+#esta es la parte de la cinematica, la neta no la entiendo del todo
+func iniciar_cinematica() -> void:
+	cinematica = true
+	cine_direccion = 0.0
+	knockbackRestante = 0.0
+	atacando = false
+	enPicada = false
+	hitbox_ataque_forma.set_deferred("disabled", true)
+	hitboxAbajo_forma.set_deferred("disabled", true)
+	gancho.reiniciar()        # suelta la bufanda si estabas colgada (esto deja gancho.muriendo en false)
+	gancho.muriendo = true    # por eso se bloquea DESPUÉS: sin input de bufanda ni impulso
+	salto.muriendo = true     # sin input de salto (la gravedad sigue activa)
+	saltoGancho = false
+	Estamina.reiniciar()      # barra llena y oculta
+
+# direccion: 1 derecha, -1 izquierda, 0 quieto. Con velocidad 0 solo se voltea sin moverse.
+func cine_mover(direccion: float, velocidad: float = 100.0) -> void:
+	cine_direccion = direccion
+	cine_velocidad = velocidad
+
+func cine_saltar() -> void:
+	if is_on_floor():
+		salto.saltar()
+
+func cine_levitar(vy: float) -> void:
+	cine_levitando = true
+	cine_vy = vy
+
+func cine_soltar_levitacion() -> void:
+	cine_levitando = false

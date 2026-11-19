@@ -1,0 +1,205 @@
+[gd_scene format=3 uid="uid://b6bguoxmkapxf"]
+
+[ext_resource type="Script" uid="uid://cu438lejfb3jd" path="res://Scripts/settings_pausa.gd" id="1_ovlh1"]
+[ext_resource type="Script" uid="uid://blpn8jqb4431m" path="res://Scripts/full_screen_control.gd" id="2_ovlh1"]
+[ext_resource type="Script" uid="uid://o4a052yeh8i4" path="res://Scripts/sfx_controller.gd" id="3_s0u67"]
+[ext_resource type="PackedScene" uid="uid://criobmicdv3vd" path="res://Scenes/MenuInicioTransicion.tscn" id="5_0c4xo"]
+[ext_resource type="Script" uid="uid://4srjkr3xom06" path="res://Scripts/music_controller_menu_inicio.gd" id="5_s0u67"]
+[ext_resource type="Texture2D" uid="uid://c3vr1hckasdjj" path="res://Assets/UI/Fondo.png" id="6_0c4xo"]
+
+[sub_resource type="FontFile" id="FontFile_2sf5m"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/48/0/ascent = 0.0
+cache/0/48/0/descent = 0.0
+cache/0/48/0/underline_position = 0.0
+cache/0/48/0/underline_thickness = 0.0
+cache/0/48/0/scale = 1.0
+cache/0/32/0/ascent = 0.0
+cache/0/32/0/descent = 0.0
+cache/0/32/0/underline_position = 0.0
+cache/0/32/0/underline_thickness = 0.0
+cache/0/32/0/scale = 1.0
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_se3yc"]
+color = Color(0.98939866, 0.98939866, 0.98939854, 1)
+thickness = 6
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_0ob53"]
+color = Color(0, 0.6117647, 0, 1)
+thickness = 6
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_82v0y"]
+color = Color(1, 1, 1, 1)
+thickness = 6
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_am3o3"]
+color = Color(0, 0.6117647, 0, 1)
+thickness = 6
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_125jq"]
+color = Color(0, 0.6117647, 0, 1)
+thickness = 6
+
+[node name="Control" type="Control" unique_id=1561898898]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_ovlh1")
+
+[node name="Panel" type="Panel" parent="." unique_id=396995937]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Options" type="Panel" parent="." unique_id=2058502458]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -440.0
+offset_top = -303.5
+offset_right = 440.0
+offset_bottom = 303.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options" unique_id=1374319032]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -167.5
+offset_right = 167.5
+offset_bottom = 99.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 72
+text = "SETTINGS"
+
+[node name="Back" type="Button" parent="Options" unique_id=1097827794]
+layout_mode = 0
+offset_left = 164.0
+offset_top = 474.5
+offset_right = 691.0
+offset_bottom = 573.5
+theme_override_font_sizes/font_size = 35
+toggle_mode = true
+text = "BACK"
+
+[node name="FullScreenControl" type="CheckButton" parent="Options" unique_id=736498648]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 267.5
+offset_right = 633.0
+offset_bottom = 337.5
+theme_override_fonts/font = SubResource("FontFile_2sf5m")
+theme_override_font_sizes/font_size = 32
+button_pressed = true
+text = "FullScreen"
+script = ExtResource("2_ovlh1")
+
+[node name="MusicLabel" type="Label" parent="Options" unique_id=150999123]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 139.5
+offset_right = 306.0
+offset_bottom = 184.5
+theme_override_font_sizes/font_size = 32
+text = "Music"
+
+[node name="Label2" type="Label" parent="Options" unique_id=1017752832]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 203.5
+offset_right = 271.0
+offset_bottom = 248.5
+theme_override_font_sizes/font_size = 32
+text = "SFX"
+
+[node name="SFXController" type="HSlider" parent="Options" unique_id=1615527371]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -85.0
+offset_right = 184.0
+offset_bottom = -69.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxLine_se3yc")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_0ob53")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_0ob53")
+max_value = 1.0
+step = 0.05
+script = ExtResource("3_s0u67")
+audio_bus_name = "SFX"
+
+[node name="MusicControllerMenuInicio" type="HSlider" parent="Options" unique_id=301052270]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -196.0
+offset_right = 175.0
+offset_bottom = -82.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxLine_82v0y")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_am3o3")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_125jq")
+max_value = 2.0
+step = 0.05
+value = 2.0
+script = ExtResource("5_s0u67")
+audio_bus_name_Inicio = "Inicio"
+
+[node name="MenuInicioTrans" parent="." unique_id=811791906 instance=ExtResource("5_0c4xo")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1532522505]
+z_index = -3
+position = Vector2(576.88885, 337.25)
+scale = Vector2(0.64305556, 0.6430555)
+texture = ExtResource("6_0c4xo")
+
+[connection signal="pressed" from="Options/Back" to="." method="_on_back_pressed"]
+[connection signal="toggled" from="Options/FullScreenControl" to="Options/FullScreenControl" method="_on_toggled"]
+[connection signal="value_changed" from="Options/SFXController" to="Options/SFXController" method="_on_value_changed"]
+[connection signal="value_changed" from="Options/MusicControllerMenuInicio" to="Options/MusicControllerMenuInicio" method="_on_value_changed"]

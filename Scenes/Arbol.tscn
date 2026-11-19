@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bmkxon86hofsu"]
+
+[ext_resource type="Texture2D" uid="uid://c712vi7cusbnf" path="res://Assets/assets/Árbol 1.png" id="1_6qa4n"]
+[ext_resource type="Texture2D" uid="uid://blhg6kelanwfj" path="res://Assets/assets/Pétalo.png" id="2_3h72x"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_okgnl"]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_rod5x"]
+offsets = PackedFloat32Array(0, 0.23623854, 0.8142202, 0.99311924)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_o2khi"]
+gradient = SubResource("Gradient_rod5x")
+
+[sub_resource type="Curve" id="Curve_3yyem"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_qket7"]
+curve = SubResource("Curve_3yyem")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_y1r17"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(750, 200, 1)
+direction = Vector3(-1, 1, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 50.0
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = 49.99998
+gravity = Vector3(0, 15, 0)
+scale_min = 0.5
+scale_max = 0.79999995
+scale_curve = SubResource("CurveTexture_qket7")
+color_ramp = SubResource("GradientTexture1D_o2khi")
+anim_offset_max = 1.0
+
+[node name="Sprite2D" type="Sprite2D" unique_id=1029264514]
+texture = ExtResource("1_6qa4n")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1248968247]
+modulate = Color(0.8392157, 1, 1, 1)
+z_index = -1
+material = SubResource("CanvasItemMaterial_okgnl")
+position = Vector2(77, -89)
+amount = 15
+amount_ratio = 0.45
+texture = ExtResource("2_3h72x")
+lifetime = 7.0
+process_material = SubResource("ParticleProcessMaterial_y1r17")

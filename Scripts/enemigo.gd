@@ -2,6 +2,7 @@ extends CharacterBody2D
 class_name EnemigoTierra
 #@onready var animation_player: AnimationPlayer = $Sprite2D/AnimationPlayer
 @onready var animation_player: AnimationPlayer = $AnimatedSprite2D/AnimationPlayer
+@onready var gpu_particles_2d: GPUParticles2D = $GPUParticles2D
 
 
 const  speed = 40
@@ -156,8 +157,10 @@ func RecibirDaño(cantidad: float, direccion_knockback: Vector2 = Vector2.ZERO) 
 		invulnerable = false
 		return
 	vida = max(vida - cantidad, vidaMinima)
-	animation_player.play("Hitflash")
+	#animation_player.play("Hitflash")
+	animation_player.play("dano")
 	HitStopManager.hit_stop_short()
+	lanzar_particulas_golpe(direccion_knockback)
 	if direccion_knockback != Vector2.ZERO:
 		velocity.x = direccion_knockback.x * KnockbackRecibido
 		KnockbackRestante = duracionKnockback
@@ -211,3 +214,9 @@ func _restaurar_visual() -> void:
 	if mat:
 		mat.set_shader_parameter("flash_amount", 0.0)
 		mat.set_shader_parameter("gray_amount", 0.0)
+
+func lanzar_particulas_golpe(direccion: Vector2) -> void:
+	if direccion == Vector2.ZERO or not direccion.is_finite():
+		direccion = Vector2.UP
+	gpu_particles_2d.global_rotation = direccion.angle()
+	gpu_particles_2d.restart()

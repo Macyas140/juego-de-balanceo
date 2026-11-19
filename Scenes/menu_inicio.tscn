@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://cuql02ntrlbrx"]
+
+[ext_resource type="Script" uid="uid://ck1nyfbpgdgis" path="res://Scripts/menu_inicio.gd" id="1_ryjsk"]
+[ext_resource type="AudioStream" uid="uid://cnvx8ucqw2tm1" path="res://Assets/Soundtrack/MusicaRecortada/menu_cortado.mp3" id="2_h8kkd"]
+[ext_resource type="PackedScene" uid="uid://criobmicdv3vd" path="res://Scenes/MenuInicioTransicion.tscn" id="3_lc4t7"]
+[ext_resource type="Texture2D" uid="uid://c3vr1hckasdjj" path="res://Assets/UI/Fondo.png" id="4_32rtn"]
+[ext_resource type="Texture2D" uid="uid://k0rjuhsmp8f" path="res://Assets/UI/Tronco.PNG" id="8_kv616"]
+
+[node name="Menu Inicio" type="Node2D" unique_id=1045287827]
+script = ExtResource("1_ryjsk")
+
+[node name="Button_Manager" type="Control" parent="." unique_id=722472382]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start" type="Button" parent="Button_Manager" unique_id=1858511259]
+z_index = 1
+layout_mode = 0
+offset_left = 340.0
+offset_top = 568.0
+offset_right = 543.3334
+offset_bottom = 641.0
+scale = Vector2(0.9, 0.9)
+text = "START"
+
+[node name="Settings" type="Button" parent="Button_Manager" unique_id=1376487965]
+z_index = 1
+layout_mode = 0
+offset_left = 593.0
+offset_top = 567.0
+offset_right = 806.3334
+offset_bottom = 639.0
+scale = Vector2(0.9, 0.9)
+text = "SETTINGS"
+
+[node name="Quit" type="Button" parent="Button_Manager" unique_id=1418606747]
+z_index = 1
+layout_mode = 0
+offset_left = 834.0
+offset_top = 562.0
+offset_right = 1066.0
+offset_bottom = 629.0
+text = "QUIT"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1543281443]
+stream = ExtResource("2_h8kkd")
+autoplay = true
+bus = &"Inicio"
+
+[node name="MenuInicioTrans" parent="." unique_id=2024223047 instance=ExtResource("3_lc4t7")]
+visible = false
+
+[node name="Fade_Timer" type="Timer" parent="MenuInicioTrans" unique_id=2003912363]
+one_shot = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=689185212]
+z_index = -3
+position = Vector2(576.88885, 337.25)
+scale = Vector2(0.64305556, 0.6430555)
+texture = ExtResource("4_32rtn")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1255265083]
+position = Vector2(669.33325, 389.25)
+scale = Vector2(0.5467593, 0.5467592)
+texture = ExtResource("8_kv616")
+
+[connection signal="pressed" from="Button_Manager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button_Manager/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Button_Manager/Quit" to="." method="_on_quit_pressed"]
+[connection signal="timeout" from="MenuInicioTrans/Fade_Timer" to="." method="_on_fade_timer_timeout"]
