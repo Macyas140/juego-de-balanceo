@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://bln28cvsi5rg4"]
+
+[ext_resource type="Texture2D" uid="uid://dsgr1fdh7oktn" path="res://Assets/Animaciones/Animaciones Tutorial/MouseSwing/swing_0000.png" id="1_ij2pl"]
+[ext_resource type="Texture2D" uid="uid://018ugnbvdiwt" path="res://Assets/Animaciones/Animaciones Tutorial/MouseSwing/swing_0001.png" id="2_lufx6"]
+[ext_resource type="Texture2D" uid="uid://cdu7yl61q1ae4" path="res://Assets/Animaciones/Animaciones Tutorial/MouseSwing/swing_0002.png" id="3_g3f2l"]
+[ext_resource type="Texture2D" uid="uid://cnmueppchwa4d" path="res://Assets/Animaciones/Animaciones Tutorial/MouseSwing/swing_0003.png" id="4_p7j5o"]
+[ext_resource type="Texture2D" uid="uid://ciprqg3u2mj71" path="res://Assets/Animaciones/Animaciones Tutorial/MouseSwing/swing_0004.png" id="5_d5yq3"]
+[ext_resource type="Texture2D" uid="uid://dox107cgigtl3" path="res://Assets/Animaciones/Animaciones Tutorial/MouseSwing/swing_0005.png" id="6_i86np"]
+[ext_resource type="Texture2D" uid="uid://d25n57wbohr3t" path="res://Assets/Animaciones/Animaciones Tutorial/MouseSwing/swing_0006.png" id="7_760i0"]
+[ext_resource type="Texture2D" uid="uid://b6iucaqycb4uj" path="res://Assets/Animaciones/Animaciones Tutorial/MouseSwing/swing_0007.png" id="8_mcq48"]
+[ext_resource type="Texture2D" uid="uid://bpy14bwwhm4r6" path="res://Assets/Animaciones/Animaciones Tutorial/MouseSwing/swing_0008.png" id="9_2gbeh"]
+[ext_resource type="Texture2D" uid="uid://bhu46a4xefkbd" path="res://Assets/Animaciones/Animaciones Tutorial/MouseSwing/swing_0009.png" id="10_0sixw"]
+[ext_resource type="Texture2D" uid="uid://1okr0v4ydwa6" path="res://Assets/Animaciones/Animaciones Tutorial/MouseSwing/swing_0010.png" id="11_2bv4q"]
+[ext_resource type="Texture2D" uid="uid://dmmtm3ap0txfr" path="res://Assets/Animaciones/Animaciones Tutorial/MouseSwing/swing_0011.png" id="12_4t1qc"]
+[ext_resource type="Texture2D" uid="uid://byggfs8sk1xbp" path="res://Assets/Animaciones/Animaciones Tutorial/MouseSwing/swing_0012.png" id="13_p77y1"]
+[ext_resource type="Texture2D" uid="uid://2nigjvpatogo" path="res://Assets/Animaciones/Animaciones Tutorial/MouseSwing/swing_0013.png" id="14_dc4if"]
+[ext_resource type="Texture2D" uid="uid://cnxoceik03h6g" path="res://Assets/Animaciones/Animaciones Tutorial/MouseSwing/swing_0014.png" id="15_xmksc"]
+[ext_resource type="Texture2D" uid="uid://bb8y8kida6dj1" path="res://Assets/Animaciones/Animaciones Tutorial/MouseSwing/swing_0015.png" id="16_0ldix"]
+[ext_resource type="Texture2D" uid="uid://baw2fe131sw5h" path="res://Assets/Animaciones/Animaciones Tutorial/MouseSwing/swing_0016.png" id="17_oj7jy"]
+[ext_resource type="Texture2D" uid="uid://d2ljqbsfehws5" path="res://Assets/Animaciones/Animaciones Tutorial/MouseSwing/swing_0017.png" id="18_u8t1y"]
+[ext_resource type="Texture2D" uid="uid://6hwtwobsh6em" path="res://Assets/Animaciones/Animaciones Tutorial/MouseSwing/swing_0018.png" id="19_tngb8"]
+[ext_resource type="Texture2D" uid="uid://de3pfle125fxr" path="res://Assets/Animaciones/Animaciones Tutorial/MouseSwing/swing_0019.png" id="20_3cmme"]
+[ext_resource type="Texture2D" uid="uid://bjeugmxvb2bh1" path="res://Assets/Animaciones/Animaciones Tutorial/MouseSwing/swing_0020.png" id="21_owfr8"]
+[ext_resource type="Texture2D" uid="uid://nphsofc7s1wr" path="res://Assets/Animaciones/Animaciones Tutorial/MouseSwing/swing_0021.png" id="22_g2p1v"]
+[ext_resource type="Texture2D" uid="uid://de2pung1qkg85" path="res://Assets/Animaciones/Animaciones Tutorial/MouseSwing/swing_0022.png" id="23_j6475"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_82v0y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ij2pl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_lufx6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_g3f2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_p7j5o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_d5yq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_i86np")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_760i0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mcq48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2gbeh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0sixw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_2bv4q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4t1qc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_p77y1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_dc4if")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_xmksc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_0ldix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_oj7jy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_u8t1y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_tngb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_3cmme")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_owfr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_g2p1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_j6475")
+}],
+"loop": 1,
+"name": &"MouseSwing",
+"speed": 30.0
+}]
+
+[node name="MouseSwing" type="AnimatedSprite2D" unique_id=786386494]
+sprite_frames = SubResource("SpriteFrames_82v0y")
+animation = &"MouseSwing"
+frame_progress = 0.7615596

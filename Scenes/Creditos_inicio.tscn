@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://ch4r5xj30hqfn"]
+
+[ext_resource type="Texture2D" uid="uid://c3vr1hckasdjj" path="res://Assets/UI/Fondo.png" id="1_o5vrd"]
+[ext_resource type="Script" uid="uid://b48umpesxkxrp" path="res://Scripts/creditos_inicio.gd" id="1_uby3v"]
+[ext_resource type="Texture2D" uid="uid://dgub2ql3slwi" path="res://Assets/Pantalla inicio/Back.PNG" id="3_jr3xi"]
+[ext_resource type="Texture2D" uid="uid://8rmot5q884rv" path="res://Assets/Pantalla inicio/Back click.PNG" id="4_i5s70"]
+[ext_resource type="Texture2D" uid="uid://cskm51nlbfukv" path="res://Assets/Pantalla inicio/Back pasar mouse.PNG" id="5_8ugav"]
+
+[node name="Control" type="Control" unique_id=1317254042 node_paths=PackedStringArray("contenido")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uby3v")
+contenido = NodePath("Options")
+
+[node name="Panel" type="Panel" parent="." unique_id=705255634]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=928698297]
+z_index = -6
+position = Vector2(576.88885, 337.25)
+scale = Vector2(0.64305556, 0.6430555)
+texture = ExtResource("1_o5vrd")
+
+[node name="Options" type="Panel" parent="." unique_id=1633653000]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -440.0
+offset_top = -303.5
+offset_right = 440.0
+offset_bottom = 303.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options" unique_id=269859632]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -167.5
+offset_right = 167.5
+offset_bottom = 99.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 72
+text = "CREDITOS"
+
+[node name="Back" type="TextureButton" parent="Options" unique_id=1615952636]
+layout_mode = 0
+offset_left = 331.0
+offset_top = 424.5
+offset_right = 395.0
+offset_bottom = 488.5
+scale = Vector2(3, 3)
+toggle_mode = true
+texture_normal = ExtResource("3_jr3xi")
+texture_pressed = ExtResource("4_i5s70")
+texture_hover = ExtResource("5_8ugav")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Options" unique_id=2098638649]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 109.5
+offset_right = 801.0
+offset_bottom = 448.5
+theme_override_font_sizes/normal_font_size = 42
+text = "Artista:
+Regina Lopez Almodovar
+
+Game Designer:
+Emilio Castellanos Cortez
+
+Programacion:
+Emilio Israel Macias Fernandez"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Options/Back" to="." method="_on_back_pressed"]

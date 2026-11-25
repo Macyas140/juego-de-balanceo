@@ -1,0 +1,298 @@
+[gd_scene format=3 uid="uid://dwtslfx6xpq3k"]
+
+[ext_resource type="Texture2D" uid="uid://blxd5rny7al1m" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0000.png" id="1_hg6ya"]
+[ext_resource type="Texture2D" uid="uid://deq8inrsu36ld" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0001.png" id="2_ffvwu"]
+[ext_resource type="Texture2D" uid="uid://dpnxha8ss7k08" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0002.png" id="3_ob61j"]
+[ext_resource type="Texture2D" uid="uid://c604utwd8fswt" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0003.png" id="4_hwyhu"]
+[ext_resource type="Texture2D" uid="uid://da06i2j31jlav" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0004.png" id="5_b0754"]
+[ext_resource type="Texture2D" uid="uid://fervtnegsil8" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0005.png" id="6_pi2er"]
+[ext_resource type="Texture2D" uid="uid://dpbd574mw0ayv" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0006.png" id="7_8gakb"]
+[ext_resource type="Texture2D" uid="uid://c2buu5wr06e6e" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0007.png" id="8_0xdtv"]
+[ext_resource type="Texture2D" uid="uid://cxdyangsu5785" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0008.png" id="9_itgkc"]
+[ext_resource type="Texture2D" uid="uid://cksx875fldxk" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0009.png" id="10_vh2b1"]
+[ext_resource type="Texture2D" uid="uid://dbdwbhskugp5s" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0010.png" id="11_cquku"]
+[ext_resource type="Texture2D" uid="uid://daqgbrpotlt4w" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0011.png" id="12_je2n8"]
+[ext_resource type="Texture2D" uid="uid://ukth74mcs1ub" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0012.png" id="13_wm8rc"]
+[ext_resource type="Texture2D" uid="uid://cljt50j8cj4dm" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0013.png" id="14_ippbp"]
+[ext_resource type="Texture2D" uid="uid://3vpq1jeasu47" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0014.png" id="15_3w7fb"]
+[ext_resource type="Texture2D" uid="uid://htt6hda7kbri" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0015.png" id="16_ow65h"]
+[ext_resource type="Texture2D" uid="uid://jdj6jjg4rsai" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0016.png" id="17_7x5aw"]
+[ext_resource type="Texture2D" uid="uid://dyblma8epmu7p" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0017.png" id="18_5tdgc"]
+[ext_resource type="Texture2D" uid="uid://dwrw2hge7k3on" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0018.png" id="19_ko8j2"]
+[ext_resource type="Texture2D" uid="uid://bouybdcxx30m7" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0019.png" id="20_i0i26"]
+[ext_resource type="Texture2D" uid="uid://bs61637nquckc" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0020.png" id="21_1dlwj"]
+[ext_resource type="Texture2D" uid="uid://4j31i53jg0k4" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0021.png" id="22_46ud8"]
+[ext_resource type="Texture2D" uid="uid://vh4ni57dgcl7" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0022.png" id="23_50obg"]
+[ext_resource type="Texture2D" uid="uid://cnrdu6ve2babo" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0023.png" id="24_n1gcl"]
+[ext_resource type="Texture2D" uid="uid://db1t4exvusw2g" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0024.png" id="25_hdrde"]
+[ext_resource type="Texture2D" uid="uid://dvpdg02stpmmq" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0025.png" id="26_38d5e"]
+[ext_resource type="Texture2D" uid="uid://cxd8utp1eyilt" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0026.png" id="27_kyx6d"]
+[ext_resource type="Texture2D" uid="uid://bc1c8q6kjok7j" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0027.png" id="28_faygl"]
+[ext_resource type="Texture2D" uid="uid://5jl78dpolka0" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0028.png" id="29_tlnao"]
+[ext_resource type="Texture2D" uid="uid://clctsr5ane507" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0029.png" id="30_pk4po"]
+[ext_resource type="Texture2D" uid="uid://cmqxcrgsnma81" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0030.png" id="31_66583"]
+[ext_resource type="Texture2D" uid="uid://cifsqkoh7fyfl" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0031.png" id="32_lyfq6"]
+[ext_resource type="Texture2D" uid="uid://qy82r5wg8sgw" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0032.png" id="33_shwfg"]
+[ext_resource type="Texture2D" uid="uid://cjhvdb0n8uogg" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0033.png" id="34_k3k7r"]
+[ext_resource type="Texture2D" uid="uid://bfskiysrugcvp" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0034.png" id="35_hwr0d"]
+[ext_resource type="Texture2D" uid="uid://ddgt8k2wyv6re" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0035.png" id="36_8l7sd"]
+[ext_resource type="Texture2D" uid="uid://pwkb7l3j3oq1" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0036.png" id="37_bu1br"]
+[ext_resource type="Texture2D" uid="uid://7oo02mokah3n" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0037.png" id="38_pxjmk"]
+[ext_resource type="Texture2D" uid="uid://cx0gobtjwcfwn" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0038.png" id="39_5vlil"]
+[ext_resource type="Texture2D" uid="uid://bp3fltmjp2i2v" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0039.png" id="40_3dl61"]
+[ext_resource type="Texture2D" uid="uid://bgvu5olm2kjar" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0040.png" id="41_xni2a"]
+[ext_resource type="Texture2D" uid="uid://bc8tahv6o4stm" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0041.png" id="42_r11od"]
+[ext_resource type="Texture2D" uid="uid://cyi8ivwu4xit8" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0042.png" id="43_bnlhq"]
+[ext_resource type="Texture2D" uid="uid://bx0wdck7g08l3" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0043.png" id="44_g6m46"]
+[ext_resource type="Texture2D" uid="uid://4cpuokonfwn5" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0044.png" id="45_g4we1"]
+[ext_resource type="Texture2D" uid="uid://k0cedum165m1" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0045.png" id="46_g2a5f"]
+[ext_resource type="Texture2D" uid="uid://o1wkh5lmlah4" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0046.png" id="47_2max6"]
+[ext_resource type="Texture2D" uid="uid://665k32if2xd2" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0047.png" id="48_7hotq"]
+[ext_resource type="Texture2D" uid="uid://bav5r3wx1k884" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0048.png" id="49_uax8r"]
+[ext_resource type="Texture2D" uid="uid://c62se16k188ge" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0049.png" id="50_ojcis"]
+[ext_resource type="Texture2D" uid="uid://sa4aemqkiera" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0050.png" id="51_7ym1h"]
+[ext_resource type="Texture2D" uid="uid://du8sjc41vieay" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0051.png" id="52_8mp0v"]
+[ext_resource type="Texture2D" uid="uid://bur22kophm2dn" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0052.png" id="53_fh0ri"]
+[ext_resource type="Texture2D" uid="uid://b7t75al4utor8" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0053.png" id="54_7f4pa"]
+[ext_resource type="Texture2D" uid="uid://b10tsrlvoklul" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0054.png" id="55_rm042"]
+[ext_resource type="Texture2D" uid="uid://bq1llpd8wl07o" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0055.png" id="56_7cc7v"]
+[ext_resource type="Texture2D" uid="uid://bdl55alwr768g" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0056.png" id="57_xuxmg"]
+[ext_resource type="Texture2D" uid="uid://csi8667mkfjx7" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0057.png" id="58_u8tk0"]
+[ext_resource type="Texture2D" uid="uid://cnhchh8f47gqf" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0058.png" id="59_u3rrs"]
+[ext_resource type="Texture2D" uid="uid://dnuxj7cvs0dcn" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0059.png" id="60_w02ak"]
+[ext_resource type="Texture2D" uid="uid://6rm4b01ucrpx" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0060.png" id="61_ojupn"]
+[ext_resource type="Texture2D" uid="uid://b833wani3kb0s" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0061.png" id="62_pypda"]
+[ext_resource type="Texture2D" uid="uid://bgers2d0cw335" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0062.png" id="63_oij7y"]
+[ext_resource type="Texture2D" uid="uid://bxv8ip3tf8gn6" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0063.png" id="64_63jlo"]
+[ext_resource type="Texture2D" uid="uid://clsvq16anl0vn" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0064.png" id="65_fbnk1"]
+[ext_resource type="Texture2D" uid="uid://dpsv5turbejeu" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0065.png" id="66_sr7ex"]
+[ext_resource type="Texture2D" uid="uid://by8vcy0odjju6" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0066.png" id="67_kjlyj"]
+[ext_resource type="Texture2D" uid="uid://dtymemht04jmy" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0067.png" id="68_1ktem"]
+[ext_resource type="Texture2D" uid="uid://c6xur0m5dieq2" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0068.png" id="69_gpqnv"]
+[ext_resource type="Texture2D" uid="uid://c1454f5hyxjbd" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0069.png" id="70_urd4o"]
+[ext_resource type="Texture2D" uid="uid://41wu7tdl4vnm" path="res://Assets/Animaciones/Animaciones Tutorial/PogoJump/jumpPogo_0070.png" id="71_8hsxb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_82v0y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hg6ya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ffvwu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ob61j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hwyhu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_b0754")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pi2er")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8gakb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0xdtv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_itgkc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_vh2b1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cquku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_je2n8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_wm8rc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ippbp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_3w7fb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ow65h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_7x5aw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_5tdgc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ko8j2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_i0i26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1dlwj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_46ud8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_50obg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_n1gcl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_hdrde")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_38d5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_kyx6d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_faygl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_tlnao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_pk4po")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_66583")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_lyfq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_shwfg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_k3k7r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_hwr0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_8l7sd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_bu1br")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_pxjmk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_5vlil")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_3dl61")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_xni2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_r11od")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_bnlhq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_g6m46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_g4we1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_g2a5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_2max6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_7hotq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_uax8r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_ojcis")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_7ym1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_8mp0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_fh0ri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_7f4pa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_rm042")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_7cc7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_xuxmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_u8tk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_u3rrs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_w02ak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_ojupn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_pypda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_oij7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_63jlo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_fbnk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_sr7ex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_kjlyj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_1ktem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_gpqnv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_urd4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_8hsxb")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 30.0
+}]
+
+[node name="PogoJump" type="AnimatedSprite2D" unique_id=1607983311]
+sprite_frames = SubResource("SpriteFrames_82v0y")
+frame_progress = 0.46765006

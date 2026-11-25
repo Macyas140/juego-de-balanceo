@@ -1,0 +1,299 @@
+[gd_scene format=3 uid="uid://dttjn03ry5duy"]
+
+[ext_resource type="Texture2D" uid="uid://cnlyo65pxi5p8" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0000.png" id="1_l6cbl"]
+[ext_resource type="Texture2D" uid="uid://nhw6js3sggf8" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0001.png" id="2_goyel"]
+[ext_resource type="Texture2D" uid="uid://bmlop6gwep5q7" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0002.png" id="3_d0ras"]
+[ext_resource type="Texture2D" uid="uid://7qgrjj1ac6er" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0003.png" id="4_ng7fd"]
+[ext_resource type="Texture2D" uid="uid://cybetyw54hioh" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0004.png" id="5_y1cdx"]
+[ext_resource type="Texture2D" uid="uid://d1e6agj0rjmqo" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0005.png" id="6_ri5bm"]
+[ext_resource type="Texture2D" uid="uid://bx0ofitdj8rog" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0006.png" id="7_ybste"]
+[ext_resource type="Texture2D" uid="uid://pwiethin2bmd" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0007.png" id="8_yfbvq"]
+[ext_resource type="Texture2D" uid="uid://du7khpa2npegn" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0008.png" id="9_vwwkf"]
+[ext_resource type="Texture2D" uid="uid://b7ms1v7ryws77" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0009.png" id="10_71yfr"]
+[ext_resource type="Texture2D" uid="uid://dolc85w4ibkpv" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0010.png" id="11_qy0bh"]
+[ext_resource type="Texture2D" uid="uid://lckfwmpn30tg" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0011.png" id="12_b65na"]
+[ext_resource type="Texture2D" uid="uid://cft147f45grix" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0012.png" id="13_mq3xd"]
+[ext_resource type="Texture2D" uid="uid://7egl7vfhtruc" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0013.png" id="14_lv6cq"]
+[ext_resource type="Texture2D" uid="uid://bxg7w0f6dmt0g" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0014.png" id="15_fq6d5"]
+[ext_resource type="Texture2D" uid="uid://ct1w4pm2grd3r" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0015.png" id="16_a4joj"]
+[ext_resource type="Texture2D" uid="uid://ccaq140ycv7yu" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0016.png" id="17_gnktk"]
+[ext_resource type="Texture2D" uid="uid://bgpxkrkffkdp0" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0017.png" id="18_a0gu4"]
+[ext_resource type="Texture2D" uid="uid://bhvn4wmmq6ejl" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0018.png" id="19_g2j6a"]
+[ext_resource type="Texture2D" uid="uid://s3thfk880pje" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0019.png" id="20_djne5"]
+[ext_resource type="Texture2D" uid="uid://cj2e4wihmfyia" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0020.png" id="21_jpc24"]
+[ext_resource type="Texture2D" uid="uid://bcsw07atuxsjs" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0021.png" id="22_wkovd"]
+[ext_resource type="Texture2D" uid="uid://bi3wqlj3y7nne" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0022.png" id="23_h7c1l"]
+[ext_resource type="Texture2D" uid="uid://b83vameqbd0oc" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0023.png" id="24_d2abh"]
+[ext_resource type="Texture2D" uid="uid://nwpcjypit6v4" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0024.png" id="25_cvb2v"]
+[ext_resource type="Texture2D" uid="uid://b0tiwfl5e87m0" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0025.png" id="26_qqeal"]
+[ext_resource type="Texture2D" uid="uid://xrspsdq6ql8i" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0026.png" id="27_lkyqb"]
+[ext_resource type="Texture2D" uid="uid://bf21r65ihjo6a" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0027.png" id="28_r0s37"]
+[ext_resource type="Texture2D" uid="uid://cnb1fvymxmlx6" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0028.png" id="29_l5kxg"]
+[ext_resource type="Texture2D" uid="uid://bqinwqhdsadug" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0029.png" id="30_7xygd"]
+[ext_resource type="Texture2D" uid="uid://lftqf0ob7qeu" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0030.png" id="31_oovhn"]
+[ext_resource type="Texture2D" uid="uid://26wequcxi7l6" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0031.png" id="32_2mamn"]
+[ext_resource type="Texture2D" uid="uid://0yf5ccqgbtcv" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0032.png" id="33_syptk"]
+[ext_resource type="Texture2D" uid="uid://bm5svq0kxmh1i" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0033.png" id="34_x4uwu"]
+[ext_resource type="Texture2D" uid="uid://b512unjq382uf" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0034.png" id="35_u8qvi"]
+[ext_resource type="Texture2D" uid="uid://gtoo278mq6fs" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0035.png" id="36_sabe3"]
+[ext_resource type="Texture2D" uid="uid://ccv4lja0m1rup" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0036.png" id="37_fv6j4"]
+[ext_resource type="Texture2D" uid="uid://w6ahjvwo8c8l" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0037.png" id="38_y5tok"]
+[ext_resource type="Texture2D" uid="uid://c8rlavty7ue45" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0038.png" id="39_q5v4m"]
+[ext_resource type="Texture2D" uid="uid://2e0vig0l6idu" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0039.png" id="40_kmojw"]
+[ext_resource type="Texture2D" uid="uid://b5wb3egkj6srp" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0040.png" id="41_uugoy"]
+[ext_resource type="Texture2D" uid="uid://c5cqe3rehtl5h" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0041.png" id="42_t14uj"]
+[ext_resource type="Texture2D" uid="uid://bauna6xi3y6tm" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0042.png" id="43_ryjdv"]
+[ext_resource type="Texture2D" uid="uid://cirfagvbvm6qi" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0043.png" id="44_rxfmm"]
+[ext_resource type="Texture2D" uid="uid://dvodbqmcdwrqq" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0044.png" id="45_rxntk"]
+[ext_resource type="Texture2D" uid="uid://cjjuji0sxodd5" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0045.png" id="46_galkl"]
+[ext_resource type="Texture2D" uid="uid://cwfp24yuuii44" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0046.png" id="47_yxa41"]
+[ext_resource type="Texture2D" uid="uid://dmryn7xsg81sn" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0047.png" id="48_jyn7y"]
+[ext_resource type="Texture2D" uid="uid://b3w7o3o0t7e8t" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0048.png" id="49_jdnng"]
+[ext_resource type="Texture2D" uid="uid://utjpb3e5j2b0" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0049.png" id="50_u00wo"]
+[ext_resource type="Texture2D" uid="uid://dntewamsnyqxo" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0050.png" id="51_w3ij7"]
+[ext_resource type="Texture2D" uid="uid://dbgivyrqu32km" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0051.png" id="52_n2p4a"]
+[ext_resource type="Texture2D" uid="uid://bu4xgvk5vw8gq" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0052.png" id="53_rbamg"]
+[ext_resource type="Texture2D" uid="uid://ctit71idafu02" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0053.png" id="54_evra5"]
+[ext_resource type="Texture2D" uid="uid://e1wwlkirektw" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0054.png" id="55_xnaat"]
+[ext_resource type="Texture2D" uid="uid://cict5n48b474w" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0055.png" id="56_rv3b2"]
+[ext_resource type="Texture2D" uid="uid://b3tgc41agwy0w" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0056.png" id="57_ra1d3"]
+[ext_resource type="Texture2D" uid="uid://bnvpwvf6mclb5" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0057.png" id="58_nb1cs"]
+[ext_resource type="Texture2D" uid="uid://85mc3va5tr2e" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0058.png" id="59_lh4uc"]
+[ext_resource type="Texture2D" uid="uid://dc0tudr2nsae7" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0059.png" id="60_ql5d7"]
+[ext_resource type="Texture2D" uid="uid://wc6vow6q5ulc" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0060.png" id="61_hwmj5"]
+[ext_resource type="Texture2D" uid="uid://xyhqjar0gkcs" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0061.png" id="62_i1xvw"]
+[ext_resource type="Texture2D" uid="uid://dhwyjm28hq1w1" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0062.png" id="63_fikja"]
+[ext_resource type="Texture2D" uid="uid://5yeogbvgqswi" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0063.png" id="64_dva3f"]
+[ext_resource type="Texture2D" uid="uid://br8d6aiclq8i0" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0064.png" id="65_lmrxc"]
+[ext_resource type="Texture2D" uid="uid://c20qxqntob7l4" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0065.png" id="66_vy6p5"]
+[ext_resource type="Texture2D" uid="uid://bv2oo41dhcw3d" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0066.png" id="67_7i15m"]
+[ext_resource type="Texture2D" uid="uid://be3xb0gi71nfl" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0067.png" id="68_yj71b"]
+[ext_resource type="Texture2D" uid="uid://1j3psvtye3ib" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0068.png" id="69_n0kpm"]
+[ext_resource type="Texture2D" uid="uid://c7etrd4x8wytr" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0069.png" id="70_t8wee"]
+[ext_resource type="Texture2D" uid="uid://k18ye3swih4k" path="res://Assets/Animaciones/Animaciones Tutorial/Pogo/pogo_0070.png" id="71_onmpx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_82v0y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_l6cbl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_goyel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_d0ras")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ng7fd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_y1cdx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ri5bm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ybste")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_yfbvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vwwkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_71yfr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qy0bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_b65na")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_mq3xd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_lv6cq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_fq6d5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_a4joj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_gnktk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_a0gu4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_g2j6a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_djne5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_jpc24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_wkovd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_h7c1l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_d2abh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_cvb2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_qqeal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_lkyqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_r0s37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_l5kxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_7xygd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_oovhn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_2mamn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_syptk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_x4uwu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_u8qvi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_sabe3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_fv6j4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_y5tok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_q5v4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_kmojw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_uugoy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_t14uj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_ryjdv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_rxfmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_rxntk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_galkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_yxa41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_jyn7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_jdnng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_u00wo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_w3ij7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_n2p4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_rbamg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_evra5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_xnaat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_rv3b2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_ra1d3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_nb1cs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_lh4uc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_ql5d7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_hwmj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_i1xvw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_fikja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_dva3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_lmrxc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_vy6p5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_7i15m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_yj71b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_n0kpm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_t8wee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_onmpx")
+}],
+"loop": 1,
+"name": &"Pogo",
+"speed": 30.0
+}]
+
+[node name="Pogo" type="AnimatedSprite2D" unique_id=44178411]
+sprite_frames = SubResource("SpriteFrames_82v0y")
+animation = &"Pogo"
+frame_progress = 0.91676044

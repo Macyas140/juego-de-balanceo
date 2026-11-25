@@ -2,7 +2,10 @@
 
 [ext_resource type="Script" uid="uid://cu438lejfb3jd" path="res://Scripts/settings_pausa.gd" id="1_ovlh1"]
 [ext_resource type="Script" uid="uid://blpn8jqb4431m" path="res://Scripts/full_screen_control.gd" id="2_ovlh1"]
+[ext_resource type="Texture2D" uid="uid://dgub2ql3slwi" path="res://Assets/Pantalla inicio/Back.PNG" id="2_se3yc"]
+[ext_resource type="Texture2D" uid="uid://8rmot5q884rv" path="res://Assets/Pantalla inicio/Back click.PNG" id="3_0ob53"]
 [ext_resource type="Script" uid="uid://o4a052yeh8i4" path="res://Scripts/sfx_controller.gd" id="3_s0u67"]
+[ext_resource type="Texture2D" uid="uid://cskm51nlbfukv" path="res://Assets/Pantalla inicio/Back pasar mouse.PNG" id="4_y0lix"]
 [ext_resource type="PackedScene" uid="uid://criobmicdv3vd" path="res://Scenes/MenuInicioTransicion.tscn" id="5_0c4xo"]
 [ext_resource type="Script" uid="uid://4srjkr3xom06" path="res://Scripts/music_controller_menu_inicio.gd" id="5_s0u67"]
 [ext_resource type="Texture2D" uid="uid://c3vr1hckasdjj" path="res://Assets/UI/Fondo.png" id="6_0c4xo"]
@@ -102,15 +105,17 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 72
 text = "SETTINGS"
 
-[node name="Back" type="Button" parent="Options" unique_id=1097827794]
+[node name="Back" type="TextureButton" parent="Options" unique_id=569000942]
 layout_mode = 0
-offset_left = 164.0
-offset_top = 474.5
-offset_right = 691.0
-offset_bottom = 573.5
-theme_override_font_sizes/font_size = 35
+offset_left = 321.0
+offset_top = 379.5
+offset_right = 385.0
+offset_bottom = 443.5
+scale = Vector2(3.5, 3.5)
 toggle_mode = true
-text = "BACK"
+texture_normal = ExtResource("2_se3yc")
+texture_pressed = ExtResource("3_0ob53")
+texture_hover = ExtResource("4_y0lix")
 
 [node name="FullScreenControl" type="CheckButton" parent="Options" unique_id=736498648]
 layout_mode = 0

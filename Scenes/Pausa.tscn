@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://b5nuvmmp3fpbl"]
 
 [ext_resource type="Script" uid="uid://c460im03acyl1" path="res://Scripts/pausa.gd" id="1_ibnve"]
+[ext_resource type="Texture2D" uid="uid://dgub2ql3slwi" path="res://Assets/Pantalla inicio/Back.PNG" id="2_wfbg8"]
 [ext_resource type="Script" uid="uid://c8k6kk2mhf7rg" path="res://Scripts/music_controller.gd" id="3_ibnve"]
+[ext_resource type="Texture2D" uid="uid://8rmot5q884rv" path="res://Assets/Pantalla inicio/Back click.PNG" id="3_nh0ky"]
+[ext_resource type="Texture2D" uid="uid://cskm51nlbfukv" path="res://Assets/Pantalla inicio/Back pasar mouse.PNG" id="4_pruh0"]
 [ext_resource type="Script" uid="uid://blpn8jqb4431m" path="res://Scripts/full_screen_control.gd" id="4_x5uij"]
 [ext_resource type="Script" uid="uid://o4a052yeh8i4" path="res://Scripts/sfx_controller.gd" id="5_ab0cg"]
 
@@ -123,7 +126,6 @@ toggle_mode = true
 text = "EXIT GAME"
 
 [node name="Options" type="Panel" parent="." unique_id=1357646902]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -149,15 +151,17 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 72
 text = "SETTINGS"
 
-[node name="Back" type="Button" parent="Options" unique_id=1619372874]
+[node name="Back" type="TextureButton" parent="Options" unique_id=674612447]
 layout_mode = 0
-offset_left = 164.0
-offset_top = 474.5
-offset_right = 691.0
-offset_bottom = 573.5
-theme_override_font_sizes/font_size = 35
+offset_left = 328.0
+offset_top = 348.50003
+offset_right = 392.0
+offset_bottom = 412.50003
+scale = Vector2(3.5, 3.5)
 toggle_mode = true
-text = "BACK"
+texture_normal = ExtResource("2_wfbg8")
+texture_pressed = ExtResource("3_nh0ky")
+texture_hover = ExtResource("4_pruh0")
 
 [node name="MusicController" type="HSlider" parent="Options" unique_id=1430319233]
 layout_mode = 1

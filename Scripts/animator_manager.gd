@@ -150,7 +150,10 @@ func reproducir_ataque() -> void:
 func reproducir_ataque_abajo() -> void:
 	if jugador.muriendo or jugador.muriendoColgado:
 		return
-	reproducir_una_vez(anim_ataque_abajo, 5)
+	var anim = anim_ataque_abajo
+	if _esta_colgado() and not jugador.is_on_floor():
+		anim = _animacion_colgado_ataque()
+	reproducir_una_vez(anim, 5)
 	_mostrar_efecto(efecto_abajo, anim_efecto_abajo)
 
 

@@ -1,10 +1,22 @@
 [gd_scene format=3 uid="uid://cuql02ntrlbrx"]
 
 [ext_resource type="Script" uid="uid://ck1nyfbpgdgis" path="res://Scripts/menu_inicio.gd" id="1_ryjsk"]
+[ext_resource type="Texture2D" uid="uid://clg56k66uiltc" path="res://Assets/Pantalla inicio/Play.PNG" id="2_c5p2j"]
 [ext_resource type="AudioStream" uid="uid://cnvx8ucqw2tm1" path="res://Assets/Soundtrack/MusicaRecortada/menu_cortado.mp3" id="2_h8kkd"]
+[ext_resource type="Texture2D" uid="uid://c86getkmbu00o" path="res://Assets/Pantalla inicio/Play click.PNG" id="3_hqhtn"]
 [ext_resource type="PackedScene" uid="uid://criobmicdv3vd" path="res://Scenes/MenuInicioTransicion.tscn" id="3_lc4t7"]
 [ext_resource type="Texture2D" uid="uid://c3vr1hckasdjj" path="res://Assets/UI/Fondo.png" id="4_32rtn"]
+[ext_resource type="Texture2D" uid="uid://cyx4t58jri3cf" path="res://Assets/Pantalla inicio/Play pasar mouse.PNG" id="4_aw1rd"]
+[ext_resource type="Texture2D" uid="uid://dc2nqouso6roj" path="res://Assets/Pantalla inicio/Option .PNG" id="5_kv616"]
+[ext_resource type="Texture2D" uid="uid://su20pycfj2s" path="res://Assets/Pantalla inicio/Option click.PNG" id="6_nt7jt"]
+[ext_resource type="Texture2D" uid="uid://rlnnogquwomn" path="res://Assets/Pantalla inicio/Option pasar mouse.PNG" id="7_48vr1"]
 [ext_resource type="Texture2D" uid="uid://k0rjuhsmp8f" path="res://Assets/UI/Tronco.PNG" id="8_kv616"]
+[ext_resource type="Texture2D" uid="uid://65l0bkmhtj2a" path="res://Assets/Pantalla inicio/Quit.PNG" id="8_wxmwl"]
+[ext_resource type="Texture2D" uid="uid://d0ui7oy4a1p6s" path="res://Assets/Pantalla inicio/Quit click.PNG" id="9_wffga"]
+[ext_resource type="Texture2D" uid="uid://bht1cksnqffi3" path="res://Assets/Pantalla inicio/Quit pasar mouse.PNG" id="10_ckm3b"]
+[ext_resource type="Texture2D" uid="uid://cwgoofe208pf7" path="res://Assets/Pantalla inicio/Créditos.PNG" id="11_5pyek"]
+[ext_resource type="Texture2D" uid="uid://ka7kbbuci1k" path="res://Assets/Pantalla inicio/Créditos click.PNG" id="12_u80u2"]
+[ext_resource type="Texture2D" uid="uid://c01352ewi24lo" path="res://Assets/Pantalla inicio/Créditos pasar mouse.PNG" id="13_ng3r1"]
 
 [node name="Menu Inicio" type="Node2D" unique_id=1045287827]
 script = ExtResource("1_ryjsk")
@@ -15,34 +27,53 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Start" type="Button" parent="Button_Manager" unique_id=1858511259]
+[node name="Start" type="TextureButton" parent="Button_Manager" unique_id=223090519]
 z_index = 1
 layout_mode = 0
-offset_left = 340.0
-offset_top = 568.0
-offset_right = 543.3334
-offset_bottom = 641.0
-scale = Vector2(0.9, 0.9)
-text = "START"
+offset_left = 349.0
+offset_top = 509.0
+offset_right = 415.5
+offset_bottom = 573.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("2_c5p2j")
+texture_pressed = ExtResource("3_hqhtn")
+texture_hover = ExtResource("4_aw1rd")
 
-[node name="Settings" type="Button" parent="Button_Manager" unique_id=1376487965]
+[node name="Settings" type="TextureButton" parent="Button_Manager" unique_id=1017649929]
 z_index = 1
 layout_mode = 0
-offset_left = 593.0
-offset_top = 567.0
-offset_right = 806.3334
-offset_bottom = 639.0
-scale = Vector2(0.9, 0.9)
-text = "SETTINGS"
+offset_left = 525.0
+offset_top = 472.0
+offset_right = 589.0
+offset_bottom = 536.0
+scale = Vector2(2.5, 2.5)
+texture_normal = ExtResource("5_kv616")
+texture_pressed = ExtResource("6_nt7jt")
+texture_hover = ExtResource("7_48vr1")
 
-[node name="Quit" type="Button" parent="Button_Manager" unique_id=1418606747]
+[node name="Quit" type="TextureButton" parent="Button_Manager" unique_id=1234791288]
 z_index = 1
 layout_mode = 0
-offset_left = 834.0
-offset_top = 562.0
-offset_right = 1066.0
-offset_bottom = 629.0
-text = "QUIT"
+offset_left = 946.0
+offset_top = 504.0
+offset_right = 1010.0
+offset_bottom = 568.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("8_wxmwl")
+texture_pressed = ExtResource("9_wffga")
+texture_hover = ExtResource("10_ckm3b")
+
+[node name="Creditos" type="TextureButton" parent="Button_Manager" unique_id=1976041008]
+z_index = 1
+layout_mode = 0
+offset_left = 739.0
+offset_top = 467.0
+offset_right = 803.0
+offset_bottom = 531.0
+scale = Vector2(2.5, 2.5)
+texture_normal = ExtResource("11_5pyek")
+texture_pressed = ExtResource("12_u80u2")
+texture_hover = ExtResource("13_ng3r1")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1543281443]
 stream = ExtResource("2_h8kkd")
@@ -69,4 +100,5 @@ texture = ExtResource("8_kv616")
 [connection signal="pressed" from="Button_Manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_Manager/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Button_Manager/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Button_Manager/Creditos" to="." method="_on_creditos_pressed"]
 [connection signal="timeout" from="MenuInicioTrans/Fade_Timer" to="." method="_on_fade_timer_timeout"]

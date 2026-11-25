@@ -1,6 +1,12 @@
-res://Scenes/juego.tscn
+res://Scenes/menu_inicio.tscn
 res://addons/phantom_camera/themes/theme.tres
 res://Shaders/Personaje.gdshader
 res://Shaders/Enemigo.gdshader
 res://Shaders/vignette.gdshader
 res://Shaders/HitFlah.tres
+res://Scripts/menu_inicio.gd
+res://Scenes/Creditos_inicio.tscn
+res://Scripts/creditos_inicio.gd
+res://Scenes/Pausa.tscn
+res://Scenes/juego.tscn
+res://Scenes/settingsPausa.tscn

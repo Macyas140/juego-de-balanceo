@@ -1,0 +1,167 @@
+[gd_scene format=3 uid="uid://cf3efjlesisam"]
+
+[ext_resource type="Texture2D" uid="uid://qgi0wmesnwfq" path="res://Assets/Animaciones/Tutorial/tutorial_0000.png" id="1_hd8v5"]
+[ext_resource type="Texture2D" uid="uid://bwyh531vp85au" path="res://Assets/Animaciones/Tutorial/tutorial_0001.png" id="2_mcjcj"]
+[ext_resource type="Texture2D" uid="uid://eksjceeree7w" path="res://Assets/Animaciones/Tutorial/tutorial_0002.png" id="3_ndpyo"]
+[ext_resource type="Texture2D" uid="uid://dltwjbkk4na6f" path="res://Assets/Animaciones/Tutorial/tutorial_0003.png" id="4_ppxi0"]
+[ext_resource type="Texture2D" uid="uid://cjcckqqkofhfo" path="res://Assets/Animaciones/Tutorial/tutorial_0004.png" id="5_n1p38"]
+[ext_resource type="Texture2D" uid="uid://cprj4sksw1dyv" path="res://Assets/Animaciones/Tutorial/tutorial_0005.png" id="6_yefvj"]
+[ext_resource type="Texture2D" uid="uid://8ubm2v35pnwo" path="res://Assets/Animaciones/Tutorial/tutorial_0006.png" id="7_e4437"]
+[ext_resource type="Texture2D" uid="uid://1iiy70boa4am" path="res://Assets/Animaciones/Tutorial/tutorial_0007.png" id="8_8j7wv"]
+[ext_resource type="Texture2D" uid="uid://b7q1kr6tf8hlr" path="res://Assets/Animaciones/Tutorial/tutorial_0008.png" id="9_wks8k"]
+[ext_resource type="Texture2D" uid="uid://cwjslc0nbdtyk" path="res://Assets/Animaciones/Tutorial/tutorial_0009.png" id="10_xjbs2"]
+[ext_resource type="Texture2D" uid="uid://4ic5lvs1cffy" path="res://Assets/Animaciones/Tutorial/tutorial_0010.png" id="11_rjfu6"]
+[ext_resource type="Texture2D" uid="uid://b3qqnu1f070cq" path="res://Assets/Animaciones/Tutorial/tutorial_0011.png" id="12_kkc8x"]
+[ext_resource type="Texture2D" uid="uid://6nqyf46p8783" path="res://Assets/Animaciones/Tutorial/tutorial_0012.png" id="13_qpxwc"]
+[ext_resource type="Texture2D" uid="uid://bpw4j25mq4e0p" path="res://Assets/Animaciones/Tutorial/tutorial_0013.png" id="14_epan6"]
+[ext_resource type="Texture2D" uid="uid://bshfylgt53kon" path="res://Assets/Animaciones/Tutorial/tutorial_0014.png" id="15_tbcam"]
+[ext_resource type="Texture2D" uid="uid://ei2nbf7r70nf" path="res://Assets/Animaciones/Tutorial/tutorial_0015.png" id="16_mx2xa"]
+[ext_resource type="Texture2D" uid="uid://ci8kcxhwk8cnd" path="res://Assets/Animaciones/Tutorial/tutorial_0016.png" id="17_8ru4e"]
+[ext_resource type="Texture2D" uid="uid://durlubcoikmvf" path="res://Assets/Animaciones/Tutorial/tutorial_0017.png" id="18_i4jnf"]
+[ext_resource type="Texture2D" uid="uid://c54v6u1gs12x8" path="res://Assets/Animaciones/Tutorial/tutorial_0018.png" id="19_j230g"]
+[ext_resource type="Texture2D" uid="uid://b52bjjdeoklvg" path="res://Assets/Animaciones/Tutorial/tutorial_0019.png" id="20_n6qc5"]
+[ext_resource type="Texture2D" uid="uid://svttcqhy3tk2" path="res://Assets/Animaciones/Tutorial/tutorial_0020.png" id="21_qtf36"]
+[ext_resource type="Texture2D" uid="uid://bfhswvivirlqq" path="res://Assets/Animaciones/Tutorial/tutorial_0021.png" id="22_27y3o"]
+[ext_resource type="Texture2D" uid="uid://bjegl888ktn8g" path="res://Assets/Animaciones/Tutorial/tutorial_0022.png" id="23_r7ba7"]
+[ext_resource type="Texture2D" uid="uid://cbhh58rulkwsa" path="res://Assets/Animaciones/Tutorial/tutorial_0023.png" id="24_ctl4s"]
+[ext_resource type="Texture2D" uid="uid://cil5v14lxrx8v" path="res://Assets/Animaciones/Tutorial/tutorial_0024.png" id="25_a11di"]
+[ext_resource type="Texture2D" uid="uid://ckwmiqu8hnaw6" path="res://Assets/Animaciones/Tutorial/tutorial_0025.png" id="26_11amd"]
+[ext_resource type="Texture2D" uid="uid://b3wdoewq5xjwn" path="res://Assets/Animaciones/Tutorial/tutorial_0026.png" id="27_i25s6"]
+[ext_resource type="Texture2D" uid="uid://be5ge2myp6rd7" path="res://Assets/Animaciones/Tutorial/tutorial_0027.png" id="28_ycqd8"]
+[ext_resource type="Texture2D" uid="uid://5qcxt67j6fri" path="res://Assets/Animaciones/Tutorial/tutorial_0028.png" id="29_ueox3"]
+[ext_resource type="Texture2D" uid="uid://51ijm4wc3nmw" path="res://Assets/Animaciones/Tutorial/tutorial_0029.png" id="30_on3tv"]
+[ext_resource type="Texture2D" uid="uid://d1s1ejxcvnnwh" path="res://Assets/Animaciones/Tutorial/tutorial_0030.png" id="31_aie2c"]
+[ext_resource type="Texture2D" uid="uid://bxpp3826yf3ds" path="res://Assets/Animaciones/Tutorial/tutorial_0031.png" id="32_pxub0"]
+[ext_resource type="Texture2D" uid="uid://chenny8x5rluv" path="res://Assets/Animaciones/Tutorial/tutorial_0032.png" id="33_51t3j"]
+[ext_resource type="Texture2D" uid="uid://c15t2pmr3845m" path="res://Assets/Animaciones/Tutorial/tutorial_0033.png" id="34_x3pfl"]
+[ext_resource type="Texture2D" uid="uid://cncfxrmkfarqg" path="res://Assets/Animaciones/Tutorial/tutorial_0034.png" id="35_sqtqd"]
+[ext_resource type="Texture2D" uid="uid://duq60exxp2vqb" path="res://Assets/Animaciones/Tutorial/tutorial_0035.png" id="36_ekihs"]
+[ext_resource type="Texture2D" uid="uid://cjgirunir8nm6" path="res://Assets/Animaciones/Tutorial/tutorial_0036.png" id="37_i0fxa"]
+[ext_resource type="Texture2D" uid="uid://dbbnfiresj0fd" path="res://Assets/Animaciones/Tutorial/tutorial_0037.png" id="38_65pui"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_82v0y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hd8v5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mcjcj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ndpyo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ppxi0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_n1p38")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_yefvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_e4437")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8j7wv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wks8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xjbs2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_rjfu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_kkc8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_qpxwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_epan6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_tbcam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_mx2xa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_8ru4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_i4jnf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_j230g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_n6qc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_qtf36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_27y3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_r7ba7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ctl4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_a11di")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_11amd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_i25s6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ycqd8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ueox3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_on3tv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_aie2c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_pxub0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_51t3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_x3pfl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_sqtqd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_ekihs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_i0fxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_65pui")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="Tuto" type="AnimatedSprite2D" unique_id=88796083]
+sprite_frames = SubResource("SpriteFrames_82v0y")
+autoplay = "default"
+frame_progress = 0.2587636
