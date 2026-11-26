@@ -59,6 +59,7 @@
 [ext_resource type="Texture2D" uid="uid://do5p6135moiep" path="res://Assets/assets/Gato.png" id="42_t5btx"]
 [ext_resource type="Script" uid="uid://63pgmghswo03" path="res://Scripts/zona_final.gd" id="43_3kefq"]
 [ext_resource type="PackedScene" uid="uid://b5nuvmmp3fpbl" path="res://Scenes/Pausa.tscn" id="43_pe46i"]
+[ext_resource type="Texture2D" uid="uid://bfwhp3dxogxu3" path="res://Assets/assets/Casa v02.png" id="43_ry1ik"]
 [ext_resource type="AudioStream" uid="uid://cgncdk1s3bbc6" path="res://Assets/Soundtrack/MusicaRecortada/nivel_cortado.mp3" id="55_dby7i"]
 [ext_resource type="PackedScene" uid="uid://criobmicdv3vd" path="res://Scenes/MenuInicioTransicion.tscn" id="57_5jhkb"]
 
@@ -11282,6 +11283,12 @@ scale = Vector2(0.193, 0.193)
 [node name="Sprite2D" type="Sprite2D" parent="elementosDecoracion" unique_id=1339753798]
 position = Vector2(9719, -847)
 texture = ExtResource("42_t5btx")
+
+[node name="Sprite2D2" type="Sprite2D" parent="elementosDecoracion" unique_id=856454763]
+z_index = -1
+position = Vector2(10121, -953)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("43_ry1ik")
 
 [node name="UIMoneda" type="Node2D" parent="." unique_id=1141765505]
 

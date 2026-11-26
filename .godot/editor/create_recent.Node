@@ -1,6 +1,7 @@
-AudioStreamPlayer
+Container
 Sprite2D
 TextureButton
+AudioStreamPlayer
 RichTextLabel
 TextEdit
 HBoxContainer

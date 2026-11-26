@@ -1,12 +1,27 @@
 [gd_scene format=3 uid="uid://b5nuvmmp3fpbl"]
 
 [ext_resource type="Script" uid="uid://c460im03acyl1" path="res://Scripts/pausa.gd" id="1_ibnve"]
+[ext_resource type="Texture2D" uid="uid://bvhcpiokjksw8" path="res://Assets/Pantalla pausa/Resumev02.PNG" id="2_64juw"]
 [ext_resource type="Texture2D" uid="uid://dgub2ql3slwi" path="res://Assets/Pantalla inicio/Back.PNG" id="2_wfbg8"]
+[ext_resource type="Texture2D" uid="uid://kx3roi22pp1q" path="res://Assets/Pantalla pausa/Resume click v02.PNG" id="3_ggqc0"]
 [ext_resource type="Script" uid="uid://c8k6kk2mhf7rg" path="res://Scripts/music_controller.gd" id="3_ibnve"]
 [ext_resource type="Texture2D" uid="uid://8rmot5q884rv" path="res://Assets/Pantalla inicio/Back click.PNG" id="3_nh0ky"]
+[ext_resource type="Texture2D" uid="uid://bd6ko7s0rw3fv" path="res://Assets/Pantalla pausa/Resume pasar mouse v02.PNG" id="4_gy0by"]
 [ext_resource type="Texture2D" uid="uid://cskm51nlbfukv" path="res://Assets/Pantalla inicio/Back pasar mouse.PNG" id="4_pruh0"]
 [ext_resource type="Script" uid="uid://blpn8jqb4431m" path="res://Scripts/full_screen_control.gd" id="4_x5uij"]
 [ext_resource type="Script" uid="uid://o4a052yeh8i4" path="res://Scripts/sfx_controller.gd" id="5_ab0cg"]
+[ext_resource type="Texture2D" uid="uid://u7k3q5pfoxn3" path="res://Assets/Pantalla pausa/Setting v03.png" id="5_ofcwh"]
+[ext_resource type="Texture2D" uid="uid://bkwtg3cieapxt" path="res://Assets/Pantalla pausa/Settin click v03.png" id="6_drdas"]
+[ext_resource type="Texture2D" uid="uid://bm8qix2vnsutd" path="res://Assets/Pantalla pausa/Setting pasar mouse v03.png" id="7_2g2gg"]
+[ext_resource type="Texture2D" uid="uid://ey75d8kh0wna" path="res://Assets/Pantalla pausa/Restartv02.PNG" id="8_807y4"]
+[ext_resource type="Texture2D" uid="uid://cn4vwtyea1b0l" path="res://Assets/Pantalla pausa/Restart click v02.PNG" id="9_0rnqr"]
+[ext_resource type="Texture2D" uid="uid://cu54q7biqvti8" path="res://Assets/Pantalla pausa/Restart pasar mouse v02.PNG" id="10_os7i2"]
+[ext_resource type="Texture2D" uid="uid://darspxl0r5fq6" path="res://Assets/Pantalla pausa/Main menu v02.PNG" id="11_p2h1a"]
+[ext_resource type="Texture2D" uid="uid://cfl4cd7y1kugr" path="res://Assets/Pantalla pausa/Main menu click v02.PNG" id="12_a7jvw"]
+[ext_resource type="Texture2D" uid="uid://dri36xm3ecsla" path="res://Assets/Pantalla pausa/Main menu pasar mouse v02.PNG" id="13_45kyr"]
+[ext_resource type="Texture2D" uid="uid://0r7jxgpp2k6c" path="res://Assets/Pantalla pausa/Quit v02.PNG" id="14_l1xqu"]
+[ext_resource type="Texture2D" uid="uid://bhhbxcgf4jce4" path="res://Assets/Pantalla pausa/Quit click v02.PNG" id="15_cyebr"]
+[ext_resource type="Texture2D" uid="uid://efgqld1h5dak" path="res://Assets/Pantalla pausa/Quit pasar mouse v02.PNG" id="16_1a6u2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_125jq"]
 bg_color = Color(0.36862746, 0.36862746, 0.36862746, 0.49411765)
@@ -78,52 +93,61 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_125jq")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=220490321]
+oversampling_with_scale = 1
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -245.0
-offset_top = -272.75
-offset_right = 245.0
-offset_bottom = 272.75
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 260.0
+offset_top = 25.0
+offset_right = -271.0
+offset_bottom = -23.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Main Buttons" type="VBoxContainer" parent="PanelContainer" unique_id=1622179249]
 z_index = 2
 layout_mode = 2
-theme_override_constants/separation = 50
+theme_override_constants/separation = 30
 
-[node name="Resume" type="Button" parent="PanelContainer/Main Buttons" unique_id=880524906]
+[node name="Resume" type="TextureButton" parent="PanelContainer/Main Buttons" unique_id=1142500914]
 layout_mode = 2
-theme_override_font_sizes/font_size = 35
-text = "CONTINUE"
+texture_normal = ExtResource("2_64juw")
+texture_pressed = ExtResource("3_ggqc0")
+texture_hover = ExtResource("4_gy0by")
+stretch_mode = 5
 
-[node name="Settings" type="Button" parent="PanelContainer/Main Buttons" unique_id=60086780]
+[node name="Settings" type="TextureButton" parent="PanelContainer/Main Buttons" unique_id=83220393]
 layout_mode = 2
-theme_override_font_sizes/font_size = 35
 toggle_mode = true
-text = "SETTINGS"
+texture_normal = ExtResource("5_ofcwh")
+texture_pressed = ExtResource("6_drdas")
+texture_hover = ExtResource("7_2g2gg")
+stretch_mode = 3
 
-[node name="Restart" type="Button" parent="PanelContainer/Main Buttons" unique_id=344548465]
+[node name="Restart" type="TextureButton" parent="PanelContainer/Main Buttons" unique_id=1768850551]
 layout_mode = 2
-theme_override_font_sizes/font_size = 35
 toggle_mode = true
-text = "RESTART"
+texture_normal = ExtResource("8_807y4")
+texture_pressed = ExtResource("9_0rnqr")
+texture_hover = ExtResource("10_os7i2")
+stretch_mode = 3
 
-[node name="MainMenu" type="Button" parent="PanelContainer/Main Buttons" unique_id=1077107780]
+[node name="MainMenu" type="TextureButton" parent="PanelContainer/Main Buttons" unique_id=371941740]
 layout_mode = 2
-theme_override_font_sizes/font_size = 35
 toggle_mode = true
-text = "MAIN MENU"
+texture_normal = ExtResource("11_p2h1a")
+texture_pressed = ExtResource("12_a7jvw")
+texture_hover = ExtResource("13_45kyr")
+stretch_mode = 3
 
-[node name="ExitGame" type="Button" parent="PanelContainer/Main Buttons" unique_id=2089556673]
+[node name="ExitGame" type="TextureButton" parent="PanelContainer/Main Buttons" unique_id=1772743711]
 layout_mode = 2
-theme_override_font_sizes/font_size = 35
 toggle_mode = true
-text = "EXIT GAME"
+texture_normal = ExtResource("14_l1xqu")
+texture_pressed = ExtResource("15_cyebr")
+texture_hover = ExtResource("16_1a6u2")
+stretch_mode = 3
 
 [node name="Options" type="Panel" parent="." unique_id=1357646902]
 layout_mode = 1
