@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://t3ll1mjpuf5h"
+path="res://.godot/imported/Retro FootStep Grass 01.wav-9696b4612d0520fe2f9b0df32c23eb9d.sample"
+
+[deps]
+
+source_file="res://Assets/Soundtrack/FreeSFX/GameSFX/FootStep/Retro FootStep Grass 01.wav"
+dest_files=["res://.godot/imported/Retro FootStep Grass 01.wav-9696b4612d0520fe2f9b0df32c23eb9d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

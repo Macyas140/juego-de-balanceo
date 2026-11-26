@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://g32w350e2i4l"]
+
+[ext_resource type="Script" uid="uid://cf2lbyuho3lmt" path="res://Scripts/audio_controller.gd" id="1_ncnt2"]
+[ext_resource type="AudioStream" uid="uid://ciyuibq05nlfw" path="res://Assets/Soundtrack/FreeSFX/GameSFX/Bounce Jump/Retro Jump Classic 08.wav" id="3_xxf2r"]
+[ext_resource type="AudioStream" uid="uid://cjoyvmr4mps6r" path="res://Assets/Soundtrack/FreeSFX/GameSFX/Music/Success/Retro Success Melody 04 - electric piano 2.wav" id="4_y5jvc"]
+[ext_resource type="AudioStream" uid="uid://dd5uec66jw3os" path="res://Assets/Soundtrack/FreeSFX/GameSFX/Impact/Retro Impact Punch 07.wav" id="5_40amf"]
+[ext_resource type="AudioStream" uid="uid://c0sxrl55lpu7a" path="res://Assets/Soundtrack/FreeSFX/GameSFX/Impact/Retro Impact Punch Hurt 01.wav" id="6_6o502"]
+[ext_resource type="AudioStream" uid="uid://dooohrfgeskpk" path="res://Assets/Soundtrack/FreeSFX/GameSFX/FootStep/Retro FootStep Krushed Landing 01.wav" id="7_uc8ob"]
+[ext_resource type="AudioStream" uid="uid://dtm8apinfqg7s" path="res://Assets/Soundtrack/FreeSFX/GameSFX/Blops/Retro Blop 18.wav" id="8_ncnt2"]
+[ext_resource type="AudioStream" uid="uid://t3ll1mjpuf5h" path="res://Assets/Soundtrack/FreeSFX/GameSFX/FootStep/Retro FootStep Grass 01.wav" id="8_t18y6"]
+[ext_resource type="AudioStream" uid="uid://cxb2oeg2gt6ee" path="res://Assets/Soundtrack/FreeSFX/GameSFX/Alarms Blip Beeps/Retro Beeep 20.wav" id="9_7md5g"]
+
+[node name="AudioController" type="Node2D" unique_id=994123169]
+script = ExtResource("1_ncnt2")
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1218699246]
+
+[node name="Jump" type="AudioStreamPlayer" parent="." unique_id=381907097]
+stream = ExtResource("3_xxf2r")
+pitch_scale = 1.9
+bus = &"SFX"
+
+[node name="EndLevel" type="AudioStreamPlayer" parent="." unique_id=826126212]
+stream = ExtResource("4_y5jvc")
+volume_db = 7.0
+pitch_scale = 2.0
+bus = &"SFX"
+
+[node name="Attack" type="AudioStreamPlayer" parent="." unique_id=742560378]
+stream = ExtResource("5_40amf")
+volume_db = 1.0
+pitch_scale = 3.0
+bus = &"SFX"
+
+[node name="RecieveAttack" type="AudioStreamPlayer" parent="." unique_id=695316103]
+stream = ExtResource("6_6o502")
+volume_db = 1.8
+pitch_scale = 4.5
+bus = &"SFX"
+
+[node name="Fall" type="AudioStreamPlayer" parent="." unique_id=816390857]
+stream = ExtResource("7_uc8ob")
+volume_db = 1.0
+pitch_scale = 2.0
+
+[node name="Caminar" type="AudioStreamPlayer" parent="." unique_id=1940854359]
+stream = ExtResource("8_t18y6")
+volume_db = 1.2
+pitch_scale = 1.5
+bus = &"SFX"
+
+[node name="Lanzamiento de bufanda" type="AudioStreamPlayer" parent="." unique_id=433207895]
+stream = ExtResource("8_ncnt2")
+pitch_scale = 2.8
+bus = &"SFX"
+
+[node name="UIHover" type="AudioStreamPlayer" parent="." unique_id=313640145]
+stream = ExtResource("9_7md5g")
+volume_db = -7.707
+pitch_scale = 0.8
+
+[node name="UIClick" type="AudioStreamPlayer" parent="." unique_id=1136250476]

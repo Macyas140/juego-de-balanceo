@@ -165,6 +165,7 @@ theme_override_styles/grabber_area = SubResource("StyleBoxLine_0ob53")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_0ob53")
 max_value = 1.0
 step = 0.05
+value = 1.0
 script = ExtResource("3_s0u67")
 audio_bus_name = "SFX"
 

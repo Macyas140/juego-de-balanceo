@@ -1,6 +1,8 @@
-res://Scenes/juego.tscn
+res://Scenes/audio_controller.tscn
 res://addons/phantom_camera/themes/theme.tres
 res://Shaders/Personaje.gdshader
 res://Shaders/Enemigo.gdshader
 res://Shaders/vignette.gdshader
 res://Shaders/HitFlah.tres
+res://Scripts/audio_controller.gd
+res://Scenes/settingsPausa.tscn

@@ -26,6 +26,7 @@ PhantomCameraManager="*uid://duq6jhf6unyis"
 HitStopManager="*uid://m6181nrqdxwi"
 Checkpoint="*uid://c2ayw7ymthdov"
 TransitionScreen="*uid://dsrsjes6m3cpg"
+AudioController="*uid://g32w350e2i4l"
 
 [display]
 

@@ -57,6 +57,7 @@ func Lanzar_Bufanda():
 		seDisparo = true
 		proyectil_actual = instancia
 		instancia.tree_exiting.connect(ProyectilDestruido)
+		AudioController.play_LanzarBufanda()
 		if Estamina.estamina >= 25:
 			Estamina.gastar_por_disparo()
 		bufanda_lanzada.emit()

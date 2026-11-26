@@ -92,6 +92,9 @@ func _physics_process(delta: float) -> void:
 	var on_ground = is_on_floor()
 	dustParticles.emitting = is_moving and on_ground
 	
+	if is_moving and on_ground:
+		AudioController.play_caminar()
+	
 	if tiempoInvulnerabilidadRestante > 0:
 		tiempoInvulnerabilidadRestante -= delta
 		invulnerable = tiempoInvulnerabilidadRestante > 0
@@ -172,6 +175,7 @@ func _physics_process(delta: float) -> void:
 func ataque() -> void:
 	print("ataque")
 	atacando = true
+	AudioController.play_Attack()
 	cooldownAtaque_restante = Cooldown_Ataque
 	hitbox_ataque.scale.x = ultima_direccion
 	hitbox_ataque_forma.disabled = false
@@ -187,10 +191,12 @@ func ataqueAbajo() -> void:
 	print("Ataque detectado")
 	Estamina.gasto_Ataque()
 	enPicada = true
+	AudioController.play_Attack()
 	cooldownPicada_restante = cooldown_AtaqueAbajo
 	hitboxAbajo.scale.x = ultima_direccion
 	hitboxAbajo_forma.disabled = false
 	animador.reproducir_ataque_abajo()
+	
 	
 	
 	await get_tree().create_timer(duracion_HitboxAbajo_ataque).timeout
@@ -208,6 +214,7 @@ func recibir_daño(cantidad:float) -> void:
 	flash_animation.play("Flash2")
 	animador.reproducir_dano()
 	HitStopManager.hit_stop_short()
+	AudioController.play_Recieve_Attack()
 	
 
 signal murioColgado(colgado: bool)
@@ -318,6 +325,7 @@ func cine_saltar() -> void:
 func cine_levitar(vy: float) -> void:
 	cine_levitando = true
 	cine_vy = vy
+	AudioController.play_end_level()
 
 func cine_soltar_levitacion() -> void:
 	cine_levitando = false

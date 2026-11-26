@@ -85,3 +85,4 @@ func TemporizadorBuffer_Timeout() -> void:
 func saltar() -> void:
 	jugador.velocity.y = salto_max
 	saltando = true
+	AudioController.play_jump()

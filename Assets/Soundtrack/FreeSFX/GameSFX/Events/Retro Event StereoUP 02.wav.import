@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ckrl5uturltgx"
+path="res://.godot/imported/Retro Event StereoUP 02.wav-f2e5b7bb40f8e586f9987cbac3292f7b.sample"
+
+[deps]
+
+source_file="res://Assets/Soundtrack/FreeSFX/GameSFX/Events/Retro Event StereoUP 02.wav"
+dest_files=["res://.godot/imported/Retro Event StereoUP 02.wav-f2e5b7bb40f8e586f9987cbac3292f7b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

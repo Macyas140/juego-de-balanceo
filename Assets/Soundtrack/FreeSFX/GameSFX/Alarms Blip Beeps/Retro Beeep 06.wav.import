@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d14byxgc0stss"
+path="res://.godot/imported/Retro Beeep 06.wav-fb13ad7740920657b4eb12bb0756a04a.sample"
+
+[deps]
+
+source_file="res://Assets/Soundtrack/FreeSFX/GameSFX/Alarms Blip Beeps/Retro Beeep 06.wav"
+dest_files=["res://.godot/imported/Retro Beeep 06.wav-fb13ad7740920657b4eb12bb0756a04a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
